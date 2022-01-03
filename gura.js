@@ -415,12 +415,6 @@ const hideTag = async function(from, text){
 	       gura.sendMessage(from, {text:text, jpegThumbnail:fs.readFileSync('./media/gura.jpeg')}, 'extendedTextMessage', {contextInfo: {"mentionedJid": ane}})
 }  
 
-const usedCommandRecently = new Set()
-const isFiltered = (from) => !!usedCommandRecently.has(from)
-const addFilter = (from) => {
-    usedCommandRecently.add(from)
-    setTimeout(() => usedCommandRecently.delete(from), 3000) //delay 5 detik tod
-}
 async function sendStickerFakeSize(buffer) {
 fsize = await gura.prepareMessage(from, buffer, sticker)
 costick = await gura.prepareMessageFromContent(from,{
@@ -772,7 +766,7 @@ menu = `
 ┃${mot} ${ke}${prefix}ytmp3 ${ke}😅
 ┃${mot} ${ke}${prefix}ytmp4 [HD]${ke}😅
 ┃${mot} ${ke}${prefix}mediafire${ke}😅
-┃${mot} ${ke}${prefix}twitterhd${ke}😅
+┃${mot} ${ke}${prefix}twitterhd${ke}??
 ┃${mot} ${ke}${prefix}twittersd <Khusus Video>${ke}😅
 ┗━━━━━━━`
 katalog(menu)
