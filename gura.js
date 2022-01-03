@@ -1926,18 +1926,10 @@ case 'ytdl':
         yta(yut.videos[0].url)             
         .then(async(res) => {
         const { thumb, title, filesizeF, filesize } = res
-        const capti = `⚜️YouTube Downloader⚜️
-		     
-✴️Judul : ${yut.all[0].title}
-✴️ID Video : ${yut.all[0].videoId}
-✴️Diupload Pada : ${yut.all[0].ago}
-✴️Views : ${yut.all[0].views}
-✴️Durasi : ${yut.all[0].timestamp}
-✴️Channel : ${yut.all[0].author.name}
-✴️Link Channel : ${yut.all[0].author.url}`      
+        const capti = `*📥 Mendownload [ ${yut.all[0].title} ]*`      
         ya = await getBuffer(thumb)
         py =await gura.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}ytmp3 ${yut.all[0].url}`, buttonText: {displayText: '🎶AUDIO🎶'}, type: 1},{buttonId: `${prefix}ytmp4 ${yut.all[0].url}`, buttonText: {displayText: '📽VIDEO📽'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}ytmp3 ${yut.all[0].url}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}ytmp4 ${yut.all[0].url}`, buttonText: {displayText: '📥VIDEO'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti,
