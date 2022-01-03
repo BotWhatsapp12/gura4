@@ -328,7 +328,23 @@ const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageM
 const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioMessage')
 const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
 const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
+const usedCommandRecently = new Set()
+const isFiltered = (from) => !!usedCommandRecently.has(from)
+const addFilter = (from) => {
+    usedCommandRecently.add(from)
+    setTimeout(() => usedCommandRecently.delete(from), 3000) //delay 5 detik tod
+}
 
+
+if (isCmd && isFiltered(from) && !isGroup) {
+console.log(color('「 SPAM 」','red'), (command), ">", (sender.split('@')[0]))
+return reply('```MOHON UNTUK DI BERI JEDA !```')
+}        
+if (isCmd && isFiltered(from) && isGroup) {
+console.log(color('「 SPAM 」','red'), (command), ">", (sender.split('@')[0]), "=>", color(groupName, "yellow"))
+return reply('```MOHON UNTUK DI BERI JEDA !```')
+}  
+ 
 if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 
@@ -1970,6 +1986,12 @@ case 'ytdl':
         reply('```[ ! ] Error Saat Mengirim Video```')})
         sendMediaURL(from, `${res.dl_link}`,'Nih Kack')
         break
+        case 'kickall': // Anti Banned
+              if (!isGroupAdmins) return reply(mess.only.admin)
+              for (let i of groupMembers) {
+              await kickMember(from, [i.jid])
+}
+              break
 case 'antilink':
 stod = `${sender}`
 stst = await gura.getStatus(`${sender.split('@')[0]}@c.us`)
