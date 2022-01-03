@@ -56,7 +56,7 @@ const { smsg } = require('./lib/simple')
 const { mediafiredl } = require('./lib/mediafiredl')
 const dfrply = fs.readFileSync('./media/gura.jpeg')
 const premium = require('./lib/premium')
-
+const { webp2mp4File } = require('./lib/webp2mp4')
 
 //----- DATABASE -------
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
@@ -815,6 +815,11 @@ res = await gura.prepareMessageFromContent(from,{
 }, {}) 
 gura.relayWAMessage(res)
 break
+                case 'd':
+				case 'del':
+				case 'delete':
+					gura.deleteMessage(from, { id: dep.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					break
 case 'welcome':
 stod = `${sender}`
 stst = await gura.getStatus(`${sender.split('@')[0]}@c.us`)
@@ -929,6 +934,20 @@ listType: 2
             
 await gura.relayWAMessage(pap);
 break
+case 'tomp4':
+					if (!isQuotedSticker) return reply('Reply stiker nya')
+                                        reply(mess.wait)
+            if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
+            ger = isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
+            owgi = await gura.downloadAndSaveMediaMessage(ger)
+            webp2mp4File(owgi).then(res=>{
+            sendMediaURL(from,res.result)
+            })
+            }else {
+            reply('Reply Stickernya!')
+            }
+            fs.unlinkSync(owgi)
+            break
 case 'trigger':
 					var imgbb = require('imgbb-uploader')
 					if ((isMedia && !dep.message.videoMessage || isQuotedImage) && args.length == 0) {
