@@ -390,6 +390,24 @@ const getcmd = (id) => {
         return scommand[position].chats
     }
 }
+const getBaper = async (url, options) => {
+	try {
+		options ? options : {}
+		const res = await axios({
+			method: "get",
+			url,
+			headers: {
+				'DNT': 1,
+				'Upgrade-Insecure-Request': 1
+			},
+			...options,
+			responseType: 'arraybuffer'
+		})
+		return res.data
+	} catch (e) {
+		console.log(`Error : ${e}`)
+	}
+}
 const namabot = 'GuraBotz'
 const telestick = async (to, url, wm = namabot, wm2 = '') => {
 			exif.create(wm, wm2)
@@ -410,7 +428,7 @@ let gasIn = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2
  
 let jisin = await gasIn.json();
 console.log(jisin)
- buffer = await getBuffer("https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + jisin.result.file_path)
+ buffer = await getBaper("https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + jisin.result.file_path)
  fs.writeFileSync(`./stiker/${pe}.webp`, buffer)
  exec(`webpmux -set exif ./stiker/data.exif ./stiker/${pe}.webp -o ./stiker/${pe}.webp`, async (error) => {
 gura.sendMessage(to, fs.readFileSync(`./stiker/${pe}.webp`), sticker).then(() => fs.unlinkSync(`./stiker/${pe}.webp`))
