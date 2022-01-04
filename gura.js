@@ -390,8 +390,8 @@ const getcmd = (id) => {
         return scommand[position].chats
     }
 }
-
-const telestick = async (to, url, wm = GuraBotz by ArulGanz, wm2 = '') => {
+const namabot = 'GuraBotz'
+const telestick = async (to, url, wm = namabot, wm2 = '') => {
 			exif.create(wm, wm2)
 let packName = url.replace("https://t.me/addstickers/", "");
  
