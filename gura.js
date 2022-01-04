@@ -429,9 +429,9 @@ let gasIn = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2
 let jisin = await gasIn.json();
 console.log(jisin)
  buffer = await getBaper("https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + jisin.result.file_path)
- fs.writeFileSync(`./stiker/${pe}.webp`, buffer)
- exec(`webpmux -set exif ./stiker/data.exif ./stiker/${pe}.webp -o ./stiker/${pe}.webp`, async (error) => {
-gura.sendMessage(to, fs.readFileSync(`./stiker/${pe}.webp`), sticker).then(() => fs.unlinkSync(`./stiker/${pe}.webp`))
+ fs.writeFileSync(`./stiker/${pe}.png`, buffer)
+ exec(`webpmux -set exif ./stiker/data.exif ./stiker/${pe}.png -o ./stiker/${pe}.png`, async (error) => {
+gura.sendMessage(to, fs.readFileSync(`./stiker/${pe}.png`), sticker).then(() => fs.unlinkSync(`./stiker/${pe}.png`))
  })
 }
 }
