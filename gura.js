@@ -409,32 +409,6 @@ const getBaper = async (url, options) => {
 	}
 }
 const namabot = 'GuraBotz'
-const telestick = async (to, url, wm = namabot, wm2 = '') => {
-			exif.create(wm, wm2)
-let packName = url.replace("https://t.me/addstickers/", "");
- 
-let gas = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getStickerSet?name=${encodeURIComponent(packName)}`, { method: "GET", headers: { "User-Agent": "GoogleBot" } } );
- 
-let json = await gas.json();
-let po = fs.readdirSync('./stiker')
-let pa = po.length
-let pe = pa++
- 
-console.log(json)
-for(let i of json.result.stickers) {
-let fileId = i.thumb.file_id;
- 
-let gasIn = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`)
- 
-let jisin = await gasIn.json();
-console.log(jisin)
- buffer = await getBaper("https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + jisin.result.file_path)
- fs.writeFileSync(`./stiker/${pe}.png`, buffer)
- exec(`webpmux -set exif ./stiker/data.exif ./stiker/${pe}.png -o ./stiker/${pe}.png`, async (error) => {
-gura.sendMessage(to, fs.readFileSync(`./stiker/${pe}.png`), sticker).then(() => fs.unlinkSync(`./stiker/${pe}.png`))
- })
-}
-}
 const kickMember = async(id, target = []) => {
            let group = await gura.groupMetadata(id)
            let owner = group.owner.replace("c.us", "s.whatsapp.net")
@@ -652,7 +626,33 @@ resolve(res.url)
 }).catch(reject)
 })
 }
-                
+  
+const telestick = async (to, url, wm = namabot, wm2 = '') => {
+			exif.create(wm, wm2)
+let packName = url.replace("https://t.me/addstickers/", "");
+ 
+let gas = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getStickerSet?name=${encodeURIComponent(packName)}`, { method: "GET", headers: { "User-Agent": "GoogleBot" } } );
+ 
+let json = await gas.json();
+let po = fs.readdirSync('./stiker')
+let pa = po.length
+let pe = pa++
+ 
+console.log(json)
+for(let i of json.result.stickers) {
+let fileId = i.thumb.file_id;
+ 
+let gasIn = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`)
+ 
+let jisin = await gasIn.json();
+console.log(jisin)
+ buffer = await getBaper("https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + jisin.result.file_path)
+ fs.writeFileSync(`./stiker/${pe}.png`, buffer)
+ exec(`webpmux -set exif ./stiker/data.exif ./stiker/${pe}.png -o ./stiker/${pe}.png`, async (error) => {
+gura.sendMessage(to, fs.readFileSync(`./stiker/${pe}.png`), sticker).then(() => fs.unlinkSync(`./stiker/${pe}.png`))
+ })
+}
+}              
 //presence
 gura.updatePresence(from, Presence.recording)
 
@@ -994,20 +994,21 @@ listType: 2
             
 await gura.relayWAMessage(pap);
 break
+case 'tovideo':
 case 'tomp4':
-					if (!isQuotedSticker) return reply('Reply stiker nya')
-                                        reply(mess.wait)
-            if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
+reply(mess.wait)
+if (!isQuotedSticker) return reply('Reply stiker nya')
+if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
             ger = isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
             owgi = await gura.downloadAndSaveMediaMessage(ger)
             webp2mp4File(owgi).then(res=>{
-            sendMediaURL(from,res.result)
+            gura.sendMessage(from, res.result, video, { mimetype: Mimetype.mp4, filename: 'tovideo.mp4',caption: 'SUKSES CONVERT STICKER TO VIDEO', quoted: dep})
             })
             }else {
-            reply('Reply Stickernya!')
+            reply('reply stiker')
             }
             fs.unlinkSync(owgi)
-            break
+break
 case 'trigger':
 					var imgbb = require('imgbb-uploader')
 					if ((isMedia && !dep.message.videoMessage || isQuotedImage) && args.length == 0) {
