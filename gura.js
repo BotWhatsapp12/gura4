@@ -1329,24 +1329,46 @@ case 'bc':
             }
             reply('*◯ Succes Broadcast ◯*')
             break   
-case 'bc2': 
-if (!dep.key.fromMe && !isOwner) return reply(ind.owner()) 
-if (args.length < 1) return reply('.......')
-anu = await gura.chats.all()
-if (isMedia && !dep.message.videoMessage || isQuotedImage) {
-const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
-buff = await gura.downloadMediaMessage(encmedia)
-for (let _ of anu) {
-gura.sendMessage(_.jid, buff, image, {caption: `×❮ *BOT BROADCAST* ❯×\n\n*OWNER* : https://tinyurl.com/yyju5b4k\n*INSTAGRAM OWNER*: https://bit.ly/3dT9725\n*📝PESAN : ${body.slice(4)}*`})
+case 'bc2':
+      case 'broadcast2':
+             if (!isOwner) return  reply(mess.only.owner)
+             if (args.length < 1) return reply('teks?')
+             anu = await gura.chats.all()
+             if (isMedia && !dep.message.videoMessage || isQuotedImage) {
+             const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
+             bc = await gura.downloadMediaMessage(encmedia)
+             for (let _ of anu) {
+             gura.sendMessage(_.jid, bc, image, {quoted:ftrol,caption: `*「 BROADCAST 」*\n\n${body.slice(4)}`})
 }
-reply('SUKSES BROADCAST')
-} else {
-for (let _ of anu) {
-sendMess(_.jid, `×❮ *BOT BROADCAST* ❯×\n\n*Owner* : https://tinyurl.com/yyju5b4k\n*IG Owner*: https://bit.ly/3dT9725\n*📝Pesan : ${body.slice(4)}*`)
+             reply('Suksess broadcast')
+             } else {
+             for (let _ of anu) {
+             gura.sendMessage(_.jid, 
+			{"contentText": `*「 PESAN SIARAN BOT 」*\n\n${body.slice(4)}`,
+			"footerText": 'Crated By GuraBotz',
+			"buttons": [{ buttonId: `.menu`,buttonText:{displayText: `🏷️MENU`},type:1},{ buttonId: `.owner`,buttonText:{displayText: `👥 OWNER`},type:1}], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 }
-reply('SUKSES BROADCAST')
+             reply('Suksess broadcast')
 }
-break
+             break
+case 'bc3':
+         if (!isOwner) return reply('LU BUKAN OWNER GBLOK')
+         if (args.length < 1) return reply('.......')
+         anu = await gura.chats.all()
+         if (isMedia && !dep.message.videoMessage || isQuotedImage) {
+         const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
+         bc = await gura.downloadMediaMessage(encmedia)
+         for (let _ of anu) {
+         gura.sendMessage(_.jid, bc, image, { caption: `[ Bot Broadcast ]\n\n${body.slice(4)}` })
+         }
+         reply('Suksess broadcast')
+         } else {
+         for (let _ of anu) {
+         sendMess(_.jid, `[ *BOT BROADCAST* ]\n\n${body.slice(4)}`)
+         }
+         reply('Suksess broadcast')
+         }
+		break
 case 'igdl':
         if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply(mess.Iv)
         if (!q) return fakevo('Linknya?')
