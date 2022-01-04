@@ -1955,14 +1955,14 @@ case 'ytdl':
         yta(yut.videos[0].url)             
         .then(async(res) => {
         const { thumb, title, filesizeF, filesize } = res
-        const capti = `*📥 Mendownload [ ${yut.all[0].title} ]*`      
+        const capti = `*📥 Mendownload ${yut.all[0].title} *`      
         ya = await getBuffer(thumb)
         py =await gura.prepareMessage(from, ya, image)
         gbutsan = [{buttonId: `${prefix}ytmp3 ${yut.all[0].url}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}ytmp4 ${yut.all[0].url}`, buttonText: {displayText: '📥VIDEO'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti,
-        footerText: '```®Bot WhatsApp by ArulGanz```\n\n```®SILAHKAN PILIH MEDIA DIBAWAH INI```',
+        footerText: '```Silahkan Pilih Medianya Kak```',
         buttons: gbutsan,
         headerType: 4
 }
