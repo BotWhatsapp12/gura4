@@ -1346,7 +1346,7 @@ case 'bc2':
              gura.sendMessage(_.jid, 
 			{"contentText": `*「 PESAN SIARAN BOT 」*\n\n${body.slice(4)}`,
 			"footerText": 'Crated By GuraBotz',
-			"buttons": [{ buttonId: `.menu`,buttonText:{displayText: `🏷️MENU`},type:1},{ buttonId: `.owner`,buttonText:{displayText: `👥 OWNER`},type:1}], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fakeimage, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+			"buttons": [{ buttonId: `.menu`,buttonText:{displayText: `🏷️MENU`},type:1},{ buttonId: `.owner`,buttonText:{displayText: `👥 OWNER`},type:1}], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ofrply, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 }
              reply('Suksess broadcast')
 }
