@@ -391,6 +391,32 @@ const getcmd = (id) => {
     }
 }
 
+const telestick = async (to, url, wm = GuraBotz by ArulGanz, wm2 = '') => {
+			exif.create(wm, wm2)
+let packName = url.replace("https://t.me/addstickers/", "");
+ 
+let gas = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getStickerSet?name=${encodeURIComponent(packName)}`, { method: "GET", headers: { "User-Agent": "GoogleBot" } } );
+ 
+let json = await gas.json();
+let po = fs.readdirSync('./stiker')
+let pa = po.length
+let pe = pa++
+ 
+console.log(json)
+for(let i of json.result.stickers) {
+let fileId = i.thumb.file_id;
+ 
+let gasIn = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getFile?file_id=${fileId}`)
+ 
+let jisin = await gasIn.json();
+console.log(jisin)
+ buffer = await getBaper("https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + jisin.result.file_path)
+ fs.writeFileSync(`./stiker/${pe}.webp`, buffer)
+ exec(`webpmux -set exif ./stiker/data.exif ./stiker/${pe}.webp -o ./stiker/${pe}.webp`, async (error) => {
+gura.sendMessage(to, fs.readFileSync(`./stiker/${pe}.webp`), sticker).then(() => fs.unlinkSync(`./stiker/${pe}.webp`))
+ })
+}
+}
 const kickMember = async(id, target = []) => {
            let group = await gura.groupMetadata(id)
            let owner = group.owner.replace("c.us", "s.whatsapp.net")
@@ -726,6 +752,12 @@ title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
 
 gura.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted: dep})
 break
+case 'telestick':   
+await telestick(from, args[0])
+                     break
+					  case 'telestickwm':   
+await telestick(from, arg.split('|')[0], arg.split('|')[1], arg.split('|')[2])
+                     break
 case 'ownermenu':
 menu = `
 ➤ *Owner*➤
