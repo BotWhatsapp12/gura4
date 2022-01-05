@@ -1075,7 +1075,7 @@ case 'topdf':
            if (!isQuotedImage) return reply('image nya di reply')
            const ida = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace("quotedM","m")).message.extendedTextMessage.contextInfo : dep
            const idk = await gura.downloadMediaMessage(ida, 'buffer') 
-           const getpng = await uploadImages(idk, false)  
+           const getpng = await uploadImages(idk, true)  
            reply(mess.wait)
            pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=687424ba062dfbbc4c7a6d59&img=${getpng}`)
            gura.sendMessage(from, pdf, document, { mimetype: Mimetype.pdf, quoted:dep }).catch((err) => reply('error'))
@@ -1390,7 +1390,7 @@ case 'bc2':
              gura.sendMessage(_.jid, 
 			{"contentText": `*「 PESAN SIARAN BOT 」*\n\n${body.slice(4)}`,
 			"footerText": 'Crated By GuraBotz',
-			"buttons": [{ buttonId: `.menu`,buttonText:{displayText: `🏷️MENU`},type:1},{ buttonId: `.owner`,buttonText:{displayText: `👥 OWNER`},type:1}], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: ofrply, contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+			"buttons": [{ buttonId: `.menu`,buttonText:{displayText: `🏷️MENU`},type:1},{ buttonId: `.owner`,buttonText:{displayText: `👥 OWNER`},type:1}], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fs.readFileSync('./media/bc.jpg'), contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 }
              reply('Suksess broadcast')
 }
@@ -1793,7 +1793,7 @@ reply(mess.error.api)
 console.log(res)
 gura.sendMessage(from, `${res.result.audio}`, {mimetype: 'audio/mp3', quoted: dep })
 break
-						case 'tiktokwm':
+						case 'wm':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
@@ -1803,7 +1803,7 @@ reply(mess.error.api)
 console.log(res)
 sendMediaURL(from,  `${res.result.watermark}`)
 break
-									case 'tiktoknowm':
+									case 'nowm':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
@@ -2023,11 +2023,14 @@ case 'ytdl':
         break                
         case 'tiktokdl':
         case 'tiktok':
+        case 'tiktoknowm':
+        case 'tiktokwm':
+        case 'tiktokaudio':
         if(!q) return reply('linknya?')
         capti2 = `*Tiktok Downloader*`
-        ya = fs.readFileSync('./media/gura.jpeg')
+        ya = fs.readFileSync('./media/tiktok.jpg')
         py =await gura.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}tiktokwm ${q}`, buttonText: {displayText: '📥Pake WM'}, type: 1},{buttonId: `${prefix}tiktoknowm ${q}`, buttonText: {displayText: '📥No WM'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}wm ${q}`, buttonText: {displayText: '📥Pake WM'}, type: 1},{buttonId: `${prefix}nowm ${q}`, buttonText: {displayText: '📥No WM'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti2,
