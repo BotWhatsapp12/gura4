@@ -1788,16 +1788,34 @@ case 'ytmp4':
 						case 'tiktokwm':
 						case 'tiktokdl':
 if (!q) return reply('Linknya?')
-capti = `📥*TIKTOK DOWNLOADER*`
-gbutsan = [{buttonId: `${prefix}wm ${q}`, buttonText: {displayText: '📥VIDEO WM'}, type: 1}, {buttonId: `${prefix}nowm ${q}`, buttonText: {displayText: '📥VIDEO NOWM'}, type: 1}]
-        gbuttonan = {
-        contentText: capti,
-        footerText: '```Silahkan Pilih Medianya Kak```',
-        buttons: gbutsan,
-        headerType: 4
+stod = `${sender}`
+stst = await gura.getStatus(`${sender.split('@')[0]}@c.us`)
+listMsg = {
+title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
+ buttonText: 'Download TikTok',
+ footerText: 'GuraBotz',
+ description: `\n*Pilih Wm / Nowm*`,
+ sections: [
+                     {
+                      "title": `Silahkan Pilih`,
+ rows: [
+                           {
+                              "title": "Tiktok NOWM",
+                               "description" :"Mendownload Video Tiktok NoWm",
+                              "rowId": `${prefix}nowm ${q}`
+                           }
+                           {
+                              "title": "Tiktok WM",
+                               "description" :"Mendownload Video Tiktok Wm",
+                              "rowId": `${prefix}wm ${q}`
+                           }
+                        ]
+                     }],
+ listType: 1
 }
-        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
-        break     
+
+gura.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted: dep})
+break
 						case 'soundtt':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
