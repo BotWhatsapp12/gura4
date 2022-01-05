@@ -1783,39 +1783,6 @@ case 'ytmp4':
 							reply(mess.error.api)
 						}
 						break
-						case 'tiktoknowm':
-						case 'tiktok':
-						case 'tiktokwm':
-						case 'tiktokdl':
-if (!q) return reply('Linknya?')
-stod = `${sender}`
-stst = await gura.getStatus(`${sender.split('@')[0]}@c.us`)
-listMsg = {
-title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
- buttonText: 'Download TikTok',
- footerText: 'GuraBotz',
- description: `\n*Pilih Wm / Nowm*`,
- sections: [
-                     {
-                      "title": `Silahkan Pilih`,
- rows: [
-                           {
-                              "title": "Tiktok NOWM",
-                               "description" :"Mendownload Video Tiktok NoWm",
-                              "rowId": `${prefix}nowm ${q}`
-                           }
-                           {
-                              "title": "Tiktok WM",
-                               "description" :"Mendownload Video Tiktok Wm",
-                              "rowId": `${prefix}wm ${q}`
-                           }
-                        ]
-                     }],
- listType: 1
-}
-
-gura.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted: dep})
-break
 						case 'soundtt':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
@@ -1824,9 +1791,9 @@ res = await TiktokDownloader(`${q}`).catch(e => {
 reply(mess.error.api)
 })
 console.log(res)
-gura.sendMessage(from, `${res.result.audio}`, {mimetype: 'audio/mp4', quoted: dep })
+gura.sendMessage(from, `${res.result.audio}`, {mimetype: 'audio/mp3', quoted: dep })
 break
-						case 'wm':
+						case 'tiktokwm':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
@@ -1836,7 +1803,7 @@ reply(mess.error.api)
 console.log(res)
 sendMediaURL(from,  `${res.result.watermark}`)
 break
-									case 'nowm':
+									case 'tiktoknowm':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
