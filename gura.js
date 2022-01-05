@@ -1786,17 +1786,10 @@ case 'ytmp4':
 						case 'tiktoknowm':
 						case 'tiktok':
 						case 'tiktokwm':
-						case 'tiktokaudio':
 						case 'tiktokdl':
 if (!q) return reply('Linknya?')
-var { TiktokDownloader } = require('./lib/tiktokdl')
-reply(mess.wait)
-res = await TiktokDownloader(`${q}`).catch(e => {
-reply(mess.error.api)
-})
-console.log(res)
 capti = `📥*TIKTOK DOWNLOADER*`
-gbutsan = [{buttonId: `${prefix}soundtt ${q}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}wm ${q}`, buttonText: {displayText: '📥VIDEO WM'}, type: 1}, {buttonId: `${prefix}nowm ${q}`, buttonText: {displayText: '📥VIDEO NOWM'}, type: 1}]
+gbutsan = [{buttonId: `${prefix}wm ${q}`, buttonText: {displayText: '📥VIDEO WM'}, type: 1}, {buttonId: `${prefix}nowm ${q}`, buttonText: {displayText: '📥VIDEO NOWM'}, type: 1}]
         gbuttonan = {
         contentText: capti,
         footerText: '```Silahkan Pilih Medianya Kak```',
@@ -1813,7 +1806,7 @@ res = await TiktokDownloader(`${q}`).catch(e => {
 reply(mess.error.api)
 })
 console.log(res)
-sendMediaURL(from,  `${res.result.audio}`)
+gura.sendMessage(from, `${res.result.audio}`, {mimetype: 'audio/mp4', quoted: dep })
 break
 						case 'wm':
 if (!q) return reply('Linknya?')
