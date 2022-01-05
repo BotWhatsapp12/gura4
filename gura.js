@@ -1784,15 +1784,21 @@ case 'ytmp4':
 						}
 						break
 						case 'soundtt':
-if (!q) return reply('Linknya?')
-var { TiktokDownloader } = require('./lib/tiktokdl')
-reply(mess.wait)
-res = await TiktokDownloader(`${q}`).catch(e => {
-reply(mess.error.api)
-})
-console.log(res)
-gura.sendMessage(from,  `${res.result.watermark}`, audio, { mimetype: Mimetype.mp4Audio, quoted: dep })
-break
+		 		if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(mess.error.api)
+ 		if (!q) return reply('Linknya?')
+ 		reply(mess.wait)
+		hx.ttdownloader(`${args[0]}`)
+    		.then(result => {
+    		const { wm, nowm, audio } = result
+    		axios.get(`https://tinyurl.com/api-create.php?url=${nowm}`)
+    		.then(async (a) => {
+    		me = `*Link* : ${a.data}`
+    nowmm = await getBuffer(audio)
+	gura.sendMessage(from,nowmm ,MessageType.audio,{mimetype:'audio/mp4',quoted: dep})
+		})
+		})
+		break 
+					
 						case 'wm':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
