@@ -1795,7 +1795,7 @@ res = await TiktokDownloader(`${q}`).catch(e => {
 reply(mess.error.api)
 })
 console.log(res)
-capti = '📥*TIKTOK DOWNLOADER*'
+capti = `📥*TIKTOK DOWNLOADER*`
 gbutsan = [{buttonId: `${prefix}soundtt ${q}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}wm ${q}`, buttonText: {displayText: '📥VIDEO WM'}, type: 1}, {buttonId: `${prefix}nowm ${q}`, buttonText: {displayText: '📥VIDEO NOWM'}, type: 1}]
         gbuttonan = {
         contentText: capti,
@@ -1803,9 +1803,8 @@ gbutsan = [{buttonId: `${prefix}soundtt ${q}`, buttonText: {displayText: '📥AU
         buttons: gbutsan,
         headerType: 4
 }
-        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
+        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
         break     
-break
 						case 'soundtt':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
