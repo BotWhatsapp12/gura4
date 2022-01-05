@@ -1031,13 +1031,6 @@ case 'trigger':
 					reply('Gunakan foto!')
 					}
 					break
-case 'tiktok':
-tegj = `
-~ *.tiktoknowm [Linknya] Tanpa Watermak*
-~ *.tiktokwm [Linknya] Ada Watermak*
-~ *.tiktokmusik [Linknya] Soundnya*`
-reply(tegj)
-break
 case 'tourl':
     if ((isMedia && !dep.message.videoMessage || isQuotedImage || isQuotedVideo ) && args.length == 0) {
             boij = isQuotedImage || isQuotedVideo ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
@@ -1790,24 +1783,11 @@ case 'ytmp4':
 							reply(mess.error.api)
 						}
 						break
-    case 'tiktoknowm2': 
-case 'ttnowm2':
-									if (!q) return reply('Linknya?')
-									if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Invalid link')
-									reply(mess.wait)
-									let nowem = q
-									hx.ttdownloader(nowem)
-									.then(result => {
-										const { wm, nowm, audio } = result
-										axios.get(`https://tinyurl.com/api-create.php?url=${nowm}`)
-										.then(async (a) => {
-											me = `*Link* : ${a.data}`
-											noweem = await getBuffer(nowm)
-											gura.sendMessage(from,noweem , MessageType.document, {mimetype: 'video/mp4',filename: `Tiktok Download.mp4 by GuraBotz`,quoted:dep})
-											})
-										}).catch((err) => reply(`Link tidak valid`))
-									break 
-									case 'tiktoknowm':
+						case 'tiktoknowm':
+						case 'tiktok':
+						case 'tiktokwm':
+						case 'tiktokaudio':
+						case 'tiktokdl':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
@@ -1815,24 +1795,47 @@ res = await TiktokDownloader(`${q}`).catch(e => {
 reply(mess.error.api)
 })
 console.log(res)
-gura.sendMessage(from,  `${res.result.nowatermark}`, MessageType.document, {mimetype: 'video/mp4', filename: `Tiktok Download.mp4 by GuraBotz`,quoted:dep})
+capti = '📥*TIKTOK DOWNLOADER*'
+gbutsan = [{buttonId: `${prefix}soundtt ${q}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}wm ${q}`, buttonText: {displayText: '📥VIDEO WM'}, type: 1}, {buttonId: `${prefix}nowm ${q}`, buttonText: {displayText: '📥VIDEO NOWM'}, type: 1}]
+        gbuttonan = {
+        contentText: capti,
+        footerText: '```Silahkan Pilih Medianya Kak```',
+        buttons: gbutsan,
+        headerType: 4
+}
+        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
+        break     
 break
-						case 'tiktokwm':
-									if (!q) return reply('Linknya?')
-									if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply('Invalid link')
-									reply(mess.wait)
-									let wem = q
-									hx.ttdownloader(wem)
-									.then(result => {
-										const { wm, nowm, audio } = result
-										axios.get(`https://tinyurl.com/api-create.php?url=${nowm}`)
-										.then(async (a) => {
-											me = `*Link* : ${a.data}`
-											weem = await getBuffer(wm)
-											gura.sendMessage(from,weem , MessageType.document, {mimetype: 'video/mp4',filename: `Tiktok Wm.mp4 by GuraBotz`,quoted:dep})
-											})
-										}).catch((err) => reply(`Link tidak valid`))
-									break 
+						case 'soundtt':
+if (!q) return reply('Linknya?')
+var { TiktokDownloader } = require('./lib/tiktokdl')
+reply(mess.wait)
+res = await TiktokDownloader(`${q}`).catch(e => {
+reply(mess.error.api)
+})
+console.log(res)
+sendMediaURL(from,  `${res.result.audio}`)
+break
+						case 'wm':
+if (!q) return reply('Linknya?')
+var { TiktokDownloader } = require('./lib/tiktokdl')
+reply(mess.wait)
+res = await TiktokDownloader(`${q}`).catch(e => {
+reply(mess.error.api)
+})
+console.log(res)
+sendMediaURL(from,  `${res.result.watermark}`)
+break
+									case 'nowm':
+if (!q) return reply('Linknya?')
+var { TiktokDownloader } = require('./lib/tiktokdl')
+reply(mess.wait)
+res = await TiktokDownloader(`${q}`).catch(e => {
+reply(mess.error.api)
+})
+console.log(res)
+sendMediaURL(from,  `${res.result.nowatermark}`)
+break
 	case 'bcsticker':
 case 'bcs':
 					if (!dep.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
