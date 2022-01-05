@@ -2021,6 +2021,22 @@ case 'ytdl':
 }
         await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
         break                
+        case 'tiktokdl':
+        case 'tiktok':
+        if(!q) return reply('linknya?')
+        capti2 = `*Tiktok Downloader*`
+        ya = fs.readFileSync('./media/gura.jpeg')
+        py =await gura.prepareMessage(from, ya, image)
+        gbutsan = [{buttonId: `${prefix}tiktokwm ${q}`, buttonText: {displayText: '📥Pake WM'}, type: 1},{buttonId: `${prefix}tiktoknowm ${q}`, buttonText: {displayText: '📥No WM'}, type: 1}]
+        gbuttonan = {
+        imageMessage: py.message.imageMessage,
+        contentText: capti,
+        footerText: '```Silahkan Pilih Medianya Kak```',
+        buttons: gbutsan,
+        headerType: 4
+}
+        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)})
+        break              
         case 'buttonmusic':
         if(!q) return reply('linknya?')              
         res = await yta(`${q}`).catch(e => {
