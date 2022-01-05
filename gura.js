@@ -705,10 +705,10 @@ case 'help':
 stod = `${sender}`
 stst = await gura.getStatus(`${sender.split('@')[0]}@c.us`)
 listMsg = {
-title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
+title : `${ucapanWaktu} *Kak @${sender.split("@")[0]}*`,
  buttonText: 'MENU DISNI',
  footerText: 'GuraBotz',
- description: `\n*Berlarilah Ketika Kamu Bisa, Berjalan Jika Harus, Merangkak Jika Perlu, Jangan Pernah Menyerah*`,
+ description: `\n*Menu Gura Botz*`,
  sections: [
                      {
                       "title": `Menu GuraBotz`,
@@ -1815,7 +1815,7 @@ res = await TiktokDownloader(`${q}`).catch(e => {
 reply(mess.error.api)
 })
 console.log(res)
-sendMediaURL(from, `${res.result.nowatermark}`)
+gura.sendMessage(from,  `${res.result.nowatermark}`, MessageType.document, {mimetype: 'video/mp4', filename: `Tiktok Download.mp4 by GuraBotz`,quoted:dep})
 break
 						case 'tiktokwm':
 									if (!q) return reply('Linknya?')
@@ -2028,12 +2028,11 @@ case 'ytdl':
         yta(yut.videos[0].url)             
         .then(async(res) => {
         const { thumb, title, filesizeF, filesize } = res
-        const capti = `*📥 Mendownload ${yut.all[0].title} *`      
+        const capti = `*📥 Mendownload ${yut.all[0].title}*`      
         ya = await getBuffer(thumb)
         py =await gura.prepareMessage(from, ya, image)
         gbutsan = [{buttonId: `${prefix}ytmp3 ${yut.all[0].url}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}ytmp4 ${yut.all[0].url}`, buttonText: {displayText: '📥VIDEO'}, type: 1}]
         gbuttonan = {
-        imageMessage: py.message.imageMessage,
         contentText: capti,
         footerText: '```Silahkan Pilih Medianya Kak```',
         buttons: gbutsan,
