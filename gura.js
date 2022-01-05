@@ -1390,7 +1390,7 @@ case 'bc2':
              gura.sendMessage(_.jid, 
 			{"contentText": `*「 PESAN SIARAN BOT 」*\n\n${body.slice(4)}`,
 			"footerText": 'Crated By GuraBotz',
-			"buttons": [{ buttonId: `.menu`,buttonText:{displayText: `🏷️MENU`},type:1},{ buttonId: `.owner`,buttonText:{displayText: `👥 OWNER`},type:1}], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fs.readFileSync('./media/bc.jpg'), contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
+			"buttons": [{ buttonId: `${prefix}menu`,buttonText:{displayText: `🏷️MENU`},type:1},{ buttonId: `${prefix}owner`,buttonText:{displayText: `👥 OWNER`},type:1}], headerType: 'LOCATION', locationMessage: { degreesLatitude: '', degreesLongitude: '', jpegThumbnail: fs.readFileSync('./media/bc.jpg'), contextInfo: {mentionedJid: [sender]}}}, 'buttonsMessage')
 }
              reply('Suksess broadcast')
 }
@@ -1791,7 +1791,7 @@ res = await TiktokDownloader(`${q}`).catch(e => {
 reply(mess.error.api)
 })
 console.log(res)
-gura.sendMessage(from, `${res.result.audio}`, {mimetype: 'audio/mp3', quoted: dep })
+gura.sendMessage(from,  `${res.result.watermark}`, audio, { mimetype: Mimetype.mp4Audio, quoted: dep })
 break
 						case 'wm':
 if (!q) return reply('Linknya?')
