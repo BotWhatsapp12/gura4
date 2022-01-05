@@ -2013,6 +2013,7 @@ case 'ytdl':
         py =await gura.prepareMessage(from, ya, image)
         gbutsan = [{buttonId: `${prefix}ytmp3 ${yut.all[0].url}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}ytmp4 ${yut.all[0].url}`, buttonText: {displayText: '📥VIDEO'}, type: 1}]
         gbuttonan = {
+        imageMessage: py.message.imageMessage,
         contentText: capti,
         footerText: '```Silahkan Pilih Medianya Kak```',
         buttons: gbutsan,
