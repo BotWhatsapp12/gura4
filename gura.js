@@ -1683,7 +1683,7 @@ for (let i of ownerNomor) {
 const vname = gura.contacts[i] != undefined ? gura.contacts[i].vname || gura.contacts[i].notify : undefined
 inilist.push({
 "displayName": `ArulGanz`,
-"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;ArulGanz;;;\nFN:${vname ? `${vname}` : `${gura.user.name}`}\nitem1.TEL;type=CELL;type=VOICE;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Telepon\nEND:VCARD`
+"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;ArulGanz;;;\nFN:${vname ? `${vname}` : `${gura.user.name}`}\nitem1.TEL;type=CELL;type=VOICE;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Businnes\nEND:VCARD`
 })
 }
 hehe = await gura.sendMessage(from, {
@@ -1745,7 +1745,25 @@ case 'lirik':
             let di = await getBuffer(ac)
             await gura.sendMessage(from,di,image,{quoted: ftrol})
             break
+case 'ytmp4':
 case 'ytmp3':
+case 'youtube':
+case 'ytdl':
+        if(!q) return reply('linknya?')
+        capti2 = `*Youtube Downloader*`
+        ya = fs.readFileSync('./media/yutub.jpg')
+        py =await gura.prepareMessage(from, ya, image)
+        gbutsan = [{buttonId: `${prefix}p4 ${q}`, buttonText: {displayText: '📥Video'}, type: 1},{buttonId: `${prefix}p3 ${q}`, buttonText: {displayText: '📥Music'}, type: 1}]
+        gbuttonan = {
+        imageMessage: py.message.imageMessage,
+        contentText: capti2,
+        footerText: '```Silahkan Pilih Medianya Kak```',
+        buttons: gbutsan,
+        headerType: 4
+}
+        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
+        break   
+case 'p3':
 						if (args.length === 0) return reply(`Kirim perintah *${prefix}ytmp3 [linkYt]*`)
 						let isLinks = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
 						if (!isLinks) return reply(mess.error.Iv)
@@ -1764,7 +1782,7 @@ case 'ytmp3':
 							reply(mess.error.api)
 						}
 						break
-case 'ytmp4':
+case 'p4':
 						if (args.length === 0) return reply(`Kirim perintah *${prefix}ytmp4 [linkYt]*`)
 						let isLinks2 = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
 						if (!isLinks2) return reply(mess.error.Iv)
@@ -2007,7 +2025,6 @@ break
 									reply(q?`wa.me/`+sender.split("@")[0]+'?text='+wamo: `wa.me/`+sender.split("@")[0])
 									break
 case 'play':
-case 'ytdl':
         if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
         reply(mess.wait)
         let yut = await yts(q)
