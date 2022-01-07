@@ -2255,6 +2255,17 @@ reply(stdout)
 }
 })
 }
+if (isCmd) 
+          sendButMessage(from, `★彡[ᴍᴀᴀꜰ ᴋᴀᴋ, ꜰɪᴛᴜʀ ᴛᴇʀꜱᴇʙᴜᴛ ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴅᴀʟᴀᴍ ᴍᴇɴᴜ ʙᴏᴛ]彡★`, `🛒BotWhatsApp By ArulGanz\n\n\nButton Dibawah Untuk Membuka Menu`, [
+            {
+              buttonId: `${prefix}menu`,
+              buttonText: {
+                displayText: `★彡[ᴍᴇɴᴜ]彡★`,
+              },
+              type: 1,
+            }]);
+}
+
 if (isGroup && budy != undefined) {
 	} else {
 	console.log(color('[TEXT]', 'red'), 'FINXBASE', color(sender.split('@')[0]))
