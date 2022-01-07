@@ -702,165 +702,107 @@ switch(command) {
 
 case 'menu':
 case 'help':
-stod = `${sender}`
-stst = await gura.getStatus(`${sender.split('@')[0]}@c.us`)
-listMsg = {
-title : `${ucapanWaktu} *Kak @${sender.split("@")[0]}*`,
- buttonText: 'MENU DISNI',
- footerText: 'GuraBotz',
- description: `\n*Menu Gura Botz*`,
- sections: [
-                     {
-                      "title": `Menu GuraBotz`,
- rows: [
-                           {
-                              "title": "Semua Perintah",
-                               "description" :"Menampilkan Semua Menu",
-                              "rowId": `${prefix}allmenu`
-                           },
-                          {
-                              "title": "Patner Bot",
-                               "description" :"Menampilkan Info PatnerBot",
-                              "rowId": `${prefix}patnerbot`
-                           },
-                           {
-                              "title": "Menu Owner",
-                              "description" :"Menampilkan Info Menu Owner",
-                              "rowId": `${prefix}ownermenu`
-                           },
-                           {
-                              "title": "Kontak Owner",
-                              "description" :"Menampilkan Kontak Owner Bot",
-                              "rowId": `${prefix}owner`
-                           },
-                           {
-                              "title": "Download Menu",
-                              "description" :"Menampilkan Info Menu Downloader",
-                              "rowId":  `${prefix}downloadmenu`
-                           },
-                           {
-                              "title": "Maker Menu",
-                              "description" :"Menampilkan Info Menu Maker",
-                              "rowId":  `${prefix}makermenu`
-                           },
-                           {
-                              "title": "Other Menu",
-                              "description" :"Menampilkan Info Menu Other",
-                              "rowId":  `${prefix}othermenu`
-                           },
-                           {
-                              "title": "Official Group",
-                              "description" :"Menampilkan Info Group Gura",
-                              "rowId":  `${prefix}officialgc`
-                           },
-                           {
-                              "title": "Group Menu",
-                              "description" :"Menampilkan Info Menu Group",
-                              "rowId":  `${prefix}groupmenu`
-                           },
-                           {
-                              "title": "Menu Group Lainnya",
-                              "description" :"Menampilkan Info Menu Group",
-                              "rowId":  `${prefix}group`
-                           }
-                        ]
-                     }],
- listType: 1
-}
+case 'allmenu':
+reply3('*Loading...*')
+uptime = process.uptime()            
+var p = '*'
+const tod =`
+┏━━━━━━━━━━━━━━━⬣ 
+┃┃✯┏━━⬣ *GURA BOTZ*
+┃┃✯┃⬡ ${p}⚜️Hai kak ${pushname}${p}		
+┃┃✯┃⬡ ${p}🔣Prefix : ${prefix}${p}
+┃┃✯┃⬡ ${p}🌟Runtime : ${kyun(uptime)}${p}
+┃┃✯┗━━⬣
+┗━━━━━━━━━━━━━━━⬣`
+tod2 =`
+͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
+*Info Owner*
+🚹 *No        : @62 812-2985-9085* 
+🌄 *IG         : @_daaa_1*
 
-gura.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted: dep})
-break
+➤ *Others*➤
+┃*き⃟🐣*  *.menu*😃
+┃*き⃟🐣* *.ssweb*😃
+┃*き⃟🐣* *.runtime*😃
+┃*き⃟🐣* *.owner*😃
+┃*き⃟🐣* *.get*😀
+┃*き⃟🐣* *.fdeface*😀
+┃*き⃟🐣* *.totag <reply media>*😀
+┃*き⃟🐣* *.jadibot* *Premium*😀
+┃*き⃟🐣* *.listbot*😀
+┃*き⃟🐣* *.ping*😀
+┗━━━━━━━
+
+➤ *Search*➤
+┃*き⃟🐣* *.lirik*🤨
+┃*き⃟🐣* *.ytsearch*🤨
+┃*き⃟🐣* *.pinterest*🤨
+┃*き⃟🐣* *.image*🤨
+┃*き⃟🐣* *.google (query)*🤨
+┗━━━━━━━
+
+➤ *Tools*➤
+┃*き⃟🐣* *.sticker <reply gambar>*🤗
+┃*き⃟🐣* *.takestick* 🤗
+┃*き⃟🐣* *.toimg <Agak Lelet>*🤗
+┃*き⃟🐣* *.tourl <reply media>*🤗
+┃*き⃟🐣* *.tomp3 <reply media>*🤗
+┃*き⃟🐣* *.tinyurl <masukan link>*🤗
+┗━━━━━━━
+
+➤ *Group*➤
+┃*き⃟🐣* *.group <Pilih>*😎
+┃*き⃟🐣* *.tutuptime <waktu>*😎
+┃*き⃟🐣* *.bukatime <waktu>*😎
+┃*き⃟🐣* *.promoteall*😎
+┃*き⃟🐣* *.demoteall*😎
+┃*き⃟🐣* *.promote <@tag>*😎
+┃*き⃟🐣* *.demote <@tag>*😎
+┃*き⃟🐣* *.getnumber <@tag>*😎
+┃*き⃟🐣* *.getbio <@tag>*😎
+┃*き⃟🐣* *.add* *<628x> Jangan Buat Mainan*😎
+┃*き⃟🐣* *.kick* *<@tag>Jangan Buat Mainan*😎
+┗━━━━━━━
+
+➤ *Owner*➤
+┃*き⃟🐣* *.join*😄
+┃*き⃟🐣* *.hidetag*😄
+┃*き⃟🐣* *.tagall*😄
+┃*き⃟🐣* *> eval*😄
+┃*き⃟🐣* *$ exec*😄
+┃*き⃟🐣* *clearall*😄
+┗━━━━━━━
+
+➤ *Download*➤
+┃*き⃟🐣* *.tiktok <link>*😅
+┃*き⃟🐣* *.instagram <link>*😅
+┃*き⃟🐣* *.play <judul lagu>*😅
+┃*き⃟🐣* *.youtube <link>*😅
+┃*き⃟🐣* *.mediafire <link>*😅
+┃*き⃟🐣* *.twitter <link>*😅
+┗━━━━━━━
+
+
+➤ *Terimakasih Kepada*➤
+┃*き⃟🐣* *ArulGanz*😄
+┃*き⃟🐣* *Pembuat Base Gura*😄
+┃*き⃟🐣* *All Creator Bot Wa*😄
+┃*き⃟🐣* *Penyedia Apikey*😄
+┃*き⃟🐣* *Teman² Yg Suka Bagi² Case*😄
+┃*き⃟🐣* *User GuraBotz*😄
+┗━━━━━━━ *@GuraBotz*
+`
+          but = [
+          { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER' }, type: 1 }, { buttonId: `${prefix}patnerbot`, buttonText: { displayText: 'PATNER BOT' }, type: 1 }
+                  ]
+        sendButLocation(from, tod, tod2, tamnel, but)
+           break
 case 'telestick':   
 await telestick(from, args[0])
                      break
 					  case 'telestickwm':   
 await telestick(from, arg.split('|')[0], arg.split('|')[1], arg.split('|')[2])
                      break
-case 'ownermenu':
-menu = `
-➤ *Owner*➤
-┃${mot} ${ke}${prefix}join${ke}😄
-┃${mot} ${ke}${prefix}ohidetag${ke}😄
-┃${mot} ${ke} > eval${ke}😄
-┃${mot} ${ke}$ exec${ke}😄
-┃${mot} ${ke}clearall${ke}😄
-┗━━━━━━━`
-katalog(menu)
-break
-case 'groupmenu':
-menu = `
-➤ *Group*➤
-┃${mot} ${ke}${prefix}group <Pilih>${ke}😎
-┃${mot} ${ke}${prefix}tutuptime <waktu>${ke}😎
-┃${mot} ${ke}${prefix}bukatime <waktu>${ke}😎
-┃${mot} ${ke}${prefix}promoteall${ke}😎
-┃${mot} ${ke}${prefix}demoteall${ke}😎
-┃${mot} ${ke}${prefix}tagall${ke}😎
-┃${mot} ${ke}${prefix}promote <@tag>${ke}😎
-┃${mot} ${ke}${prefix}demote <@tag>${ke}😎
-┃${mot} ${ke}${prefix}getnumber <@tag>${ke}😎
-┃${mot} ${ke}${prefix}getbio <@tag>${ke}😎
-┃${mot} ${ke}${prefix}hidetag${ke}😎
-┃${mot} ${ke}${prefix}add${ke}<628xxx>Jangan Buat Mainan😎
-┃${mot} ${ke}${prefix}kick${ke}<@tag>*Jangan Buat Mainan😎
-┗━━━━━━━`
-katalog(menu)
-break
-case 'downloadmenu':
-menu = `
-➤ *Download*➤
-┃${mot} ${ke}${prefix}tiktokwm query${ke}😅
-┃${mot} ${ke}${prefix}tiktoknowm${ke}😅
-┃${mot} ${ke}${prefix}igdl <url>${ke}😅
-┃${mot} ${ke}${prefix}play ${ke}😅
-┃${mot} ${ke}${prefix}ytmp3 ${ke}😅
-┃${mot} ${ke}${prefix}ytmp4 [HD]${ke}😅
-┃${mot} ${ke}${prefix}mediafire${ke}😅
-┃${mot} ${ke}${prefix}twitterhd${ke}??
-┃${mot} ${ke}${prefix}twittersd <Khusus Video>${ke}😅
-┗━━━━━━━`
-katalog(menu)
-break
-case 'makermenu':
-menu = `
-➤ *MakerMenu*➤
-┃${mot} ${ke}${prefix}sticker <reply gambar>${ke}🤗
-┃${mot} ${ke}${prefix}smeme${ke}🤗
-┃${mot} ${ke}${prefix}trigger${ke}🤗
-┃${mot} ${ke}${prefix}semoji${ke}🤗
-┃${mot} ${ke}${prefix}takestick${ke} 🤗
-┃${mot} ${ke}${prefix}attp <masukan teks>${ke}??
-┃${mot} ${ke}${prefix}toimg <Agak Lelet>${ke}🤗
-┃${mot} ${ke}${prefix}tomp4 <reply sticker>${ke}🤗
-┃${mot} ${ke}${prefix}tomp3 <reply media>${ke}🤗
-┃${mot} ${ke}${prefix}tinyurl <masukan link>${ke}🤗
-┗━━━━━━━`
-katalog(menu)
-break
-case 'othermenu':
-menu = `
-➤ *Others*➤
-┃${mot} ${ke}${prefix}menu${ke}😃
-┃${mot} ${ke}${prefix}ssweb${ke}😃
-┃${mot} ${ke}${prefix}runtime${ke}😃
-┃${mot} ${ke}${prefix}owner${ke}😃
-┃${mot} ${ke}${prefix}get${ke}😀
-┃${mot} ${ke}${prefix}fdeface${ke}😀
-┃${mot} ${ke}${prefix}totag <reply media>${ke}😀
-┃${mot} ${ke}${prefix}jadibot${ke} *Premium*😀
-┃${mot} ${ke}${prefix}listbot${ke}😀
-┃${mot} ${ke}${prefix}ping${ke}😀
-┃${mot} ${ke}${prefix}lirik${ke}🤨
-┃${mot} ${ke}${prefix}ytsearch${ke}🤨
-┃${mot} ${ke}${prefix}pinterest${ke}🤨
-┃${mot} ${ke}${prefix}topdf${ke}🤨
-┃${mot} ${ke}${prefix}image${ke}🤨
-┃${mot} ${ke}${prefix}google (query) ${ke}🤨
-┃${mot} ${ke}${prefix}wallpaper (query) ${ke}🤨
-┃${mot} ${ke}${prefix}meme${ke}😀
-┗━━━━━━━`
-katalog(menu)
-break
 case 'viewonce':
 res = await gura.prepareMessageFromContent(from,{
 "viewOnceMessage": {
@@ -940,45 +882,6 @@ case 'smeme2':
 										sendStickerFromUrl(from,`${teks}`)
 									})
 									break
-case 'allmenu':
-            let pap = gura.prepareMessageFromContent(from, {
-            
-listMessage: {
-            
-productListInfo: {
-            
-businessOwnerJid: "6281229859085@s.whatsapp.net", // nomor busines
-            
-headerImage: {
-            
-jpegThumbnail: fs.readFileSync('./media/gura.jpeg', { encoding: "base64" }), // image to produk
-            
-productId: "4992157607472925" // produk id
-            
-},
-            
-productSections: [{ products: 
-[{productId: "4992157607472925"}], 
-            
-title: 'Hanya Kang Recode & Copas Case' //this is the title 
-            
-}]
-},
-buttonText: `Hallo Om`,
-description: `*All Menu Gura Botz*`, //ini adalah list menu nya
-            
-footerText: `${fake}`, //this is footer text
-           
-listType: 2
-            
-}
-            
-}, 
-            
-{});
-            
-await gura.relayWAMessage(pap);
-break
 case 'tovideo':
 case 'tomp4':
 reply(mess.wait)
@@ -2256,7 +2159,7 @@ reply(stdout)
 })
 }
 if (isCmd) 
-          sendButMessage(from, `★彡[ᴍᴀᴀꜰ ᴋᴀᴋ, ꜰɪᴛᴜʀ ᴛᴇʀꜱᴇʙᴜᴛ ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴅᴀʟᴀᴍ ᴍᴇɴᴜ ʙᴏᴛ]彡★`, `🛒BotWhatsApp By ArulGanz\n\n\nButton Dibawah Untuk Membuka Menu`, [
+          sendButMessage(from, `★彡[ᴍᴀᴀꜰ ᴋᴀᴋ, ꜰɪᴛᴜʀ ᴛᴇʀꜱᴇʙᴜᴛ ᴛɪᴅᴀᴋ ᴀᴅᴀ]彡★`, `🛒BotWhatsApp By ArulGanz\n\n\nButton Dibawah Untuk Membuka Menu`, [
             {
               buttonId: `${prefix}menu`,
               buttonText: {
