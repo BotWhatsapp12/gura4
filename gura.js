@@ -703,7 +703,6 @@ switch(command) {
 case 'menu':
 case 'help':
 case 'allmenu':
-reply3('*Loading...*')
 uptime = process.uptime()            
 var p = '*'
 const tod =`
@@ -839,6 +838,7 @@ case 'welcome':
 case 'replycek':
 teg = `Tes Reply`
 reply3(teg)
+reoly(teg)
 break
 case 'smeme': 
 reply(mess.wait)
