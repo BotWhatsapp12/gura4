@@ -881,34 +881,19 @@ break
 					gura.deleteMessage(from, { id: dep.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
 case 'welcome':
-stod = `${sender}`
-stst = await gura.getStatus(`${sender.split('@')[0]}@c.us`)
-listMsg = {
-title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
- buttonText: 'Pilih Disini',
- footerText: 'GuraBotz',
- description: `\n*Welcome On Untuk Mengaktifkan*\n*Welcome Off Untuk Mematikan*`,
- sections: [
-                     {
-                      "title": `Mode Welcome`,                   
- rows: [
-                           {
-                              "title": "Welcome On",
-                               "description" :"Mengaktifkan fitur welcome",
-                              "rowId": `${prefix}wel enable`
-                           },
-                           {
-                              "title": "Welcome Off",
-                               "description" :"Mematikan fitur welcome",
-                              "rowId": `${prefix}wel disable`
-                           }
-                        ]
-                     }],
- listType: 1
+        capti2 = `*Mode Welcome*`
+        ya = fs.readFileSync('./media/welcom.jpg')
+        py =await gura.prepareMessage(from, ya, image)
+        gbutsan = [{buttonId: `${prefix}wel enable`, buttonText: {displayText: '🔖ON'}, type: 1},{buttonId: `${prefix}wel disable`, buttonText: {displayText: '🔖OFF'}, type: 1}]
+        gbuttonan = {
+        imageMessage: py.message.imageMessage,
+        contentText: capti2,
+        footerText: '```Silahkan Pilih Modenya Kak```',
+        buttons: gbutsan,
+        headerType: 4
 }
-
-gura.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted: dep})
-break
+        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
+        break                 
 case 'replycek':
 teg = `Tes Reply`
 reply3(teg)
@@ -1256,24 +1241,6 @@ setTimeout( () => {
 var nomor = dep.participant
 gura.groupSettingChange (from, GroupSettingChange.messageSend, false);
 }, timer)
-break
-case 'ppcouple':
-case 'ppcp': 
-			anu = await fetchJson(`https://ziyy.herokuapp.com/api/ppcouple?apikey=xZiyy`) 
-			cowo = await getBuffer(anu.result.cowo_image)
-		    gura.sendMessage(from, cowo, image, {caption: 'Ini Untuk *Cowoknya*'})
-       cewe = await getBuffer(anu.result.cewe_image)
-		gura.sendMessage(from, cewe, image,  {caption: 'Ini Untuk *Ceweknya*'})
-		button = [
-    {buttonId: `${prefix}ppcouple`, buttonText: {displayText: 'Next'}, type: 1}
-]
- buttons = {
-    contentText: '*Next PP COUPLE*',
-    footerText: `GuraBotz by ArulGanz`,
-    buttons: button,
-    headerType: 1
-}
-await gura.sendMessage(from, buttons, MessageType.buttonsMessage, {quoted: dep})
 break
 case 'tomp3':
 					gura.updatePresence(from, Presence.composing)
@@ -1745,6 +1712,21 @@ case 'lirik':
             let di = await getBuffer(ac)
             await gura.sendMessage(from,di,image,{quoted: ftrol})
             break
+ case 'twitter':
+        if(!q) return reply('linknya?')
+        capti2 = `*Twitter Downloader*`
+        ya = fs.readFileSync('./media/twit.jpg')
+        py =await gura.prepareMessage(from, ya, image)
+        gbutsan = [{buttonId: `${prefix}twitterhd ${q}`, buttonText: {displayText: '📥Video HD'}, type: 1},{buttonId: `${prefix}twittersd ${q}`, buttonText: {displayText: '📥Video SD'}, type: 1}]
+        gbuttonan = {
+        imageMessage: py.message.imageMessage,
+        contentText: capti2,
+        footerText: '```Silahkan Pilih Medianya Kak```',
+        buttons: gbutsan,
+        headerType: 4
+}
+        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
+        break   
 case 'ytmp4':
 case 'ytmp3':
 case 'youtube':
@@ -1850,47 +1832,15 @@ case 'bcs':
 						reply('Suksess broadcast')
 					}
 					break
-case 'bcvideo':
-case 'bcv':
-					if (!dep.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
-					anu = await gura.chats.all()
-					if (isMedia && !dep.message.videoMessage || isQuotedVideo) {
-						const encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
-						bc = await gura.downloadMediaMessage(encmedia)
-						for (let _ of anu) {
-							gura.sendMessage(_.jid, bc, video, {mimetype: 'video/mp4', duration: 359996400,quoted: ftoko,caption: `[ *Izin BroadCast Kak* ]\n\n${body.slice(9)}`})
-						}
-						reply('Suksess broadcast')
-					}
-					break
-	case 'bcaudio':
-	case 'bca':
-					if (!dep.key.fromMe && !isOwner && !isCreator) return reply(lang.onlyOwner())
-					anu = await gura.chats.all()
-					if (isMedia && !dep.message.audioMessage || isQuotedAudio) {
-						const encmedia = isQuotedAudio ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
-						bc = await gura.downloadMediaMessage(encmedia)
-						for (let _ of anu) {
-							gura.sendMessage(_.jid, bc, audio, {mimetype :  'audio/mp4' , duration : 359996400, ptt : true,quoted: ftoko,caption: `[ *Izin BroadCast Kak* ]\n\n${body.slice(9)}`})
-						}
-						reply('Suksess broadcast')
-					}
-					break
-case 'wallpaper': 
-if (args.length == 0) return reply(`Nama Yg Mau Dicari Mana Tod\nContoh: ${prefix + command}  Gawr Gura`)
-query = args.join(" ")
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/wallpaper?apikey=97abf14478036eda55d194e2&query=${query}`)
-ini_buffer = await getBuffer(get_result.result)
-await gura.sendMessage(from, ini_buffer, image, { quoted: ftrol })
-break
 case 'mediafire':
 if (!isPremium) return reply(`Kamu bukan user premium`)
 if (args.length < 1) return reply('Link Nya Mana?')
 if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error)
-reply(monospace(mess.wait))
+reply(mess.wait)
 teks = args.join(' ')
 rescun = await mediafiredl(teks)
-result = `❒「MediaFire Download」
+result = `
+❒「MediaFire Download」
 ├ Nama : ${rescun[0].nama}
 ├ Ukuran : ${rescun[0].size}
 └ Link : ${rescun[0].link}`
@@ -2034,7 +1984,7 @@ case 'play':
         const capti = `*📥 Mendownload ${yut.all[0].title}*`      
         ya = await getBuffer(thumb)
         py =await gura.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}ytmp3 ${yut.all[0].url}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}ytmp4 ${yut.all[0].url}`, buttonText: {displayText: '📥VIDEO'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}p3 ${yut.all[0].url}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}p4 ${yut.all[0].url}`, buttonText: {displayText: '📥VIDEO'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti,
@@ -2075,41 +2025,20 @@ case 'play':
         reply('```[ ! ] Error Saat Mengirim Video```')})
         sendMediaURL(from, `${res.dl_link}`,'Nih Kack')
         break
-        case 'kickall': // Anti Banned
-              if (!isGroupAdmins) return reply(mess.only.admin)
-              for (let i of groupMembers) {
-              await kickMember(from, [i.jid])
-}
-              break
 case 'antilink':
-stod = `${sender}`
-stst = await gura.getStatus(`${sender.split('@')[0]}@c.us`)
-listMsg = {
-title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
- buttonText: 'Pilih Disini',
- footerText: 'GuraBotz',
- description: `\n*PilIh On / Off*\n*Pencet Dibawah*`,
- sections: [
-                     {
-                      "title": `Mode Antilink GuraBotz`,
- rows: [
-                           {
-                              "title": "Antilink On",
-                               "description" :"Mengaktifkan Antilink",
-                              "rowId": `${prefix}an1 enable`
-                           },
-                           {
-                              "title": "Antilink Off",
-                               "description" :"Mematikan Antilink",
-                              "rowId": `${prefix}an1 disable`
-                           }
-                        ]
-                     }],
- listType: 1
+        capti2 = `*Mode Antilink*`
+        ya = fs.readFileSync('./media/antilink.jpg')
+        py =await gura.prepareMessage(from, ya, image)
+        gbutsan = [{buttonId: `${prefix}an1 enable`, buttonText: {displayText: '🔖ON'}, type: 1},{buttonId: `${prefix}an1 disable`, buttonText: {displayText: '🔖OFF'}, type: 1}]
+        gbuttonan = {
+        imageMessage: py.message.imageMessage,
+        contentText: capti2,
+        footerText: '```Silahkan Pilih Modenya Kak```',
+        buttons: gbutsan,
+        headerType: 4
 }
-
-gura.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted: dep})
-break                                
+        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
+        break                                 
 case 'an1':
                 if (!isGroup) return reply(mess.only.group)
               if (!isBotGroupAdmins) return reply(`Bot Harus jadi Admin`)
@@ -2325,17 +2254,6 @@ if (stdout) {
 reply(stdout)
 }
 })
-}
-
-if (isCmd) 
-          sendButMessage(from, `★彡[ᴍᴀᴀꜰ ᴋᴀᴋ, ꜰɪᴛᴜʀ ᴛᴇʀꜱᴇʙᴜᴛ ᴛɪᴅᴀᴋ ᴀᴅᴀ ᴅᴀʟᴀᴍ ᴍᴇɴᴜ ʙᴏᴛ]彡★`, `🛒BotWhatsApp By ArulGanz\n\n\nButton Dibawah Untuk Membuka Menu`, [
-            {
-              buttonId: `${prefix}menu`,
-              buttonText: {
-                displayText: `★彡[ᴍᴇɴᴜ]彡★`,
-              },
-              type: 1,
-            }]);
 }
 if (isGroup && budy != undefined) {
 	} else {
