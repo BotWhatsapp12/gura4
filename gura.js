@@ -57,7 +57,6 @@ const { mediafiredl } = require('./lib/mediafiredl')
 const dfrply = fs.readFileSync('./media/gura.jpeg')
 const premium = require('./lib/premium')
 const { webp2mp4File } = require('./lib/webp2mp4')
-const { webp2gifFile } = require("./lib/gif.js")
 
 //----- DATABASE -------
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
@@ -133,7 +132,7 @@ const isCmd = body.startsWith(prefix)
 mess = {
 wait: '*[⏳] Sedang Di Proses Kak*',
 search: 'Searching...',eror: 'Error',
-success: '*sama sama*',
+success: '✔️ Berhasil ✔️',
 error: {
 stick: 'Ulangi bang',
 tes: '*Testing Bot... *'
@@ -500,13 +499,6 @@ fs.unlinkSync(filess)
 });
 }
 
-const sendWebp = async(to, url) => {
-           var names = Date.now() / 10000;
-           var download = function (uri, filename, callback) {
-           request.head(uri, function (err, res, body) {
-           request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
-});
-};
 const sendStickerUrl = async(to, url) => {
 console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Downloading sticker...'))
 var names = getRandom('.webp')
@@ -808,19 +800,6 @@ tod2 =`
                   ]
         sendButLocation(from, tod, tod2, tamnel, but)
            break
-case 'tovideo':
-               if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
-               reply(mess.wait)
-               encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
-               mediaaa = await gura.downloadAndSaveMediaMessage(encmediaaa)
-               a = await webp2gifFile(mediaaa)
-               mp4 = await getBuffer(a.result)
-               gura.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: dep, caption: mess.success})
-               fs.unlinkSync(mediaaa)
-               } else {
-               reply(mess.wrongFormat)
-}
-               break
 //*Menu Pake Api
 case 'telestick':
 case 'telesticker': 
@@ -846,16 +825,6 @@ break
               if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
               buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
               gura.sendMessage(from, buffer, sticker, { quoted: dep })
-              break
-       case 'ttg':
-              if (!q) return await reply(mess.wrongFormat)
-              reply(mess.wait)
-              sendWebp(from, `https://api.vhtear.com/textxgif?text=${q}&apikey=FauzanBotz`)
-             .then(() => console.log('Success creating GIF!'))
-             .catch(async (err) => {
-              console.error(err)
-              reply('Error!')
-})
               break
                 case 'd':
 				case 'del':
@@ -923,6 +892,21 @@ case 'smeme2':
 										sendStickerFromUrl(from,`${teks}`)
 									})
 									break
+case 'tovideo':
+case 'tomp4':
+reply(mess.wait)
+if (!isQuotedSticker) return reply('Reply stiker nya')
+if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
+            ger = isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
+            owgi = await gura.downloadAndSaveMediaMessage(ger)
+            webp2mp4File(owgi).then(res=>{
+            gura.sendMessage(from, res.result, video, { mimetype: Mimetype.mp4, filename: 'tovideo.mp4',caption: 'SUKSES CONVERT STICKER TO VIDEO', quoted: dep})
+            })
+            }else {
+            reply('reply stiker')
+            }
+            fs.unlinkSync(owgi)
+break
 case 'trigger':
 					var imgbb = require('imgbb-uploader')
 					if ((isMedia && !dep.message.videoMessage || isQuotedImage) && args.length == 0) {
