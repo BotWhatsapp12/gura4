@@ -802,13 +802,13 @@ tod2 =`
         sendButLocation(from, tod, tod2, tamnel, but)
            break
            case 'tovideo':
-               if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
+               if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
                reply(mess.wait)
                encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
                mediaaa = await gura.downloadAndSaveMediaMessage(encmediaaa)
                a = await webp2gifFile(mediaaa)
                mp4 = await getBuffer(a.result)
-               gura.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: gura, caption: mess.success})
+               gura.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: dep, caption: mess.success})
                fs.unlinkSync(mediaaa)
                } else {
                reply(mess.wrongFormat)
