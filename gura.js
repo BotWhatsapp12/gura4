@@ -2216,6 +2216,11 @@ reply(e)
 }
 }
 
+if (isCmd){
+	iiir = fs.readFileSync('./database/gada.mp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+
 if (budy.startsWith('$')){
 if (!itsMe && !isOwner) return
 qur = budy.slice(2)
@@ -2227,12 +2232,7 @@ reply(stdout)
 })
 }
 
-if (isCmd)
-{
-const loooo = fs.readFileSync('./database/gada.mp3')
-                gura.sendMessage(from, loooo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
 }
-
 if (isGroup && budy != undefined) {
 	} else {
 	console.log(color('[TEXT]', 'red'), 'FINXBASE', color(sender.split('@')[0]))
