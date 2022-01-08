@@ -57,6 +57,7 @@ const { mediafiredl } = require('./lib/mediafiredl')
 const dfrply = fs.readFileSync('./media/gura.jpeg')
 const premium = require('./lib/premium')
 const { webp2mp4File } = require('./lib/webp2mp4')
+const { webp2gifFile } = require("./lib/gif.js")
 
 //----- DATABASE -------
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
@@ -800,6 +801,19 @@ tod2 =`
                   ]
         sendButLocation(from, tod, tod2, tamnel, but)
            break
+           case 'tovideo':
+               if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
+               reply(mess.wait)
+               encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
+               mediaaa = await gura.downloadAndSaveMediaMessage(encmediaaa)
+               a = await webp2gifFile(mediaaa)
+               mp4 = await getBuffer(a.result)
+               gura.sendMessage(from, mp4, video, {mimetype: 'video/mp4', quoted: gura, caption: mess.success})
+               fs.unlinkSync(mediaaa)
+               } else {
+               reply(mess.wrongFormat)
+}
+               break
 //*Menu Pake Api
 case 'telestick':
 case 'telesticker': 
