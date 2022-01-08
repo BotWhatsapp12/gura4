@@ -35,6 +35,7 @@ const qrcodes = require('qrcode');
 const googleIt = require('google-it')
 const os = require('os');
 const hx = require('hxz-api')
+const xfar = require('xfarr-api');
 const googleImage = require('g-i-s')
 const ggs = require('google-it')
 const imgbb = require('imgbb-uploader');
@@ -801,6 +802,23 @@ tod2 =`
                   ]
         sendButLocation(from, tod, tod2, tamnel, but)
            break
+           case 'facebook': case 'fb': case 'fbdl': case 'facebookdl':
+                if (!q) return reply('Linknya? ')
+                if (!q.includes('facebook.com') && !q.includes('fb.watch')) return reply('Harus Link FB ngab')
+                reply(mess.wait)
+                xfar.Facebook(args[1]).then(async data => {
+                    let txt = `*----「 FACEBOOK DOWNLOADER 」----*\n\n`
+                    txt += `*📫 Title :* ${data.title}\n`
+                    txt += `*🎞️ Type :* ${data.medias[0].extension}\n`
+                    txt += `*📟 Quality :* ${data.medias[0].quality}\n`
+                    txt += `*💾 Size :* ${data.medias[0].formattedSize}\n`
+                    txt += `*📚 Url :* ${data.url}`
+                    sendFileFromUrl(from,data.medias[0].url,txt)
+                })
+                .catch((err) => {
+                    reply(lang.err())
+                })
+            break
            case 'tovideo':
                if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
                reply(mess.wait)
