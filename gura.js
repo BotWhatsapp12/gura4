@@ -672,11 +672,51 @@ gura.updatePresence(from, Presence.composing)
 
 //--------- COMMAND ----------
 if(budy.includes('Bot')){
-const iiiir = fs.readFileSync('./database/gurabot')
+const iiiir = fs.readFileSync('./database/botmp3')
                 gura.sendMessage(from, iiiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
 }
 if(budy.includes('bot')){
-	const iiir = fs.readFileSync('./database/botmp3')
+	iiir = fs.readFileSync('./database/botmp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+if(budy.includes('anjir')){
+	iiir = fs.readFileSync('./database/toxic1.mp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+if(budy.includes('kontol')){
+	iiir = fs.readFileSync('./database/toxic1.mp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+if(budy.includes('memek')){
+	iiir = fs.readFileSync('./database/toxic1.mp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+if(budy.includes('kntl')){
+	iiir = fs.readFileSync('./database/toxic1.mp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+if(budy.includes('anj')){
+	iiir = fs.readFileSync('./database/toxic1.mp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+if(budy.includes('asu')){
+	iiir = fs.readFileSync('./database/toxic1.mp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+if(budy.includes('ngntd')){
+	iiir = fs.readFileSync('./database/toxic1.mp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+if(budy.includes('ngentod')){
+	iiir = fs.readFileSync('./database/toxic1.mp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+if(budy.includes('bego')){
+	iiir = fs.readFileSync('./database/toxic1.mp3')
+                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
+}
+if(budy.includes('gblk')){
+	iiir = fs.readFileSync('./database/toxic1.mp3')
                 gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
 }
 if(budy.includes('Assalamualaikum')){
@@ -685,10 +725,6 @@ reply(cpref)
 }
 if(budy.includes('assalamualaikum')){
 cpref = `*Waalaikumsalam Wr Wb*`
-reply(cpref)
-}
-if(budy.includes('tolol')){
-cpref = `*Iya Kak Saya Emang Tolol 😔*`
 reply(cpref)
 }
 if (isCmd && isFiltered(from) && !isGroup) {
@@ -798,9 +834,11 @@ tod2 =`
 ┗━━━━━━━ *@GuraBotz*
 `
           but = [
-          { buttonId: `${prefix}owner`, buttonText: { displayText: 'OWNER' }, type: 1 }, { buttonId: `${prefix}patnerbot`, buttonText: { displayText: 'PATNER BOT' }, type: 1 }
+          { buttonId: `${prefix}owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `${prefix}patnerbot`, buttonText: { displayText: 'PatnerBot' }, type: 1 }
                   ]
-        sendButLocation(from, tod, tod2, tamnel, but)
+        sendButLocation(from, tod, tod2, tamnel, but)     
+const loo = fs.readFileSync('./database/spam.mp3')
+                gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
            case 'facebook': case 'fb': case 'fbdl': case 'facebookdl':
                 if (!q) return reply('Linknya? ')
@@ -2188,15 +2226,11 @@ reply(stdout)
 }
 })
 }
-if (isCmd) 
-          sendButMessage(from, `★彡[ᴍᴀᴀꜰ ᴋᴀᴋ, ꜰɪᴛᴜʀ ᴛᴇʀꜱᴇʙᴜᴛ ᴛɪᴅᴀᴋ ᴀᴅᴀ]彡★`, `🛒BotWhatsApp By ArulGanz\n\n\nButton Dibawah Untuk Membuka Menu`, [
-            {
-              buttonId: `${prefix}menu`,
-              buttonText: {
-                displayText: `★彡[ᴍᴇɴᴜ]彡★`,
-              },
-              type: 1,
-            }]);
+
+if (isCmd)
+{
+const loooo = fs.readFileSync('./database/gada.mp3')
+                gura.sendMessage(from, loooo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
 }
 
 if (isGroup && budy != undefined) {
