@@ -148,7 +148,7 @@ admin: 'Fitur dapat Digunakan oleh Admin Group!',
 Badmin: 'Fitur dapat Digunakan Setelah Bot menjadi ADMIN!'
 }
 }
-
+ownerNumbers = ["6281229859085@s.whatsapp.net","6281578859076@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net"]
 const totalchat = await gura.chats.all()
 const botNumber = gura.user.jid
 const ownerNumber = setting.ownerNumber
@@ -1616,18 +1616,20 @@ await gura.sendMessage(from, buttons, MessageType.buttonsMessage, {quoted: fakev
 }
 break      
 case 'owner':
-let inilist = []
-for (let i of ownerNomor) {
-const vname = gura.contacts[i] != undefined ? gura.contacts[i].vname || gura.contacts[i].notify : undefined
-inilist.push({
-"displayName": `ArulGanz`,
-"vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;ArulGanz;;;\nFN:${vname ? `${vname}` : `${gura.user.name}`}\nitem1.TEL;type=CELL;type=VOICE;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Businnes\nEND:VCARD`
+     case 'developer':
+     case 'creator':
+     let ini_list = []
+     for (let i of ownerNumbers) {
+     const vname = gura.contacts[i] != undefined ? gura.contacts[i].vname || gura.contacts[i].notify : undefined
+     ini_list.push({
+     "displayName": 'Ownernya',
+     "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${vname ? `${vname}` : `ArulGanz`}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Telepon\nEND:VCARD`
 })
 }
-hehe = await gura.sendMessage(from, {
-"displayName": `${inilist.length} kontak`,
-"contacts": inilist 
-}, 'contactsArrayMessage', { quoted: ftrol })
+     hehe = await gura.sendMessage(from, {
+     "displayName": `${ini_list.length} kontak`,
+     "contacts": ini_list 
+     }, 'contactsArrayMessage', { quoted: ftrol })
 button = [
   {buttonId: `${prefix}patnerbot`, buttonText: {displayText: '★彡[ᴘᴀᴛɴᴇʀ ʙᴏᴛ]彡★'}, type: 1}
 ]
