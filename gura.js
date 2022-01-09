@@ -628,7 +628,7 @@ resolve(res.url)
 }).catch(reject)
 })
 }
-  
+ 
 const telestick = async (to, url, wm = namabot, wm2 = '') => {
 			exif.create(wm, wm2)
 let packName = url.replace("https://t.me/addstickers/", "");
@@ -636,7 +636,7 @@ let packName = url.replace("https://t.me/addstickers/", "");
 let gas = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getStickerSet?name=${encodeURIComponent(packName)}`, { method: "GET", headers: { "User-Agent": "GoogleBot" } } );
  
 let json = await gas.json();
-let po = fs.readdirSync('./stiker')
+let po = fs.readdirSync('./src/sticker')
 let pa = po.length
 let pe = pa++
  
@@ -649,12 +649,12 @@ let gasIn = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2
 let jisin = await gasIn.json();
 console.log(jisin)
  buffer = await getBaper("https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + jisin.result.file_path)
- fs.writeFileSync(`./stiker/${pe}.png`, buffer)
- exec(`webpmux -set exif ./stiker/data.exif ./stiker/${pe}.png -o ./stiker/${pe}.png`, async (error) => {
-gura.sendMessage(to, fs.readFileSync(`./stiker/${pe}.png`), sticker).then(() => fs.unlinkSync(`./stiker/${pe}.png`))
+ fs.writeFileSync(`./src/sticker/${pe}.webp`, buffer)
+ exec(`webpmux -set exif ./src/sticker/data.exif ./src/sticker/${pe}.webp -o ./src/sticker/${pe}.webp`, async (error) => {
+benny.sendMessage(to, fs.readFileSync(`./src/sticker/${pe}.webp`), sticker).then(() => fs.unlinkSync(`./src/sticker/${pe}.webp`))
  })
 }
-}              
+}
 //presence
 gura.updatePresence(from, Presence.recording)
 
@@ -840,6 +840,10 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
+           case 'telestick':   await telestick(from, args[0])
+                     break
+					  case 'telestickwm':   await telestick(from, arg.split('|')[0], arg.split('|')[1], arg.split('|')[2])
+                     break
            case 'swm2': case 'take2': case 'takesticker2': case 'takestick2':{
 									reply(mess.wait) 
 									let packname1 = q.split('|')[0] ? q.split('|')[0] : q
@@ -946,19 +950,6 @@ const loo = fs.readFileSync('./database/spam.mp3')
 }
                break
 //*Menu Pake Api
-case 'telestick':
-case 'telesticker': 
-       case 'telestiker':
-              if (!q) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
-              reply(mess.wait)
-              ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=511fc49c7ad4edcecf8653cf&url=${args[0]}`)
-              ini_sticker = ini_url.result.sticker
-              reply('Sending '+ ini_sticker.length +' stickers...')
-              for (sticker_ in ini_sticker) {
-              ini_buffer = await getBuffer(ini_sticker[sticker_])
-              gura.sendMessage(from, ini_buffer, sticker, {})
-}
-              break
 case 'ttp':
 if (args.length < 1) return reply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
 woy = args.join(" ")
