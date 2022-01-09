@@ -840,6 +840,81 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
+           case 'swm2': case 'take2': case 'takesticker2': case 'takestick2':{
+									reply(mess.wait) 
+									let packname1 = q.split('|')[0] ? q.split('|')[0] : q
+									let author1 = q.split('|')[1] ? q.split('|')[1] : ''
+									if (isQuotedImage) {
+										let encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
+										let media = await gura.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
+										exif.create(packname1, author1, `stickwm_${sender}`)
+										await ffmpeg(`${media}`)
+										.input(media)
+										.on('start', function (cmd) {
+											console.log(color(`STARTED : ${cmd}`,'yellow'))
+											})
+											.on('error', function (err) {
+												console.log(color(`ERROR : ${err}`,'red'))
+												fs.unlinkSync(media)
+												reply(mess.error)
+												})
+												.on('end', function () {
+													console.log(color(`FINISH`,'magenta'))
+													exec(`webpmux -set exif ./sticker/stickwm_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
+														if (error) return reply(mess.error)
+														gura.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: dep})
+														fs.unlinkSync(media)
+														fs.unlinkSync(`./sticker/${sender}.webp`)
+														fs.unlinkSync(`./sticker/stickwm_${sender}.exif`)
+														})
+														})
+														.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+														.toFormat('webp')
+														.save(`./sticker/${sender}.webp`)
+														} else if (( isQuotedVideo && dep.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.fileLength < 10000000)) {
+															let encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
+															let media = await gura.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
+															exif.create(packname1, author1, `stickwm_${sender}`)
+															reply(mess.wait)
+															await ffmpeg(`${media}`)
+															.inputFormat(media.split('.')[4])
+															.on('start', function (cmd) {
+																console.log(color(`STARTED : ${cmd}`,'yellow'))
+																})
+																.on('error', function (err) {
+																	console.log(color(`ERROR : ${err}`,'red'))
+																	fs.unlinkSync(media)
+																	let tipe = media.endsWith('.mp4') ? 'video' : 'gif'
+																	reply(mess.error)
+																	})
+																	.on('end', function () {
+																		console.log((`FINISH`,'magenta'))
+																		exec(`webpmux -set exif ./sticker/stickwm_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
+																			if (error) return reply(mess.error)
+																			gura.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: dep})
+																			fs.unlinkSync(media)
+																			fs.unlinkSync(`./sticker/${sender}.webp`)
+																			fs.unlinkSync(`./sticker/stickwm_${sender}.exif`)
+																			})
+																			})
+																			.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+																			.toFormat('webp')
+																			.save(`./sticker/${sender}.webp`)
+																			} else if (isQuotedSticker) {
+																				let encmedia = JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+																				let media = await gura.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
+																				exif.create(packname1, author1, `takestick_${sender}`)
+																				exec(`webpmux -set exif ./sticker/takestick_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
+																				if (error) return reply(mess.error)
+																				gura.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: dep})
+																				fs.unlinkSync(media)
+																				fs.unlinkSync(`./sticker/takestick_${sender}.exif`)
+																				})
+																				} else {
+																					reply(`Kirim gambar/video dengan caption ${prefix}stickerwm nama|author atau tag gambar/video yang sudah dikirim\nNote : Durasi video maximal 10 detik`)
+																				 }
+																			}
+																	 break
            case 'facebook': case 'fb': case 'fbdl': case 'facebookdl':
                 if (!q) return reply('Linknya? ')
                 if (!q.includes('facebook.com') && !q.includes('fb.watch')) return reply('Harus Link FB ngab')
