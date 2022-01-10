@@ -165,6 +165,8 @@ const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
 const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
 const isGroupAdmins = groupAdmins.includes(sender) || false
 const isAntilink = isGroup ? anlink.includes(from) : false
+const isAntilinkyt = isGroup ? anlink.includes(from) : false
+const isAntilinkmediafire = isGroup ? anlink.includes(from) : false
 const isWelkom = isGroup ? welkom.includes(from) : false
 const itsMe = dep.key.fromMe ? true : false
 const isOwner = ownerNumber.includes(sender)
@@ -318,7 +320,31 @@ setTimeout(() => {
 gura.groupRemove(from, [sender])
 }, 2000);
 }
-}         
+}        
+
+if (isGroup && !dep.key.fromMe && isAntilinkyt) {
+if (budy.includes("youtube.com")) {
+if (isGroupAdmins) return reply('Kalau Admin Gak Bakal Gw kick Kok')
+console.log(color('[KICK]', 'red'), color('Received a link!', 'yellow'))
+reply(`「 *LINK YOUTUBE TERDETEKSI* 」\n\n_*Kamu akan di kick dari Group!!*_`)
+setTimeout(() => {
+gura.groupRemove(from, [sender])
+}, 2000);
+}
+}      
+
+if (isGroup && !dep.key.fromMe && isAntilinkmediafire) {
+if (budy.includes("mediafire.com")) {
+if (isGroupAdmins) return reply('Kalau Admin Gak Bakal Gw kick Kok')
+console.log(color('[KICK]', 'red'), color('Received a link!', 'yellow'))
+reply(`「 *LINK MEDIAFIRE TERDETEKSI* 」\n\n_*Kamu akan di kick dari Group!!*_`)
+setTimeout(() => {
+gura.groupRemove(from, [sender])
+}, 2000);
+}
+}        
+
+
                 
 colors = ['red','white','black','blue','yellow','green']
 const isVideo = (type === 'videoMessage')
@@ -636,7 +662,7 @@ let packName = url.replace("https://t.me/addstickers/", "");
 let gas = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/getStickerSet?name=${encodeURIComponent(packName)}`, { method: "GET", headers: { "User-Agent": "GoogleBot" } } );
  
 let json = await gas.json();
-let po = fs.readdirSync('./src/sticker')
+let po = fs.readdirSync('./stiker')
 let pa = po.length
 let pe = pa++
  
@@ -649,12 +675,12 @@ let gasIn = await fetch(`https://api.telegram.org/bot891038791:AAHWB1dQd-vi0IbH2
 let jisin = await gasIn.json();
 console.log(jisin)
  buffer = await getBaper("https://api.telegram.org/file/bot891038791:AAHWB1dQd-vi0IbH2NjKYUk-hqQ8rQuzPD4/" + jisin.result.file_path)
- fs.writeFileSync(`./src/sticker/${pe}.webp`, buffer)
- exec(`webpmux -set exif ./src/sticker/data.exif ./src/sticker/${pe}.webp -o ./src/sticker/${pe}.webp`, async (error) => {
-benny.sendMessage(to, fs.readFileSync(`./src/sticker/${pe}.webp`), sticker).then(() => fs.unlinkSync(`./src/sticker/${pe}.webp`))
+ fs.writeFileSync(`./stiker/${pe}.png`, buffer)
+ exec(`webpmux -set exif ./stiker/data.exif ./stiker/${pe}.png -o ./stiker/${pe}.png`, async (error) => {
+gura.sendMessage(to, fs.readFileSync(`./stiker/${pe}.png`), sticker).then(() => fs.unlinkSync(`./stiker/${pe}.png`))
  })
 }
-}
+}             
 //presence
 gura.updatePresence(from, Presence.recording)
 
@@ -2077,7 +2103,25 @@ case 'antilink':
         headerType: 4
 }
         await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
-        break                                 
+        break 
+case 'antilinkyt':
+                if (!isGroup) return reply(mess.only.group)
+              if (!isBotGroupAdmins) return reply(`Bot Harus jadi Admin`)
+              if (!q) return reply(`Pilih enable atau disable`)
+              if (args[0].toLowerCase() === 'enable'){
+              if (isAntilinkyt) return reply(`Udah aktif`)
+              anlink.push(from)
+              fs.writeFileSync('./database/antilink.json', JSON.stringify(anlink))
+              reply('*「 ANTILINK YT DI AKTIFKAN 」*\n\nYang Ngirim Link Group Bakal Ke Kick!')
+              } else if (args[0].toLowerCase() === 'disable'){
+              let anu = anlink.indexOf(from)
+              anlink.splice(anu, 1)
+              fs.writeFileSync('./database/antilink.json', JSON.stringify(anlink))
+              reply('*「 ANTILINK YT DI NONAKTIFKAN 」*')
+              } else {
+              reply(`Pilih enable atau disable`)
+}
+        break                                
 case 'an1':
                 if (!isGroup) return reply(mess.only.group)
               if (!isBotGroupAdmins) return reply(`Bot Harus jadi Admin`)
