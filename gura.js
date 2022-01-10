@@ -41,6 +41,7 @@ const ggs = require('google-it')
 const imgbb = require('imgbb-uploader');
 const { EmojiAPI } = require("emoji-api");
 const emoji = new EmojiAPI()
+const zee = require('api-alphabot')
 
 //------ FUNCTION -------
 const { color, bgcolor } = require('./lib/warna')
@@ -862,6 +863,22 @@ const loo = fs.readFileSync('./database/spam.mp3')
                 reply('Sukses Ganti Ke Mode Self')
             }
             break
+            case 'soundcloud':
+    	        if (!q) return reply('linknya?')
+                if (!q.includes('soundcloud.com')) return reply('harus link soundcloaud')
+                await reply(mess.wait)
+				zee.SoundCloud(`${text}`).then(async (data) => {
+                    let txt = `*----「 SOUNDCLOUD DOWNLOAD 」----*\n\n`
+                    txt += `*📟 Title :* ${data.title}\n`
+                    txt += `*🎞️ Duration :* ${data.duration}\n`
+					txt += `*🛠️ Quality :* ${data.medias[1].quality}\n`
+					txt += `*🚧 Ext :* ${data.medias[0].extension}\n`
+                    txt += `*💾 Size :* ${data.medias[0].formattedSize}\n`
+                    txt += `*📚 Url Source :* ${data.url}\n\n`
+                    txt += `*Mohon tunggu sebentar kak, sedang proses pengiriman...*`
+                    sendFileFromUrl(from, data.thumbnail, txt)
+                    gura.sendMessage(from, {audio : {url : data.medias[0].url}, mimetype: 'audio/mp4'}, {quoted: dep})})
+                    break
            case 'swm2': case 'take2': case 'takesticker2': case 'takestick2':{
 									reply(mess.wait) 
 									let packname1 = q.split('|')[0] ? q.split('|')[0] : q
