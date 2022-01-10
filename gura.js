@@ -297,7 +297,7 @@ const mentions = (teks, memberr, id) => {
 
 ///Sticker Reply
 		const sticWait = (hehe) => {
-			ano = fs.readFileSync('./media/wait.webp')
+			ano = fs.readFileSync('./media/wait.jpg')
 			gura.sendMessage(hehe, ano, sticker, { quoted: dep})
 		}
 const runtime = function(seconds) {
