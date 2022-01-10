@@ -1023,6 +1023,76 @@ sendStickerUrl(from, `${anu1}`)
 reply('Gunakan foto/stiker!')
 }
 break
+case 'xnxx2':
+                    if (args.length == 0) return reply(`Contoh: ${prefix + command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`)
+                    query = args.join(" ")
+                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/xnxx?apikey=genbotkey&url=${query}`)
+                    get_result = get_result.result
+                    ini_txt = `Title : ${get_result.title}\n`
+                    ini_txt += `Duration : ${get_result.duration}\n`
+                    ini_txt += `View : ${get_result.view}\n`
+                    ini_txt += `Rating : ${get_result.rating}\n`
+                    ini_txt += `Like : ${get_result.like}\n`
+                    ini_txt += `Dislike : ${get_result.dislike}\n`
+                    ini_txt += `Comment : ${get_result.comment}\n`
+                    ini_txt += `Tag : ${get_result.tag.join(", ")}\n`
+                    ini_txt += `Description : ${get_result.description}\n`
+                    ini_txt += "Link : \n"
+                    ini_link = get_result.link
+                    for (var x of ini_link) {
+                        ini_txt += `${x.type} - ${x.link}\n\n`
+                    }
+                    thumbnail = await getBuffer(get_result.thumbnail)
+                    gura.sendMessage(from, thumbnail, image, { quoted: dep, caption: ini_txt })
+                    break
+case 'xnxxsearch':
+if (!isGroup)return reply(mess.only.group)
+if (!q) return reply(`Example: ${prefix + command} Japanese`)
+get_result = await fetchJson(`https://api.lolhuman.xyz/api/xnxxsearch?apikey=genbotkey&query=${q}`)
+reply(mess.wait)
+get_result = get_result.result
+ini_txt = ""
+for (var x of get_result) {
+ini_txt += `Title : ${x.title}\n`
+ini_txt += `Views : ${x.views}\n`
+ini_txt += `Duration : ${x.duration}\n`
+ini_txt += `Uploader : ${x.uploader}\n`
+ini_txt += `Link : ${x.link}\n`
+ini_txt += `Thumbnail : ${x.thumbnail}\n\n`
+}
+reply(ini_txt)
+break
+
+case 'xnxx': case 'xnxxstalk':
+if (!isGroup)return reply(mess.only.group)
+if (!q) return reply(`Example: ${prefix + command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`)
+get_result = await fetchJson(`https://api.lolhuman.xyz/api/xnxx?apikey=genbotkey&url=${q}`)
+reply(mess.wait)
+get_result = get_result.result
+ini_txt = `Title : ${get_result.title}\n`
+ini_txt += `Duration : ${get_result.duration}\n`
+ini_txt += `View : ${get_result.view}\n`
+ini_txt += `Rating : ${get_result.rating}\n`
+ini_txt += `Like : ${get_result.like}\n`
+ini_txt += `Dislike : ${get_result.dislike}\n`
+ini_txt += `Comment : ${get_result.comment}\n`
+ini_txt += `Tag : ${get_result.tag.join(", ")}\n`
+ini_txt += `Description : ${get_result.description}\n`
+ini_txt += "Link : \n"
+ini_link = get_result.link
+                    for (var x of ini_link) {
+ini_txt += `${x.type} - ${x.link}\n\n`
+                    }
+thumbnail = await getBuffer(get_result.thumbnail)
+gura.sendMessage(from, thumbnail, image, { quoted: dep, caption: ini_txt })
+break
+
+case 'xnxxdownload': case 'xnxxdl':
+if (!isGroup)return reply(mess.only.group)
+if(!q)return reply(`Search link di Fitur xnxxstalk`)
+reply(mess.wait)
+sendMediaURL(from, `${q}`)
+break
 case 'smeme2':
 									if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* Gura`)
 									try {
