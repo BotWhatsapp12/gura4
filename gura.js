@@ -310,7 +310,6 @@ return dDisplay + hDisplay + mDisplay + sDisplay;
                 }
                 
 if (isGroup && !dep.key.fromMe && isAntilink) {
-if (isGroupAdmins) return reply('Kalau Admin Gak Bakal Gw kick Kok')
 if (budy.includes("://chat.whatsapp.com/")) {
 console.log(color('[KICK]', 'red'), color('Received a link!', 'yellow'))
 reply(`「 *LINK GRUP TERDETEKSI* 」\n\n_Link Group terdeteksi!!_\n_Kamu akan di kick dari Group!!_`)
