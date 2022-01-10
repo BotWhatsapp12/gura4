@@ -295,7 +295,11 @@ const mentions = (teks, memberr, id) => {
 	(id == null || id == undefined || id == false) ? gura.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : gura.sendMessage(from, teks.trim(), extendedText, {quoted: ftrol, contextInfo: {"mentionedJid": memberr}})
 }
 
-
+///Sticker Reply
+		const sticWait = (hehe) => {
+			ano = fs.readFileSync('./media/wait.webp')
+			gura.sendMessage(hehe, ano, sticker, { quoted: dep})
+		}
 const runtime = function(seconds) {
 seconds = Number(seconds);
 var d = Math.floor(seconds / (3600 * 24));
@@ -693,7 +697,7 @@ if(budy.includes('kontol')){
 	iiir = fs.readFileSync('./database/toxic1.mp3')
                 gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
 }
-if(budy.includes('memek')){
+if(budy.includes('Anj')){
 	iiir = fs.readFileSync('./database/toxic1.mp3')
                 gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
 }
@@ -858,12 +862,8 @@ const loo = fs.readFileSync('./database/spam.mp3')
                 reply('Sukses Ganti Ke Mode Self')
             }
             break
-           case 'telestick':   await telestick(from, args[0])
-                     break
-					  case 'telestickwm':   await telestick(from, arg.split('|')[0], arg.split('|')[1], arg.split('|')[2])
-                     break
            case 'swm2': case 'take2': case 'takesticker2': case 'takestick2':{
-									reply(mess.wait) 
+									sticWait(from) 
 									let packname1 = q.split('|')[0] ? q.split('|')[0] : q
 									let author1 = q.split('|')[1] ? q.split('|')[1] : ''
 									if (isQuotedImage) {
@@ -897,7 +897,7 @@ const loo = fs.readFileSync('./database/spam.mp3')
 															let encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
 															let media = await gura.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
 															exif.create(packname1, author1, `stickwm_${sender}`)
-															reply(mess.wait)
+															sticWait(from)
 															await ffmpeg(`${media}`)
 															.inputFormat(media.split('.')[4])
 															.on('start', function (cmd) {
@@ -940,7 +940,7 @@ const loo = fs.readFileSync('./database/spam.mp3')
            case 'facebook': case 'fb': case 'fbdl': case 'facebookdl':
                 if (!q) return reply('Linknya? ')
                 if (!q.includes('facebook.com') && !q.includes('fb.watch')) return reply('Harus Link FB ngab')
-                reply(mess.wait)
+                sticWait(from) 
                 xfar.Facebook(args[1]).then(async data => {
                     let txt = `*----「 FACEBOOK DOWNLOADER 」----*\n\n`
                     txt += `*📫 Title :* ${data.title}\n`
@@ -956,7 +956,7 @@ const loo = fs.readFileSync('./database/spam.mp3')
             break
            case 'tovideo':
                if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
-               reply(mess.wait)
+               sticWait(from) 
                encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
                mediaaa = await gura.downloadAndSaveMediaMessage(encmediaaa)
                a = await webp2gifFile(mediaaa)
@@ -971,11 +971,12 @@ const loo = fs.readFileSync('./database/spam.mp3')
 case 'ttp':
 if (args.length < 1) return reply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
 woy = args.join(" ")
-reply('wait....')
+sticWait(from) 
 anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
 sendStickerUrl(from, anjay)
 break
        case 'attp':
+       sticWait(from) 
               if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
               buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
               gura.sendMessage(from, buffer, sticker, { quoted: dep })
@@ -1002,10 +1003,10 @@ case 'welcome':
 case 'replycek':
 teg = `Tes Reply`
 reply3(teg)
-reoly(teg)
+reply(teg)
 break
 case 'smeme': 
-reply(mess.wait)
+sticWait(from) 
 top = arg.split('|')[0]
 bottom = arg.split('|')[1]
 var imgbb = require('imgbb-uploader')
@@ -1026,7 +1027,7 @@ case 'smeme2':
 									if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* Gura`)
 									try {
 										if (!isQuotedImage) return reply(`Reply Gambar!`)
-										reply(mess.wait)
+										sticWait(from) 
 										var teks2 = args.join(' ')
 										var enmedia = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
 										var media = await gura.downloadMediaMessage(enmedia)
@@ -1039,6 +1040,7 @@ case 'smeme2':
 										}
 									break
 						case 'emoji':case 'semoji':
+						sticWait(from) 
 									if (!q) return reply(`Example : ${prefix + command} 😂`)
 									hex2 = args.join(' ') 
 									emoji.get(`${hex2}`).then(emoji => {
@@ -1048,7 +1050,7 @@ case 'smeme2':
 									break
 case 'tovideo':
 case 'tomp4':
-reply(mess.wait)
+sticWait(from) 
 if (!isQuotedSticker) return reply('Reply stiker nya')
 if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
             ger = isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
@@ -1065,7 +1067,7 @@ case 'trigger':
 					var imgbb = require('imgbb-uploader')
 					if ((isMedia && !dep.message.videoMessage || isQuotedImage) && args.length == 0) {
 					ger = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep 
-					reply(mess.wait)
+				   sticWait(from) 
 					console.log(color(time, 'magenta'), color('Downloading sticker...'))
 					owgi = await  gura.downloadAndSaveMediaMessage(ger)
 					anu = await imgbb("91904762b2cd230ce1d861279bd6bf1d", owgi)
@@ -1128,7 +1130,7 @@ case 'topdf':
            const ida = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace("quotedM","m")).message.extendedTextMessage.contextInfo : dep
            const idk = await gura.downloadMediaMessage(ida, 'buffer') 
            const getpng = await uploadImages(idk, true)  
-           reply(mess.wait)
+           sticWait(from)
            pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=687424ba062dfbbc4c7a6d59&img=${getpng}`)
            gura.sendMessage(from, pdf, document, { mimetype: Mimetype.pdf, quoted:dep }).catch((err) => reply('error'))
            break
@@ -1136,7 +1138,7 @@ case 'image':
 case 'gimage':
 case 'googleimage':
 if (args.length < 1) return reply('Apa Yang Mau Dicari?')
-reply(mess.wait)
+sticWait(from)
 teks = args.join(' ')
 res = await googleImage(teks, google)
 function google(error, result){
@@ -1153,7 +1155,7 @@ case 'googlesearch':
 case 'ggs':
 if (args.length < 1) return reply('Yang mau di cari apaan?')
 teks = args.join(' ')
-reply(mess.wait)
+sticWait(from)
 res = await ggs({'query' : `${teks}`})
 kant = ``
 for (let i of res) {
@@ -1305,7 +1307,7 @@ break
 case 'tomp3':
 					gura.updatePresence(from, Presence.composing)
 					if (!isQuotedVideo) return reply('Reply Video Nya Kak')
-					reply(mess.wait)
+					sticWait(from)
 					encmediad = JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 					mediad = await gura.downloadAndSaveMediaMessage(encmediad)
 					ran = getRandom('.mp4')
@@ -1333,7 +1335,7 @@ reply(mess.error.api)
 break
 case 'toimg':
 			if (!isQuotedSticker) return reply('𝗥𝗲𝗽𝗹𝘆/𝘁𝗮𝗴 𝘀𝘁𝗶𝗰𝗸𝗲𝗿 !')
-			reply(mess.wait)
+			sticWait(from)
 			encmedia = JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 			media = await gura.downloadAndSaveMediaMessage(encmedia)
 			ran = getRandom('.png')
@@ -1358,7 +1360,7 @@ case 'clearall':{
 									break
 case 'yts': case 'youtubesearch': case 'ytsearch':{
 									if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* _query_`)
-									reply(mess.wait)
+									sticWait(from)
 									yts(q)
 									.then((res) => {
 										let yt = res.videos
@@ -1438,7 +1440,7 @@ case 'bc3':
 case 'igdl':
         if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply(mess.Iv)
         if (!q) return fakevo('Linknya?')
-        reply(mess.wait)
+        sticWait(from)
 	    hx.igdl(args[0])
 	    .then(async(result) => {
             for(let i of result.medias){
@@ -1807,7 +1809,7 @@ case 'p3':
 						let isLinks = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
 						if (!isLinks) return reply(mess.error.Iv)
 						try {
-							reply(mess.wait)
+							sticWait(from)
 							yta(args[0])
 							.then((res) => {
 								const { dl_link, thumb, title, filesizeF, filesize } = res
@@ -1826,7 +1828,7 @@ case 'p4':
 						let isLinks2 = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
 						if (!isLinks2) return reply(mess.error.Iv)
 						try {
-							reply(mess.wait)
+							sticWait(from)
 							ytv(args[0])
 							.then((res) => {
 								const { dl_link, thumb, title, filesizeF, filesize } = res
@@ -1843,7 +1845,7 @@ case 'p4':
 						case 'soundtt':
 		 		if (!isUrl(args[0]) && !args[0].includes('tiktok.com')) return reply(mess.error.api)
  		if (!q) return reply('Linknya?')
- 		reply(mess.wait)
+ 		sticWait(from)
 		hx.ttdownloader(`${args[0]}`)
     		.then(result => {
     		const { wm, nowm, audio } = result
@@ -1859,7 +1861,7 @@ case 'p4':
 						case 'wm':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
-reply(mess.wait)
+sticWait(from)
 res = await TiktokDownloader(`${q}`).catch(e => {
 reply(mess.error.api)
 })
@@ -1869,7 +1871,7 @@ break
 									case 'nowm':
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
-reply(mess.wait)
+sticWait(from)
 res = await TiktokDownloader(`${q}`).catch(e => {
 reply(mess.error.api)
 })
@@ -1893,7 +1895,7 @@ case 'mediafire':
 if (!isPremium) return reply(`Kamu bukan user premium`)
 if (args.length < 1) return reply('Link Nya Mana?')
 if(!isUrl(args[0]) && !args[0].includes('mediafire')) return reply(mess.error)
-reply(mess.wait)
+sticWait(from)
 teks = args.join(' ')
 rescun = await mediafiredl(teks)
 result = `
@@ -2033,7 +2035,7 @@ break
 									break
 case 'play':
         if (args.length < 1) return reply(`Kirim perintah *${prefix}play query`)
-        reply(mess.wait)
+        sticWait(from)
         let yut = await yts(q)
         yta(yut.videos[0].url)             
         .then(async(res) => {
