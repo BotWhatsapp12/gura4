@@ -670,7 +670,11 @@ gura.updatePresence(from, Presence.composing)
            gura.setStatus(`ArulBotz Aktif Selama ${kyun(runi)} `).catch((_)=>_);
 
            settingstatus = new Date() * 1;
-           
+//public&self       
+if (!gura.public) {
+            if (!dep.key.fromMe && !isOwner) return
+        }
+         
 
 //--------- COMMAND ----------
 if(budy.includes('Bot')){
@@ -842,6 +846,18 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
+           case 'public': {
+                if (!dep.key.fromMe && !isOwner) reply(mess.owner)
+                gura.public = true
+                reply('Sukses Ganti Ke Mode Public')
+            }
+            break
+            case 'self': {
+                if (!dep.key.fromMe && !isOwner) reply(mess.owner)
+                gura.public = false
+                reply('Sukses Ganti Ke Mode Self')
+            }
+            break
            case 'telestick':   await telestick(from, args[0])
                      break
 					  case 'telestickwm':   await telestick(from, arg.split('|')[0], arg.split('|')[1], arg.split('|')[2])
