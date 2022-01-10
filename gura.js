@@ -167,6 +167,7 @@ const isGroupAdmins = groupAdmins.includes(sender) || false
 const isAntilink = isGroup ? anlink.includes(from) : false
 const isAntilinkyt = isGroup ? anlink.includes(from) : false
 const isAntilinkmediafire = isGroup ? anlink.includes(from) : false
+const isAntilinkwame = isGroup ? anlink.includes(from) : false
 const isWelkom = isGroup ? welkom.includes(from) : false
 const itsMe = dep.key.fromMe ? true : false
 const isOwner = ownerNumber.includes(sender)
@@ -312,8 +313,8 @@ return dDisplay + hDisplay + mDisplay + sDisplay;
                 }
                 
 if (isGroup && !dep.key.fromMe && isAntilink) {
-if (budy.includes("://chat.whatsapp.com/")) {
 if (isGroupAdmins) return reply('Kalau Admin Gak Bakal Gw kick Kok')
+if (budy.includes("://chat.whatsapp.com/")) {
 console.log(color('[KICK]', 'red'), color('Received a link!', 'yellow'))
 reply(`「 *LINK GRUP TERDETEKSI* 」\n\n_Link Group terdeteksi!!_\n_Kamu akan di kick dari Group!!_`)
 setTimeout(() => {
@@ -323,8 +324,8 @@ gura.groupRemove(from, [sender])
 }        
 
 if (isGroup && !dep.key.fromMe && isAntilinkyt) {
-if (budy.includes("youtube.com")) {
 if (isGroupAdmins) return reply('Kalau Admin Gak Bakal Gw kick Kok')
+if (budy.includes("youtube.com")) {
 console.log(color('[KICK]', 'red'), color('Received a link!', 'yellow'))
 reply(`「 *LINK YOUTUBE TERDETEKSI* 」\n\n_*Kamu akan di kick dari Group!!*_`)
 setTimeout(() => {
@@ -338,6 +339,17 @@ if (budy.includes("mediafire.com")) {
 if (isGroupAdmins) return reply('Kalau Admin Gak Bakal Gw kick Kok')
 console.log(color('[KICK]', 'red'), color('Received a link!', 'yellow'))
 reply(`「 *LINK MEDIAFIRE TERDETEKSI* 」\n\n_*Kamu akan di kick dari Group!!*_`)
+setTimeout(() => {
+gura.groupRemove(from, [sender])
+}, 2000);
+}
+}        
+
+if (isGroup && !dep.key.fromMe && isAntilinkwame) {
+if (budy.includes("wa.me/")) {
+if (isGroupAdmins) return reply('Kalau Admin Gak Bakal Gw kick Kok')
+console.log(color('[KICK]', 'red'), color('Received a link!', 'yellow'))
+reply(`「 *LINK WA ME TERDETEKSI* 」\n\n_*Kamu akan di kick dari Group!!*_`)
 setTimeout(() => {
 gura.groupRemove(from, [sender])
 }, 2000);
@@ -2105,14 +2117,57 @@ case 'antilink':
         await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
         break 
 case 'antilinkyt':
+case 'antilinkyoutube':
+        capti2 = `*Mode Antilink Youtube*`
+        ya = fs.readFileSync('./media/antilink1.jpg')
+        py =await gura.prepareMessage(from, ya, image)
+        gbutsan = [{buttonId: `${prefix}anyt enable`, buttonText: {displayText: '🔖ON'}, type: 1},{buttonId: `${prefix}anyt disable`, buttonText: {displayText: '🔖OFF'}, type: 1}]
+        gbuttonan = {
+        imageMessage: py.message.imageMessage,
+        contentText: capti2,
+        footerText: '```Silahkan Pilih Modenya Kak```',
+        buttons: gbutsan,
+        headerType: 4
+}
+        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
+        break 
+case 'antilinkmediafire':
+        capti2 = `*Mode Antilink Mediafire*`
+        ya = fs.readFileSync('./media/antilink2.jpg')
+        py =await gura.prepareMessage(from, ya, image)
+        gbutsan = [{buttonId: `${prefix}anmediafire enable`, buttonText: {displayText: '🔖ON'}, type: 1},{buttonId: `${prefix}anmediafire disable`, buttonText: {displayText: '🔖OFF'}, type: 1}]
+        gbuttonan = {
+        imageMessage: py.message.imageMessage,
+        contentText: capti2,
+        footerText: '```Silahkan Pilih Modenya Kak```',
+        buttons: gbutsan,
+        headerType: 4
+}
+        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
+        break 
+case 'antiwame':
+        capti2 = `*Mode Anti Wame*`
+        ya = fs.readFileSync('./media/antilink3.jpg')
+        py =await gura.prepareMessage(from, ya, image)
+        gbutsan = [{buttonId: `${prefix}anwame enable`, buttonText: {displayText: '🔖ON'}, type: 1},{buttonId: `${prefix}anwame disable`, buttonText: {displayText: '🔖OFF'}, type: 1}]
+        gbuttonan = {
+        imageMessage: py.message.imageMessage,
+        contentText: capti2,
+        footerText: '```Silahkan Pilih Modenya Kak```',
+        buttons: gbutsan,
+        headerType: 4
+}
+        await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
+        break 
+case 'anyt':
                 if (!isGroup) return reply(mess.only.group)
               if (!isBotGroupAdmins) return reply(`Bot Harus jadi Admin`)
               if (!q) return reply(`Pilih enable atau disable`)
               if (args[0].toLowerCase() === 'enable'){
               if (isAntilinkyt) return reply(`Udah aktif`)
               anlink.push(from)
-              fs.writeFileSync('./database/antilink.json', JSON.stringify(anlink))
-              reply('*「 ANTILINK YT DI AKTIFKAN 」*\n\nYang Ngirim Link Group Bakal Ke Kick!')
+              fs.writeFileSync('./database/antilink1.json', JSON.stringify(anlink))
+              reply('*「 ANTILINK YT DI AKTIFKAN 」*\n\n*Yang Ngirim Link Youtube Bakal Ke Kick!*')
               } else if (args[0].toLowerCase() === 'disable'){
               let anu = anlink.indexOf(from)
               anlink.splice(anu, 1)
@@ -2121,7 +2176,43 @@ case 'antilinkyt':
               } else {
               reply(`Pilih enable atau disable`)
 }
-        break                                
+        break     
+case 'anwame':
+                if (!isGroup) return reply(mess.only.group)
+              if (!isBotGroupAdmins) return reply(`Bot Harus jadi Admin`)
+              if (!q) return reply(`Pilih enable atau disable`)
+              if (args[0].toLowerCase() === 'enable'){
+              if (isAntilinkwame) return reply(`Udah aktif`)
+              anlink.push(from)
+              fs.writeFileSync('./database/antilink2.json', JSON.stringify(anlink))
+              reply('*「 ANTIWAME DI AKTIFKAN 」*\n\n*Yang Ngirim Link Wame Bakal Ke Kick!*')
+              } else if (args[0].toLowerCase() === 'disable'){
+              let anu = anlink.indexOf(from)
+              anlink.splice(anu, 1)
+              fs.writeFileSync('./database/antilink.json', JSON.stringify(anlink))
+              reply('*「 ANTIWAME DI NONAKTIFKAN 」*')
+              } else {
+              reply(`Pilih enable atau disable`)
+}
+        break   
+case 'anmediafire':
+                if (!isGroup) return reply(mess.only.group)
+              if (!isBotGroupAdmins) return reply(`Bot Harus jadi Admin`)
+              if (!q) return reply(`Pilih enable atau disable`)
+              if (args[0].toLowerCase() === 'enable'){
+              if (isAntilinkmediafire) return reply(`Udah aktif`)
+              anlink.push(from)
+              fs.writeFileSync('./database/antilink3.json', JSON.stringify(anlink))
+              reply('*「 ANTI MEDIAFIRE DI AKTIFKAN 」*\n\n*Yang Ngirim Link Mediafire Bakal Ke Kick!*')
+              } else if (args[0].toLowerCase() === 'disable'){
+              let anu = anlink.indexOf(from)
+              anlink.splice(anu, 1)
+              fs.writeFileSync('./database/antilink.json', JSON.stringify(anlink))
+              reply('*「 ANTI MEDIAFIRE DI NONAKTIFKAN 」*')
+              } else {
+              reply(`Pilih enable atau disable`)
+}
+        break                                          
 case 'an1':
                 if (!isGroup) return reply(mess.only.group)
               if (!isBotGroupAdmins) return reply(`Bot Harus jadi Admin`)
