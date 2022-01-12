@@ -5,9 +5,8 @@ const fs = require("fs-extra")
 
 const { getBuffer } = require('../lib/functions')
 const { color, bgcolor } = require('../lib/warna')
-var p = '```'
-join = '${p}Hai Selamat Datang${p} @${num.split('@')[0]}\n${p}Nama :${p}\n${p}Askot :${p}\n${p}Umur :${p}\n${p}Status :${p}\n\n - [ Welcome Ngab] -'
-leave = '_*Byeee @${num.split('@')[0]}*_'
+join = '\`\`\`New Member\`\`\` \n \`\`\`Nama :\`\`\` \n \`\`\`Askot : \`\`\` \n \`\`\`Umur :\`\`\` \n \`\`\`Status :\`\`\` \n\n - [ Welcome👋 ] -'
+leave = '_*Sayonara....👋*_'
 
 teks = `${join}`
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
