@@ -544,6 +544,29 @@ console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:m
             })
             })
            }
+           
+const sendWebp = async(to, url) => {
+           var names = Date.now() / 10000;
+           var download = function (uri, filename, callback) {
+           request.head(uri, function (err, res, body) {
+           request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+});
+};
+           download(url, './sticker' + names + '.png', async function () {
+           console.log('selesai');
+           let filess = './sticker' + names + '.png'
+           let asw = './sticker' + names + '.webp'
+           exec(`ffmpeg -i ${filess} -vf "scale=512:512:force_original_aspect_ratio=increase,fps=40, crop=512:512" ${asw}`, (err) => {
+           fs.unlinkSync(filess)
+           if (err) return reply(`${err}`)
+           exec(`webpmux -set exif ./sticker/data.exif ${asw} -o ${asw}`, async (error) => {
+           if (error) return reply(`${error}`)
+           gura.sendMessage(from, fs.readFileSync(asw), sticker, {sendEphemeral:true, quoted:dep})
+           fs.unlinkSync(asw)
+});
+});
+});
+}
 const sendMediaURL = async(to, url, text="", mids=[]) =>{
 if(mids.length > 0){
 text = normalizeMention(to, text, mids)
@@ -779,6 +802,7 @@ tod2 =`
 ┃*き⃟🐣* *.jadibot* *Premium*😀
 ┃*き⃟🐣* *.listbot*😀
 ┃*き⃟🐣* *.ping*😀
+┃*き⃟🐣* *chat 62xnxx|(pesannya)*😀
 ┗━━━━━━━
 
 ➤ *Search*➤
@@ -798,6 +822,9 @@ tod2 =`
 ┃*き⃟🐣* *.tinyurl <masukan link>*🤗
 ┃*き⃟🐣* *.ttp <masukan teks>*🤗
 ┃*き⃟🐣* *.attp <masukan teks>*🤗
+┃*き⃟🐣* *.stickeranime*🤗
+┃*き⃟🐣* *.patrick*🤗
+┃*き⃟🐣* *.gura*🤗
 ┗━━━━━━━
 
 ➤ *Group*➤
@@ -823,6 +850,7 @@ tod2 =`
 ┃*き⃟🐣* *clearall*😄
 ┃*き⃟🐣* *self*😄
 ┃*き⃟🐣* *public*😄
+┃*き⃟🐣* *exif*😄
 ┗━━━━━━━
 
 ➤ *Download*➤
@@ -832,10 +860,12 @@ tod2 =`
 ┃*き⃟🐣* *.youtube <link>*😅
 ┃*き⃟🐣* *.mediafire <link>*😅
 ┃*き⃟🐣* *.twitter <link>*😅
+┃*き⃟🐣* *.soundcloud <link>*😅
 ┗━━━━━━━
 
 ➤ *Anime*➤
 ┃*き⃟🐣* *.loli*🤩
+┃*き⃟🐣* *.lolivideo*🤩
 ┃*き⃟🐣* *.husbu*🤩
 ┃*き⃟🐣* *.milf*🤩
 ┃*き⃟🐣* *.cosplay*🤩
@@ -893,6 +923,22 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
+           case 'scplay': 
+       case 'soundcloud':
+              if (!q) return reply('Link Yang Mana? ')
+              if (!q.includes('soundcloud')) return reply(mess.error.Iv)
+              reply(mess.wait)
+              anu = await fetchJson(`https://api.lolhuman.xyz/api/soundcloud?apikey=DhenxsKey&url=${q}`)
+             .then((data) => { sendMediaURL(from, data.result, dep) })
+             .catch((err) => { reply(String(err)) })
+              break
+            case 'exif':
+             if (!isOwner) return  reply(mess.only.owner)
+             if (!q) return reply(mess.wrongFormat)
+             if (!arg.split('|')) return reply(`Penggunaan ${prefix}exif nama|author`)
+             exif.create(arg.split('|')[0], arg.split('|')[1])
+             reply('sukses')
+             break
            case 'chat':
 			if (args[0].startsWith('08')) return reply('Awali nomor dengan 62')
             if (args[0].startsWith('+62')) return reply('Awali nomor dengan 62')
@@ -1008,10 +1054,10 @@ case 'removebg':
            if (!isQuotedImage) return reply('reply gambar nya') 
            const biasalah = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace("quotedM","m")).message.extendedTextMessage.contextInfo : dep
            const pebzgans1  = await gura.downloadMediaMessage(biasalah, 'buffer') 
-           const getbg = await uploadImages(pebzgans1, false) 
+           const getbg = await uploadImages(pebzgans1, true) 
            reply(mess.wait)
            pft = await getBuffer(`http://lolhuman.herokuapp.com/api/removebg?apikey=DhenxsKey&img=${getbg}`)
-           await gura.sendMessage(from, pft, image, {quoted:dep,caption:'Done'}).catch((err) => reply('error ):'))
+           await gura.sendMessage(from, pft, image, {quoted:dep,caption:'Done'}).catch((err) => reply('Kebanyakan Dosa Kali Lu Jadi Erorr deh'))
            break
 case 'ttp':
 if (args.length < 1) return reply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
@@ -1020,6 +1066,68 @@ reply(mess.wait)
 anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
 sendStickerUrl(from, anjay)
 break
+case 'patrick':
+              reply(mess.wait)
+              fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
+             .then(res => res.text())
+             .then(body => {
+              let tod = body.split("\n");
+              let pjr = tod[Math.floor(Math.random() * tod.length)];
+              sendWebp(from, pjr)
+}
+)
+              break
+       case 'gura':
+       case 'gawrgura':
+              reply(mess.wait)
+              fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
+             .then(res => res.text())
+             .then(body => {
+              let tod = body.split("\n");
+              let pjr = tod[Math.floor(Math.random() * tod.length)];
+              sendWebp(from, pjr)
+}
+)
+              break
+       case 'animestick':
+       case 'stickeranime':
+              reply(mess.wait)
+              fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
+             .then(res => res.text())
+             .then(body => {
+              let todd = body.split("\n");
+              let pjrr = todd[Math.floor(Math.random() * todd.length)];
+              sendWebp(from, pjrr)
+}
+)
+              break
+case 'loliv':
+       case 'lolivid':
+       case 'lolivideo':
+              reply(mess.wait)
+              anu = await fetchText('https://raw.githubusercontent.com/AlvioAdjiJanuar/random/main/loli.txt')
+             .then(async (body) => {
+              anu = body.split('\n')
+              anu = anu[Math.floor(Math.random() * anu.length)]
+              sendMediaURL(from, anu)
+})
+             .catch(async (err) => {
+              console.error(err)
+              reply(`${err}`)
+})
+              break
+case 'telesticker': 
+       case 'telestiker':
+              if (!q) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
+              reply(mess.wait)
+              ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=DhenxsKey&url=${args[0]}`)
+              ini_sticker = ini_url.result.sticker
+              reply('Sending '+ ini_sticker.length +' stickers...')
+              for (sticker_ in ini_sticker) {
+              ini_buffer = await getBuffer(ini_sticker[sticker_])
+              gura.sendMessage(from, ini_buffer, sticker, {})
+}
+              break
 case 'ttp2':  
                     if (!q) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp GuraBotz`)
                     anu1 = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${q}`)
@@ -1036,6 +1144,8 @@ case 'ttp2':
 				case 'delete':
 					gura.deleteMessage(from, { id: dep.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
+case 'tqqq':
+
 case 'welcome':
         capti2 = `*Mode Welcome*`
         ya = fs.readFileSync('./media/welcom.jpg')
@@ -1106,12 +1216,11 @@ case 'blackpink':
                 case 'summersand':
                 case 'horrorblood':
                 case 'thunder':
-                case 'glitch':
                 reply (mess.wait)
                     if (args.length == 0) return reply(`Example: ${prefix + command} LoL Human`)
                     ini_txt = args.join(" ")
                   buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=DhenxsKey&text=${ini_txt}`)
-                 buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `BACK MENU`},type:1}]
+                 buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `⬅️ Back To Menu`},type:1}, {buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
               buttonsMessage = {footerText:'Nih, Sama Sama', imageMessage: imageMsg,
               contentText:`${rply}`,buttons,headerType:4}
@@ -1127,7 +1236,7 @@ case 'blackpink':
               let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
               let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
               fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
-		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}nhentaibot`,buttonText:{displayText:'NHENTAI BOT'},type:1}]
+		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}menu`,buttonText:{displayText:'⬅️Back to Menu'},type:1}]
               imageMsg = ( await gura.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
               buttonsMessage = {footerText:'Sama Sama☕', imageMessage: imageMsg,
               contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
@@ -1243,7 +1352,7 @@ case 'topdf':
            const idk = await gura.downloadMediaMessage(ida, 'buffer') 
            const getpng = await uploadImages(idk, true)  
            reply(mess.wait)
-           pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=687424ba062dfbbc4c7a6d59&img=${getpng}`)
+           pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=DhenxsKey&img=${getpng}`)
            gura.sendMessage(from, pdf, document, { mimetype: Mimetype.pdf, quoted:dep }).catch((err) => reply('error'))
            break
 case 'image':
