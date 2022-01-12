@@ -823,6 +823,8 @@ tod2 =`
 ┃*き⃟🐣* *> eval*😄
 ┃*き⃟🐣* *$ exec*😄
 ┃*き⃟🐣* *clearall*😄
+┃*き⃟🐣* *self*😄
+┃*き⃟🐣* *public*😄
 ┗━━━━━━━
 
 ➤ *Download*➤
@@ -851,6 +853,16 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
+           case 'chat':
+			if (args[0].startsWith('08')) return reply('Awali nomor dengan 62')
+            if (args[0].startsWith('+62')) return reply('Awali nomor dengan 62')
+			if (args.length < 1) return reply(`Penggunaan ${prefix}chat 62xnxx|teks`)
+            var pc = body.slice(6)
+            var nomor = pc.split("|")[0];
+            var org = pc.split("|")[1];
+            gura.sendMessage(nomor+'@s.whatsapp.net', org, MessageType.text)   
+            reply(`Sukses mengirim chat:\n${org},@${nomor}`)
+            break
            case 'public': {
                 if (!dep.key.fromMe && !isOwner) reply(mess.owner)
                 gura.public = true
@@ -863,22 +875,6 @@ const loo = fs.readFileSync('./database/spam.mp3')
                 reply('Sukses Ganti Ke Mode Self')
             }
             break
-            case 'soundcloud':
-    	        if (!q) return reply('linknya?')
-                if (!q.includes('soundcloud.com')) return reply('harus link soundcloaud')
-                await reply(mess.wait)
-				zee.SoundCloud(`${text}`).then(async (data) => {
-                    let txt = `*----「 SOUNDCLOUD DOWNLOAD 」----*\n\n`
-                    txt += `*📟 Title :* ${data.title}\n`
-                    txt += `*🎞️ Duration :* ${data.duration}\n`
-					txt += `*🛠️ Quality :* ${data.medias[1].quality}\n`
-					txt += `*🚧 Ext :* ${data.medias[0].extension}\n`
-                    txt += `*💾 Size :* ${data.medias[0].formattedSize}\n`
-                    txt += `*📚 Url Source :* ${data.url}\n\n`
-                    txt += `*Mohon tunggu sebentar kak, sedang proses pengiriman...*`
-                    sendFileFromUrl(from, data.thumbnail, txt)
-                    gura.sendMessage(from, {audio : {url : data.medias[0].url}, mimetype: 'audio/mp4'}, {quoted: dep})})
-                    break
            case 'swm2': case 'take2': case 'takesticker2': case 'takestick2':{
 									reply(mess.wait) 
 									let packname1 = q.split('|')[0] ? q.split('|')[0] : q
@@ -954,23 +950,6 @@ const loo = fs.readFileSync('./database/spam.mp3')
 																				 }
 																			}
 																	 break
-           case 'facebook': case 'fb': case 'fbdl': case 'facebookdl':
-                if (!q) return reply('Linknya? ')
-                if (!q.includes('facebook.com') && !q.includes('fb.watch')) return reply('Harus Link FB ngab')
-                reply(mess.wait) 
-                xfar.Facebook(args[1]).then(async data => {
-                    let txt = `*----「 FACEBOOK DOWNLOADER 」----*\n\n`
-                    txt += `*📫 Title :* ${data.title}\n`
-                    txt += `*🎞️ Type :* ${data.medias[0].extension}\n`
-                    txt += `*📟 Quality :* ${data.medias[0].quality}\n`
-                    txt += `*💾 Size :* ${data.medias[0].formattedSize}\n`
-                    txt += `*📚 Url :* ${data.url}`
-                    sendFileFromUrl(from,data.medias[0].url,txt)
-                })
-                .catch((err) => {
-                    reply(lang.err())
-                })
-            break
            case 'tovideo':
                if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
                reply(mess.wait) 
@@ -992,6 +971,11 @@ reply(mess.wait)
 anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
 sendStickerUrl(from, anjay)
 break
+case 'ttp2':  
+                    if (!q) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}attp GuraBotz`)
+                    anu1 = await getBuffer(`https://api.xteam.xyz/ttp?file&text=${q}`)
+                    sendStickerUrl(from, anu1)
+                    break
        case 'attp':
        reply(mess.wait) 
               if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
