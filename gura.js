@@ -761,14 +761,6 @@ if(budy.includes('assalamualaikum')){
 cpref = `*Waalaikumsalam Wr Wb*`
 reply(cpref)
 }
-if (isCmd && !isGroup) {
-console.log(color('「 SPAM 」','red'), (command), ">", (sender.split('@')[0]))
-return reply('```JANGAN SPAM, MOHON DI BERI JEDA !!!```')
-}        
-if (isCmd && isGroup) {
-console.log(color('「 SPAM 」','red'), (command), ">", (sender.split('@')[0]), "=>", color(groupName, "yellow"))
-return reply('```JANGAN SPAM, MOHON DI BERI JEDA !!!```')
-}  
 
 switch(command) {
 
