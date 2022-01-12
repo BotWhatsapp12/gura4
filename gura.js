@@ -1147,9 +1147,10 @@ case 'blackpink':
                     case 'glitch':
                     reply (mess.wait)
                     if (args.length == 0) return reply(`Example: ${prefix + command} gura botz`)
-                    ini_txt = args.join(" ")
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome2/glitch?apikey=DhenxsKey&text1=${ini_txt}&text2=${ini_txt}`)
-                 buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `⬅️ Back To Menu`},type:1}, {buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
+                    top = arg.split('|')[0]
+                    bottom = arg.split('|')[1]
+                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome2/glitch?apikey=DhenxsKey&text1=${top}&text2=${bottom}`)
+                 buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `⬅️ Back To Menu`},type:1}]
               imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
               buttonsMessage = {footerText:'Nih, Sama Sama', imageMessage: imageMsg,
               contentText:`${rply}`,buttons,headerType:4}
