@@ -796,10 +796,8 @@ tod2 =`
 ┃*き⃟🐣* *.tourl <reply media>*🤗
 ┃*き⃟🐣* *.tomp3 <reply media>*🤗
 ┃*き⃟🐣* *.tinyurl <masukan link>*🤗
-┃*き⃟🐣* *.telestick <masukan link>*🤗
 ┃*き⃟🐣* *.ttp <masukan teks>*🤗
 ┃*き⃟🐣* *.attp <masukan teks>*🤗
-┃*き⃟🐣* *.ttg <masukan teks>*🤗
 ┗━━━━━━━
 
 ➤ *Group*➤
@@ -1024,76 +1022,51 @@ sendStickerUrl(from, `${anu1}`)
 reply('Gunakan foto/stiker!')
 }
 break
-case 'xnxx2':
-                    if (args.length == 0) return reply(`Contoh: ${prefix + command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`)
-                    query = args.join(" ")
-                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/xnxx?apikey=genbotkey&url=${query}`)
-                    get_result = get_result.result
-                    ini_txt = `Title : ${get_result.title}\n`
-                    ini_txt += `Duration : ${get_result.duration}\n`
-                    ini_txt += `View : ${get_result.view}\n`
-                    ini_txt += `Rating : ${get_result.rating}\n`
-                    ini_txt += `Like : ${get_result.like}\n`
-                    ini_txt += `Dislike : ${get_result.dislike}\n`
-                    ini_txt += `Comment : ${get_result.comment}\n`
-                    ini_txt += `Tag : ${get_result.tag.join(", ")}\n`
-                    ini_txt += `Description : ${get_result.description}\n`
-                    ini_txt += "Link : \n"
-                    ini_link = get_result.link
-                    for (var x of ini_link) {
-                        ini_txt += `${x.type} - ${x.link}\n\n`
-                    }
-                    thumbnail = await getBuffer(get_result.thumbnail)
-                    gura.sendMessage(from, thumbnail, image, { quoted: dep, caption: ini_txt })
+//Text Prome
+case 'blackpink':
+                case 'neon':
+                case 'greenneon':
+                case 'advanceglow':
+                case 'futureneon':
+                case 'sandwriting':
+                case 'sandsummer':
+                case 'sandengraved':
+                case 'metaldark':
+                case 'neonlight':
+                case 'holographic':
+                case 'text1917':
+                case 'minion':
+                case 'deluxesilver':
+                case 'newyearcard':
+                case 'bloodfrosted':
+                case 'halloween':
+                case 'jokerlogo':
+                case 'fireworksparkle':
+                case 'natureleaves':
+                case 'bokeh':
+                case 'toxic':
+                case 'strawberry':
+                case 'box3d':
+                case 'roadwarning':
+                case 'breakwall':
+                case 'icecold':
+                case 'luxury':
+                case 'cloud':
+                case 'summersand':
+                case 'horrorblood':
+                case 'thunder':
+                reply (mess.wait)
+                    if (args.length == 0) return reply(`Example: ${prefix + command} LoL Human`)
+                    ini_txt = args.join(" ")
+                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=${lolkey}&text=${ini_txt}`)
+                 buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `BACK MENU`},type:1}]
+              imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+              buttonsMessage = {footerText:'Nih, Sama Sama', imageMessage: imageMsg,
+              contentText:`${rply}`,buttons,headerType:4}
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              gura.relayWAMessage(prep)
+        
                     break
-case 'xnxxsearch':
-if (!isGroup)return reply(mess.only.group)
-if (!q) return reply(`Example: ${prefix + command} Japanese`)
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/xnxxsearch?apikey=genbotkey&query=${q}`)
-reply(mess.wait)
-get_result = get_result.result
-ini_txt = ""
-for (var x of get_result) {
-ini_txt += `Title : ${x.title}\n`
-ini_txt += `Views : ${x.views}\n`
-ini_txt += `Duration : ${x.duration}\n`
-ini_txt += `Uploader : ${x.uploader}\n`
-ini_txt += `Link : ${x.link}\n`
-ini_txt += `Thumbnail : ${x.thumbnail}\n\n`
-}
-reply(ini_txt)
-break
-
-case 'xnxx': case 'xnxxstalk':
-if (!isGroup)return reply(mess.only.group)
-if (!q) return reply(`Example: ${prefix + command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`)
-get_result = await fetchJson(`https://api.lolhuman.xyz/api/xnxx?apikey=genbotkey&url=${q}`)
-reply(mess.wait)
-get_result = get_result.result
-ini_txt = `Title : ${get_result.title}\n`
-ini_txt += `Duration : ${get_result.duration}\n`
-ini_txt += `View : ${get_result.view}\n`
-ini_txt += `Rating : ${get_result.rating}\n`
-ini_txt += `Like : ${get_result.like}\n`
-ini_txt += `Dislike : ${get_result.dislike}\n`
-ini_txt += `Comment : ${get_result.comment}\n`
-ini_txt += `Tag : ${get_result.tag.join(", ")}\n`
-ini_txt += `Description : ${get_result.description}\n`
-ini_txt += "Link : \n"
-ini_link = get_result.link
-                    for (var x of ini_link) {
-ini_txt += `${x.type} - ${x.link}\n\n`
-                    }
-thumbnail = await getBuffer(get_result.thumbnail)
-gura.sendMessage(from, thumbnail, image, { quoted: dep, caption: ini_txt })
-break
-
-case 'xnxxdownload': case 'xnxxdl':
-if (!isGroup)return reply(mess.only.group)
-if(!q)return reply(`Search link di Fitur xnxxstalk`)
-reply(mess.wait)
-sendMediaURL(from, `${q}`)
-break
 case 'smeme2':
 									if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* Gura`)
 									try {
@@ -1508,6 +1481,22 @@ case 'bc3':
          reply('Suksess broadcast')
          }
 		break
+case 'ig': case 'igphoto': case 'instaphoto': case 'instafoto': case 'igfoto': case 'igvideo': case 'instavideo': case 'instavid': case 'igreels': case 'instareels': case 'instareel': case 'igtv': case 'instatv':
+		if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply('link tidak valid')
+		let urlnya = q
+hx.igdl(args[0])
+	    .then(async(result) => {
+for(let i of result.medias){
+                if(i.url.includes('mp4')){
+                    let link = await getBuffer(i.url)
+                    gura.sendMessage(from,link,video,{thumbnail: Buffer.alloc(0), quoted: dep,caption: `Instagram •  ${i.type}`})
+                } else {
+                    let link = await getBuffer(i.url)
+                    gura.sendMessage(from,link,image,{thumbnail: Buffer.alloc(0), quoted: dep,caption: `Instagram • ${i.type}`})                  
+                }
+            }
+            }).catch((err) => reply(`Link tidak valid atau mungkin user private`))
+            break
 case 'igdl':
         if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply(mess.Iv)
         if (!q) return fakevo('Linknya?')
