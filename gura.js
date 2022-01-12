@@ -761,12 +761,12 @@ if(budy.includes('assalamualaikum')){
 cpref = `*Waalaikumsalam Wr Wb*`
 reply(cpref)
 }
-if (isCmd && isFiltered(from) && !isGroup) {
-console.log(color('「 SPAM 」','red'), (command), ">", (sender.split('@')[0]))
+if (isCmd && !isGroup) {
+console.log(color('「 SPAM 」','red'), $(command), ">", (sender.split('@')[0]))
 return reply('```JANGAN SPAM, MOHON DI BERI JEDA !!!```')
 }        
-if (isCmd && isFiltered(from) && isGroup) {
-console.log(color('「 SPAM 」','red'), (command), ">", (sender.split('@')[0]), "=>", color(groupName, "yellow"))
+if (isCmd && isGroup) {
+console.log(color('「 SPAM 」','red'), $(command), ">", (sender.split('@')[0]), "=>", color(groupName, "yellow"))
 return reply('```JANGAN SPAM, MOHON DI BERI JEDA !!!```')
 }  
 
@@ -802,7 +802,7 @@ tod2 =`
 ┃*き⃟🐣* *.jadibot* *Premium*😀
 ┃*き⃟🐣* *.listbot*😀
 ┃*き⃟🐣* *.ping*😀
-┃*き⃟🐣* *chat 62xnxx|(pesannya)*😀
+┃*き⃟🐣* *.chat 62xnxx|(pesannya)*😀
 ┗━━━━━━━
 
 ➤ *Search*➤
@@ -822,9 +822,7 @@ tod2 =`
 ┃*き⃟🐣* *.tinyurl <masukan link>*🤗
 ┃*き⃟🐣* *.ttp <masukan teks>*🤗
 ┃*き⃟🐣* *.attp <masukan teks>*🤗
-┃*き⃟🐣* *.stickeranime*🤗
-┃*き⃟🐣* *.patrick*🤗
-┃*き⃟🐣* *.gura*🤗
+┃*き⃟🐣* *.telesticker <url>*🤗
 ┗━━━━━━━
 
 ➤ *Group*➤
@@ -850,17 +848,15 @@ tod2 =`
 ┃*き⃟🐣* *clearall*😄
 ┃*き⃟🐣* *self*😄
 ┃*き⃟🐣* *public*😄
-┃*き⃟🐣* *exif*😄
 ┗━━━━━━━
 
 ➤ *Download*➤
-┃*き⃟🐣* *.tiktok <link>*😅
+┃*き⃟??* *.tiktok <link>*😅
 ┃*き⃟🐣* *.instagram <link>*😅
 ┃*き⃟🐣* *.play <judul lagu>*😅
 ┃*き⃟🐣* *.youtube <link>*😅
 ┃*き⃟🐣* *.mediafire <link>*😅
 ┃*き⃟🐣* *.twitter <link>*😅
-┃*き⃟🐣* *.soundcloud <link>*😅
 ┗━━━━━━━
 
 ➤ *Anime*➤
@@ -923,6 +919,46 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
+           case 'nhentaipdf':
+             if (args.length == 0) return reply(`Usage: ${prefix + command} query\nExample: ${prefix + command} 317986`)
+             if (isNaN(Number(args[0]))) return await reply(mess.wrongFormat)
+             try {
+             henid = args[0]
+             get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=DhenxsKey`)
+             get_result = get_result.result
+             get_info = get_result.info
+             teks = `\n${get_result.title_romaji}\n\n${get_result.title_native}\n\nCharacter : ${get_info.characters.join(", ")}\n`
+             ini_image = await getBuffer(get_result.image[0])
+             gura.sendMessage(from, ini_image, image, { caption: teks, quoted: dep })
+             anu = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=DhenxsKey`)
+             pdf = await getBuffer(anu.result)
+             gura.sendMessage(from, pdf, document, { quoted: dep, mimetype: Mimetype.pdf, filename: `${get_result.title_romaji}.pdf`, thumbnail: ini_image })
+             } catch (e) {
+             console.log(e)
+             reply(String(e))
+}
+             break
+       case 'nhentai':
+              if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
+              reply(mess.wait)
+              henid = args[0]
+              get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=DhenxsKey`)
+              get_result = get_result.result
+              ini_txt = `Title Romaji : ${get_result.title_romaji}\n`
+              ini_txt += `Title Native : ${get_result.title_native}\n`
+              ini_txt += `Read Online : ${get_result.read}\n`
+              get_info = get_result.info
+              ini_txt += `Parodies : ${get_info.parodies}\n`
+              ini_txt += `Character : ${get_info.characters.join(", ")}\n`
+              ini_txt += `Tags : ${get_info.tags.join(", ")}\n`
+              ini_txt += `Artist : ${get_info.artists}\n`
+              ini_txt += `Group : ${get_info.groups}\n`
+              ini_txt += `Languager : ${get_info.languages.join(", ")}\n`
+              ini_txt += `Categories : ${get_info.categories}\n`
+              ini_txt += `Pages : ${get_info.pages}\n`
+              ini_txt += `Uploaded : ${get_info.uploaded}\n`
+              reply(ini_txt)
+              break
            case 'scplay': 
        case 'soundcloud':
               if (!q) return reply('Link Yang Mana? ')
@@ -961,81 +997,6 @@ const loo = fs.readFileSync('./database/spam.mp3')
                 reply('Sukses Ganti Ke Mode Self')
             }
             break
-           case 'swm2': case 'take2': case 'takesticker2': case 'takestick2':{
-									reply(mess.wait) 
-									let packname1 = q.split('|')[0] ? q.split('|')[0] : q
-									let author1 = q.split('|')[1] ? q.split('|')[1] : ''
-									if (isQuotedImage) {
-										let encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
-										let media = await gura.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
-										exif.create(packname1, author1, `stickwm_${sender}`)
-										await ffmpeg(`${media}`)
-										.input(media)
-										.on('start', function (cmd) {
-											console.log(color(`STARTED : ${cmd}`,'yellow'))
-											})
-											.on('error', function (err) {
-												console.log(color(`ERROR : ${err}`,'red'))
-												fs.unlinkSync(media)
-												reply(mess.error)
-												})
-												.on('end', function () {
-													console.log(color(`FINISH`,'magenta'))
-													exec(`webpmux -set exif ./sticker/stickwm_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
-														if (error) return reply(mess.error)
-														gura.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: dep})
-														fs.unlinkSync(media)
-														fs.unlinkSync(`./sticker/${sender}.webp`)
-														fs.unlinkSync(`./sticker/stickwm_${sender}.exif`)
-														})
-														})
-														.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-														.toFormat('webp')
-														.save(`./sticker/${sender}.webp`)
-														} else if (( isQuotedVideo && dep.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.fileLength < 10000000)) {
-															let encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
-															let media = await gura.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
-															exif.create(packname1, author1, `stickwm_${sender}`)
-															reply(mess.wait)
-															await ffmpeg(`${media}`)
-															.inputFormat(media.split('.')[4])
-															.on('start', function (cmd) {
-																console.log(color(`STARTED : ${cmd}`,'yellow'))
-																})
-																.on('error', function (err) {
-																	console.log(color(`ERROR : ${err}`,'red'))
-																	fs.unlinkSync(media)
-																	let tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-																	reply(mess.error)
-																	})
-																	.on('end', function () {
-																		console.log((`FINISH`,'magenta'))
-																		exec(`webpmux -set exif ./sticker/stickwm_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
-																			if (error) return reply(mess.error)
-																			gura.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: dep})
-																			fs.unlinkSync(media)
-																			fs.unlinkSync(`./sticker/${sender}.webp`)
-																			fs.unlinkSync(`./sticker/stickwm_${sender}.exif`)
-																			})
-																			})
-																			.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
-																			.toFormat('webp')
-																			.save(`./sticker/${sender}.webp`)
-																			} else if (isQuotedSticker) {
-																				let encmedia = JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-																				let media = await gura.downloadAndSaveMediaMessage(encmedia, `./sticker/${sender}`)
-																				exif.create(packname1, author1, `takestick_${sender}`)
-																				exec(`webpmux -set exif ./sticker/takestick_${sender}.exif ./sticker/${sender}.webp -o ./sticker/${sender}.webp`, async (error) => {
-																				if (error) return reply(mess.error)
-																				gura.sendMessage(from, fs.readFileSync(`./sticker/${sender}.webp`), sticker, {quoted: dep})
-																				fs.unlinkSync(media)
-																				fs.unlinkSync(`./sticker/takestick_${sender}.exif`)
-																				})
-																				} else {
-																					reply(`Kirim gambar/video dengan caption ${prefix}stickerwm nama|author atau tag gambar/video yang sudah dikirim\nNote : Durasi video maximal 10 detik`)
-																				 }
-																			}
-																	 break
            case 'tovideo':
                if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
                reply(mess.wait) 
@@ -1066,41 +1027,6 @@ reply(mess.wait)
 anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
 sendStickerUrl(from, anjay)
 break
-case 'patrick':
-              reply(mess.wait)
-              fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
-             .then(res => res.text())
-             .then(body => {
-              let tod = body.split("\n");
-              let pjr = tod[Math.floor(Math.random() * tod.length)];
-              sendWebp(from, pjr)
-}
-)
-              break
-       case 'gura':
-       case 'gawrgura':
-              reply(mess.wait)
-              fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
-             .then(res => res.text())
-             .then(body => {
-              let tod = body.split("\n");
-              let pjr = tod[Math.floor(Math.random() * tod.length)];
-              sendWebp(from, pjr)
-}
-)
-              break
-       case 'animestick':
-       case 'stickeranime':
-              reply(mess.wait)
-              fetch('https://raw.githubusercontent.com/rashidsiregar28/data/main/animestick')
-             .then(res => res.text())
-             .then(body => {
-              let todd = body.split("\n");
-              let pjrr = todd[Math.floor(Math.random() * todd.length)];
-              sendWebp(from, pjrr)
-}
-)
-              break
 case 'loliv':
        case 'lolivid':
        case 'lolivideo':
@@ -1144,8 +1070,6 @@ case 'ttp2':
 				case 'delete':
 					gura.deleteMessage(from, { id: dep.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
-case 'tqqq':
-
 case 'welcome':
         capti2 = `*Mode Welcome*`
         ya = fs.readFileSync('./media/welcom.jpg')
@@ -1228,6 +1152,20 @@ case 'blackpink':
               gura.relayWAMessage(prep)
         
                     break
+                    case 'glitch':
+                    reply (mess.wait)
+                    if (args.length == 0) return reply(`Example: ${prefix + command} gura botz`)
+                    ini_txt = args.join(" ")
+                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome2/glitch?apikey=DhenxsKey&text1=${ini_txt}&text2=${ini_txt}`)
+                 buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `⬅️ Back To Menu`},type:1}, {buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
+              imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+              buttonsMessage = {footerText:'Nih, Sama Sama', imageMessage: imageMsg,
+              contentText:`${rply}`,buttons,headerType:4}
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              gura.relayWAMessage(prep)
+        
+                    break
+                    
                     case 'loli':
        case 'husbu':
        case 'milf':
