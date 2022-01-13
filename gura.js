@@ -918,13 +918,13 @@ const loo = fs.readFileSync('./database/spam.mp3')
              if (isNaN(Number(args[0]))) return await reply(mess.wrongFormat)
              try {
              henid = args[0]
-             get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=DhenxsKey`)
+             get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=687424ba062dfbbc4c7a6d59`)
              get_result = get_result.result
              get_info = get_result.info
              teks = `\n${get_result.title_romaji}\n\n${get_result.title_native}\n\nCharacter : ${get_info.characters.join(", ")}\n`
              ini_image = await getBuffer(get_result.image[0])
              gura.sendMessage(from, ini_image, image, { caption: teks, quoted: dep })
-             anu = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=DhenxsKey`)
+             anu = await fetchJson(`https://api.lolhuman.xyz/api/nhentaipdf/${henid}?apikey=687424ba062dfbbc4c7a6d59`)
              pdf = await getBuffer(anu.result)
              gura.sendMessage(from, pdf, document, { quoted: dep, mimetype: Mimetype.pdf, filename: `${get_result.title_romaji}.pdf`, thumbnail: ini_image })
              } catch (e) {
@@ -936,7 +936,7 @@ const loo = fs.readFileSync('./database/spam.mp3')
               if (args.length == 0) return reply(`Example: ${prefix + command} 344253`)
               reply(mess.wait)
               henid = args[0]
-              get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=DhenxsKey`)
+              get_result = await fetchJson(`https://api.lolhuman.xyz/api/nhentai/${henid}?apikey=687424ba062dfbbc4c7a6d59`)
               get_result = get_result.result
               ini_txt = `Title Romaji : ${get_result.title_romaji}\n`
               ini_txt += `Title Native : ${get_result.title_native}\n`
@@ -995,7 +995,7 @@ case 'removebg':
            const pebzgans1  = await gura.downloadMediaMessage(biasalah, 'buffer') 
            const getbg = await uploadImages(pebzgans1, true) 
            reply(mess.wait)
-           pft = await getBuffer(`http://lolhuman.herokuapp.com/api/removebg?apikey=DhenxsKey&img=${getbg}`)
+           pft = await getBuffer(`http://lolhuman.herokuapp.com/api/removebg?apikey=687424ba062dfbbc4c7a6d59&img=${getbg}`)
            await gura.sendMessage(from, pft, image, {quoted:dep,caption:'Done'}).catch((err) => reply('Kebanyakan Dosa Kali Lu Jadi Erorr deh'))
            break
 case 'ttp':
@@ -1009,7 +1009,7 @@ case 'telesticker':
        case 'telestiker':
               if (!q) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
               reply(mess.wait)
-              ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=DhenxsKey&url=${args[0]}`)
+              ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=687424ba062dfbbc4c7a6d59&url=${args[0]}`)
               ini_sticker = ini_url.result.sticker
               reply('Sending '+ ini_sticker.length +' stickers...')
               for (sticker_ in ini_sticker) {
@@ -1107,7 +1107,7 @@ case 'blackpink':
                 reply (mess.wait)
                     if (args.length == 0) return reply(`Example: ${prefix + command} LoL Human`)
                     ini_txt = args.join(" ")
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=DhenxsKey&text=${ini_txt}`)
+                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=687424ba062dfbbc4c7a6d59&text=${ini_txt}`)
                  buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `⬅️ Back To Menu`},type:1}, {buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
               imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
               buttonsMessage = {footerText:'Nih, Sama Sama', imageMessage: imageMsg,
@@ -1121,7 +1121,7 @@ case 'blackpink':
                     if (args.length == 0) return reply(`Example: ${prefix + command} gura botz`)
                     top = arg.split('|')[0]
                     bottom = arg.split('|')[1]
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome2/glitch?apikey=DhenxsKey&text1=${top}&text2=${bottom}`)
+                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome2/glitch?apikey=687424ba062dfbbc4c7a6d59&text1=${top}&text2=${bottom}`)
                  buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `⬅️ Back To Menu`},type:1}]
               imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
               buttonsMessage = {footerText:'Nih, Sama Sama', imageMessage: imageMsg,
@@ -1255,7 +1255,7 @@ case 'topdf':
            const idk = await gura.downloadMediaMessage(ida, 'buffer') 
            const getpng = await uploadImages(idk, true)  
            reply(mess.wait)
-           pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=DhenxsKey&img=${getpng}`)
+           pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=687424ba062dfbbc4c7a6d59&img=${getpng}`)
            gura.sendMessage(from, pdf, document, { mimetype: Mimetype.pdf, quoted:dep }).catch((err) => reply('error'))
            break
 case 'image':
