@@ -1842,20 +1842,20 @@ await gura.sendMessage(from, buttons, MessageType.buttonsMessage, {quoted: fakev
 }
 break      
 case 'owner':
-     case 'developer':
-     case 'creator':
-     let ini_list = []
-     for (let i of ownerNumbers) {
-     const vname = gura.contacts[i] != undefined ? gura.contacts[i].vname || gura.contacts[i].notify : undefined
-     ini_list.push({
-     "displayName": 'Ownernya',
-     "vcard": `BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:${vname ? `${vname}` : `ArulGanz`}\nitem1.TEL;waid=${i.split('@')[0]}:${i.split('@')[0]}\nitem1.X-ABLabel:Telepon\nEND:VCARD`
+case 'admin':
+let ini_list = []
+ownerContact = ['6281229859085']
+for (let i of ownerContact.map(v => v + '@s.whatsapp.net')) {
+const vname = gura.contacts[i] != undefined ? gura.contacts[i].vname || gura.contacts[i].notify : undefined
+ini_list.push({
+"displayName": "Owner GuraBotz",
+"vcard": "BEGIN:VCARD\nVERSION:3.0\nN:Sy;Bot;;;\nFN:GuraBotz\nitem1.TEL;waid=6281229859085:6281229859085\nitem1.X-ABLabel:ArulGanz\nitem2.TEL;waid=62815788590761:62815788590761\nitem2.X-ABLabel:GuraBotz\nitem3.EMAIL;type=INTERNET:arulganz119@gmail.com\nitem3.X-ABLabel:Email\nitem4.URL:https://instagram.com/_daaa_1\nitem4.X-ABLabel:instagram\nitem5.ADR:;;Singapura🇸🇬;;;;\nitem5.X-ABADR:ac\nitem5.X-ABLabel:🌍 Region\nitem6.X-ABLabel:Developer GuraBotz\nEND:VCARD"
 })
 }
-     hehe = await gura.sendMessage(from, {
-     "displayName": `${ini_list.length} kontak`,
-     "contacts": ini_list 
-     }, 'contactsArrayMessage', { quoted: ftrol })
+hehe = await arya.sendMessage(from, {
+"displayName": `${ini_list.length} kontak`,
+"contacts": ini_list 
+}, 'contactsArrayMessage', { quoted: mek })
 button = [
   {buttonId: `${prefix}patnerbot`, buttonText: {displayText: '★彡[ᴘᴀᴛɴᴇʀ ʙᴏᴛ]彡★'}, type: 1}
 ]
@@ -1886,7 +1886,8 @@ break
 			const teks = child.replace(/Memory:/, "Ram:")
 			const pingnya = `_*${latensi.toFixed(4)} Second*_`
 			})
-           reply(pingnya)
+			teks11 = `*${latensi.toFixed(4)} Second*`
+           reply(teks11)
         break;
 case 'runtime':
 reply(`${ke}${runtime(on)}${ke}`)
