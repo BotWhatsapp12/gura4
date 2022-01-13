@@ -269,9 +269,12 @@ return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net'
 }
 runa = process.uptime()         
 const gggg = `Bot Aktif Selama ${kyun(runa)}`
-const reply = (teks) => {
+const reply2 = (teks) => {
 			gura.sendMessage(from, teks, text, { thumbnail: dfrply, sendEphemeral: true, quoted: dep, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: `${gggg}`,body:"Bot WhatsApp by ArulGanz",previewType:"PHOTO",thumbnail:ofrply,sourceUrl:`https://chat.whatsapp.com/C3jhijq3xS0AVuJykrhxMn`}}})
 		}
+const reply = (teks) => {
+	      gura.sendMessage(from, teks, text, {quoted:dep, thumbnail: dfrply})
+        }
 const reply3 = (teks) => {
              res = gura.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 321, "message": teks, "footerText": "BotWhatsApp by Gura", "thumbnail": ofrply, "surface": 'CATALOG' }}, {quoted:ftrol})
              gura.relayWAMessage(res)
@@ -853,7 +856,6 @@ tod2 =`
 
 ➤ *Anime*➤
 ┃*き⃟🐣* *.loli*🤩
-┃*き⃟🐣* *.lolivideo*🤩
 ┃*き⃟🐣* *.husbu*🤩
 ┃*き⃟🐣* *.milf*🤩
 ┃*き⃟🐣* *.cosplay*🤩
@@ -951,22 +953,6 @@ const loo = fs.readFileSync('./database/spam.mp3')
               ini_txt += `Uploaded : ${get_info.uploaded}\n`
               reply(ini_txt)
               break
-           case 'scplay': 
-       case 'soundcloud':
-              if (!q) return reply('Link Yang Mana? ')
-              if (!q.includes('soundcloud')) return reply(mess.error.Iv)
-              reply(mess.wait)
-              anu = await fetchJson(`https://api.lolhuman.xyz/api/soundcloud?apikey=DhenxsKey&url=${q}`)
-             .then((data) => { sendMediaURL(from, data.result, dep) })
-             .catch((err) => { reply(String(err)) })
-              break
-            case 'exif':
-             if (!isOwner) return  reply(mess.only.owner)
-             if (!q) return reply(mess.wrongFormat)
-             if (!arg.split('|')) return reply(`Penggunaan ${prefix}exif nama|author`)
-             exif.create(arg.split('|')[0], arg.split('|')[1])
-             reply('sukses')
-             break
            case 'chat':
 			if (args[0].startsWith('08')) return reply('Awali nomor dengan 62')
             if (args[0].startsWith('+62')) return reply('Awali nomor dengan 62')
@@ -1019,21 +1005,6 @@ reply(mess.wait)
 anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
 sendStickerUrl(from, anjay)
 break
-case 'loliv':
-       case 'lolivid':
-       case 'lolivideo':
-              reply(mess.wait)
-              anu = await fetchText('https://raw.githubusercontent.com/AlvioAdjiJanuar/random/main/loli.txt')
-             .then(async (body) => {
-              anu = body.split('\n')
-              anu = anu[Math.floor(Math.random() * anu.length)]
-              sendMediaURL(from, anu)
-})
-             .catch(async (err) => {
-              console.error(err)
-              reply(`${err}`)
-})
-              break
 case 'telesticker': 
        case 'telestiker':
               if (!q) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
@@ -1080,6 +1051,7 @@ case 'replycek':
 teg = `Tes Reply`
 reply3(teg)
 reply(teg)
+sticWait(from)
 break
 case 'smeme': 
 reply(mess.wait) 
@@ -1903,11 +1875,10 @@ break
 					buff = await getBuffer(anu.screenshot)
 					gura.sendMessage(from, buff, image, {quoted: ftrol, caption : teks})
 					break
-           case 'tes':
+           
            case 'ping':
            case 'speed':
            case 'speedbot':
-           reply(mess.tes)
            const timestamp = speed();
 			const latensi = speed() - timestamp
 			exec(`neofetch --stdout`, (error, stdout, stderr) => {
@@ -1915,14 +1886,7 @@ break
 			const teks = child.replace(/Memory:/, "Ram:")
 			const pingnya = `_*${latensi.toFixed(4)} Second*_`
 			})
-           sendButMessage(from, `「 *Bot Aktif*」\n「 *Bot Aktif Selama* *${runtime(on)}*」\n「 *Dengan Kecepatan ${latensi.toFixed(4)} Second* 」`, `Silahkan Dipakai Gak Usah Spam Alay!!!`, [
-            {
-              buttonId: `${prefix}menu`,
-              buttonText: {
-                displayText: `★彡[ᴍᴇɴᴜ]彡★`,
-              },
-              type: 1,
-            }]);
+           reply(pingnya)
         break;
 case 'runtime':
 reply(`${ke}${runtime(on)}${ke}`)
