@@ -971,7 +971,7 @@ case 'telesticker':
               if (!q) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
               reply(mess.wait)
               ini_url = await fetchJson(`https://api-alphabot.herokuapp.com/api/downloader/telegram_sticker?url=${args[0]}&apikey=Alphabot`)
-              ini_sticker = ini_url.result.sticker
+              ini_sticker = ini_url.results.url
               reply('Sending '+ ini_sticker.length +' stickers...')
               for (sticker_ in ini_sticker) {
               ini_buffer = await getBuffer(ini_sticker[sticker_])
