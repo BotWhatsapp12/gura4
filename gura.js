@@ -1855,7 +1855,7 @@ ini_list.push({
 hehe = await gura.sendMessage(from, {
 "displayName": `${ini_list.length} kontak`,
 "contacts": ini_list 
-}, 'contactsArrayMessage', { quoted: mek })
+}, 'contactsArrayMessage', { quoted: dep })
 button = [
   {buttonId: `${prefix}patnerbot`, buttonText: {displayText: '★彡[ᴘᴀᴛɴᴇʀ ʙᴏᴛ]彡★'}, type: 1}
 ]
