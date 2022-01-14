@@ -922,7 +922,7 @@ const loo = fs.readFileSync('./database/spam.mp3')
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/cecan?apikey=ZeroYT7`)
 buff = await getBuffer(ini.result.url)
 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: tamnel, })).imageMessage
+              imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: tamnel, })).imageMessage
               buttonsMessage = {footerText:'crated by Gawr GuraBotz', imageMessage: imageMsg,
               contentText:`Nih Kak ☕`,buttons,headerType:4}
               prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
@@ -983,17 +983,16 @@ case 'removebg':
            await gura.sendMessage(from, pft, image, {quoted:dep,caption:'Done'}).catch((err) => reply('Kebanyakan Dosa Kali Lu Jadi Erorr deh'))
            break
 case 'ttp':
-if (args.length < 1) return reply(`teksnya mana bruh?\ncontoh ${prefix} ${pushname}`)
-woy = args.join(" ")
-reply(mess.wait) 
-anjay = `http://zekais-api.herokuapp.com/text2png?text=${woy}&color=white`
-sendStickerUrl(from, anjay)
-break
+				
+					if (!q) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}ttp GuraBotz`)
+					atetepe = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=687424ba062dfbbc4c7a6d59&text=${encodeURIComponent(q)}`)
+					gura.sendMessage(from, atetepe, sticker, { quoted: dep })
+					break
 case 'telesticker': 
        case 'telestiker':
               if (!q) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
               reply(mess.wait)
-              ini_url = await fetchJson(`https://api-alphabot.herokuapp.com/api/downloader/telegram_sticker?url=${args[0]}&apikey=Alphabot`)
+              ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=687424ba062dfbbc4c7a6d59&url=${q}`)
               ini_sticker = ini_url.results.url
               reply('Sedang Mengirim Sticker Dari Link')
               for (sticker_ in ini_sticker) {
@@ -1101,20 +1100,13 @@ case 'blackpink':
         
                     break
                     case 'glitch':
-                    reply (mess.wait)
-                    if (args.length == 0) return reply(`Example: ${prefix + command} gura botz`)
-                    top = arg.split('|')[0]
-                    bottom = arg.split('|')[1]
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome2/glitch?apikey=511fc49c7ad4edcecf8653cf&text1=${top}&text2=${bottom}`)
-                 buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `⬅️ Back To Menu`},type:1}]
-              imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'Nih, Sama Sama', imageMessage: imageMsg,
-              contentText:`${rply}`,buttons,headerType:4}
-              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
-              gura.relayWAMessage(prep)
-        
+                    if (args.length == 0) return reply(`Example: ${prefix + command} Gawr Gura`)
+                    txt1 = args[0]
+                    txt2 = args[1]
+                    getBuffer(`https://api.lolhuman.xyz/api/textprome2/${command}?apikey=ElainaKey&text1=${txt1}&text2=${txt2}`).then((gambar) => {
+                        gura.sendMessage(from, gambar, image, {thumbnail: dfrply, caption: `Gak Usah Repot² Donasi Kirim Pulsa Aja Seikhlasnya ke 6281578859076`, quoted : dep})
+                    })
                     break
-                    
                     case 'loli':
        case 'husbu':
        case 'milf':
