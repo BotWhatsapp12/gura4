@@ -972,7 +972,7 @@ case 'telesticker':
               reply(mess.wait)
               ini_url = await fetchJson(`https://api-alphabot.herokuapp.com/api/downloader/telegram_sticker?url=${args[0]}&apikey=Alphabot`)
               ini_sticker = ini_url.results.url
-              reply('Sending '+ ini_sticker.length +' stickers...')
+              reply('Sedang Mengirim Sticker Dari Link')
               for (sticker_ in ini_sticker) {
               ini_buffer = await getBuffer(ini_sticker[sticker_])
               gura.sendMessage(from, ini_buffer, sticker, {})
