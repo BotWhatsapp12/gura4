@@ -913,7 +913,30 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
-           
+           case 'cecan':
+           case 'bocil':
+           case 'hijaber':
+           case 'santuy':
+           case 'ukhti':
+ reply(mess.wait)
+ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/cecan?apikey=ZeroYT7`)
+buff = await getBuffer(ini.result.url)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
+              imageMsg = (await ikyy.prepareMessageMedia(buff, "imageMessage", { thumbnail: tamnel, })).imageMessage
+              buttonsMessage = {footerText:'crated by Gawr GuraBotz', imageMessage: imageMsg,
+              contentText:`Nih Kak ☕`,buttons,headerType:4}
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              gura.relayWAMessage(prep)
+              break
+           case 'realistic': 
+                    if (args.length < 1) return reply(`*Example :*\n${prefix + command} Gawr GuraBotz`)
+					top = arg.split('|')[0]
+                    bottom = arg.split('|')[1]
+					reply(mess.wait)
+					anu = await fetchJson(`https://api-alphabot.herokuapp.com/api/textpro/realistic?text=${top}&text2=${bottom}&apikey=Alphabot`)
+					buffer1 = await getBuffer(anu.result.url)
+					gura.sendMessage(from, buffer1, image, {quoted: dep, thumbnail: fs.readFileSync('./media/gura.jpg')})
+					break
            case 'chat':
 			if (args[0].startsWith('08')) return reply('Awali nomor dengan 62')
             if (args[0].startsWith('+62')) return reply('Awali nomor dengan 62')
