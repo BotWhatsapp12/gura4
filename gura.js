@@ -920,7 +920,7 @@ const loo = fs.readFileSync('./database/spam.mp3')
        case 'megumin':
        case 'wallnime':
        reply (mess.wait)
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=687424ba062dfbbc4c7a6d59`)
+                  buff = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=ElainaKey`)
                  buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}, {buttonId: `${prefix}owner`,buttonText:{displayText: `👥Owner`},type:1}]
               imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
               buttonsMessage = {footerText:'Made with GuraBotz', imageMessage: imageMsg,
@@ -1005,20 +1005,20 @@ case 'removebg':
            const pebzgans1  = await gura.downloadMediaMessage(biasalah, 'buffer') 
            const getbg = await uploadImages(pebzgans1, true) 
            reply(mess.wait)
-           pft = await getBuffer(`http://lolhuman.herokuapp.com/api/removebg?apikey=687424ba062dfbbc4c7a6d59&img=${getbg}`)
+           pft = await getBuffer(`http://lolhuman.herokuapp.com/api/removebg?apikey=ElainaKey&img=${getbg}`)
            await gura.sendMessage(from, pft, image, {quoted:dep,caption:'Done'}).catch((err) => reply('Kebanyakan Dosa Kali Lu Jadi Erorr deh'))
            break
 case 'ttp':
 				
 					if (!q) return reply(`Teks Nya Mana Kak?\nContoh :\n${prefix}ttp GuraBotz`)
-					atetepe = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=687424ba062dfbbc4c7a6d59&text=${encodeURIComponent(q)}`)
+					atetepe = await getBuffer(`https://api.lolhuman.xyz/api/${command}?apikey=ElainaKey&text=${encodeURIComponent(q)}`)
 					gura.sendMessage(from, atetepe, sticker, { quoted: dep })
 					break
 case 'telesticker': 
        case 'telestiker':
               if (!q) return reply(`Example: ${prefix + command} https://t.me/addstickers/LINE_Menhera_chan_ENG`)
               reply(mess.wait)
-              ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=687424ba062dfbbc4c7a6d59&url=${q}`)
+              ini_url = await fetchJson(`https://api.lolhuman.xyz/api/telestick?apikey=ElainaKey&url=${q}`)
               ini_sticker = ini_url.results.url
               reply('Sedang Mengirim Sticker Dari Link')
               for (sticker_ in ini_sticker) {
@@ -1116,7 +1116,7 @@ case 'blackpink':
                 reply (mess.wait)
                     if (args.length == 0) return reply(`Example: ${prefix + command} LoL Human`)
                     ini_txt = args.join(" ")
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=687424ba062dfbbc4c7a6d59&text=${ini_txt}`)
+                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=ElainaKey&text=${ini_txt}`)
                  buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `⬅️Back To Menu`},type:1}, {buttonId: `${prefix}owner`,buttonText:{displayText: `👥Owner`},type:1}]
               imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
               buttonsMessage = {footerText:'Made with GuraBotz', imageMessage: imageMsg,
@@ -1257,7 +1257,7 @@ case 'topdf':
            const idk = await gura.downloadMediaMessage(ida, 'buffer') 
            const getpng = await uploadImages(idk, true)  
            reply(mess.wait)
-           pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=687424ba062dfbbc4c7a6d59&img=${getpng}`)
+           pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=ElainaKey&img=${getpng}`)
            gura.sendMessage(from, pdf, document, { mimetype: Mimetype.pdf, quoted:dep }).catch((err) => reply('error'))
            break
 case 'image':
