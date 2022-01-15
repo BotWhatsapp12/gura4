@@ -930,7 +930,7 @@ const loo = fs.readFileSync('./database/spam.mp3')
                     break
        case 'storyanime':
               reply(mess.wait)
-              anu = await fetchJson(`https://lolhuman.herokuapp.com/api/storynime?apikey=`)
+              anu = await fetchJson(`https://lolhuman.herokuapp.com/api/storynime?apikey=ElainaKey`)
               buffer = await getBuffer(anu.result)
               gura.sendMessage(from, buffer, video, { quoted: dep })
               break
@@ -1165,12 +1165,153 @@ case 'smeme2':
 											console.log(e)
 										}
 									break
-						case 'emoji':case 'semoji':
+						case 'group':
+    case 'emoji':
+    case 'semoji':
+    if (!q) return reply(`Example : ${prefix + command} 😂`)
+    stod = `${sender}`
+stst = await gura.getStatus(`${sender.split('@')[0]}@c.us`)
+listMsg = {
+title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
+ buttonText: 'List Emoji',
+ footerText: 'GuraBotz',
+ description: `\n*Silahkan Pilih Model Emojinya*`,
+ sections: [
+                     {
+                      "title": `Mode Emoji`,
+ rows: [
+                           {
+                              "title": "Emoji 1",
+                              "rowId": `${prefix}emoji1 ${q}`
+                           },
+                          {
+                              "title": "Emoji 2",
+                              "rowId": `${prefix}emoji2 ${q}`
+                           },
+                           {
+                              "title": "Emoji 3",
+                              "rowId": `${prefix}emoji3 ${q}`
+                           },
+                           {
+                              "title": "Emoji 4",
+                              "rowId": `${prefix}emoji4 ${q}`
+                           },
+                           {
+                              "title": "Emoji 5",
+                              "rowId": `${prefix}emoji5 ${q}`
+                           },
+                           {
+                              "title": "Emoji 6",
+                              "rowId": `${prefix}emoji6 ${q}`
+                           },
+                           {
+                              "title": "Emoji 7",
+                              "rowId": `${prefix}emoji7 ${q}`
+                           },
+                           {
+                              "title": "Emoji 8",
+                              "rowId": `${prefix}emoji8 ${q}`
+                           },
+                           {
+                              "title": "Emoji 9",
+                              "rowId": `${prefix}emoji9 ${q}`
+                           },
+                           {
+                              "title": "Emoji 10",
+                              "rowId": `${prefix}emoji10 ${q}`
+                           },
+                        ]
+                     }],
+ listType: 1
+}
+
+gura.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted: dep})
+break
+						case 'emoji1':case 'semoji1':
 						reply(mess.wait) 
 									if (!q) return reply(`Example : ${prefix + command} 😂`)
-									hex2 = args.join(' ') 
-									emoji.get(`${hex2}`).then(emoji => {
+									emoji.get(`${q}`).then(emoji => {
+										teks = `${emoji.images[1].url}`
+										sendStickerFromUrl(from,`${teks}`)
+									})
+									break
+						case 'emoji2':case 'semoji2':
+						reply(mess.wait) 
+									if (!q) return reply(`Example : ${prefix + command} 😂`)
+									emoji.get(`${q}`).then(emoji => {
+										teks = `${emoji.images[2].url}`
+										sendStickerFromUrl(from,`${teks}`)
+									})
+									break
+						case 'emoji3':case 'semoji3':
+						reply(mess.wait) 
+									if (!q) return reply(`Example : ${prefix + command} 😂`)
+									emoji.get(`${q}`).then(emoji => {
+										teks = `${emoji.images[3].url}`
+										sendStickerFromUrl(from,`${teks}`)
+									})
+									break
+						case 'emoji4':case 'semoji4':
+						reply(mess.wait) 
+									if (!q) return reply(`Example : ${prefix + command} 😂`)
+									emoji.get(`${q}`).then(emoji => {
 										teks = `${emoji.images[4].url}`
+										sendStickerFromUrl(from,`${teks}`)
+									})
+									break
+					 case 'emoji5':case 'semoji5':
+						reply(mess.wait) 
+									if (!q) return reply(`Example : ${prefix + command} 😂`) 
+									emoji.get(`${q}`).then(emoji => {
+										teks = `${emoji.images[5].url}`
+										sendStickerFromUrl(from,`${teks}`)
+									})
+									break
+					case 'emoji6':case 'semoji6':
+						reply(mess.wait) 
+									if (!q) return reply(`Example : ${prefix + command} 😂`)
+									emoji.get(`${q}`).then(emoji => {
+										teks = `${emoji.images[6].url}`
+										sendStickerFromUrl(from,`${teks}`)
+									})
+									break
+				case 'emoji7':case 'semoji7':
+						reply(mess.wait) 
+									if (!q) return reply(`Example : ${prefix + command} 😂`)
+									emoji.get(`${q}`).then(emoji => {
+										teks = `${emoji.images[7].url}`
+										sendStickerFromUrl(from,`${teks}`)
+									})
+									break
+			case 'emoji8':case 'semoji8':
+						reply(mess.wait) 
+									if (!q) return reply(`Example : ${prefix + command} 😂`) 
+									emoji.get(`${q}`).then(emoji => {
+										teks = `${emoji.images[8].url}`
+										sendStickerFromUrl(from,`${teks}`)
+									})
+									break
+		case 'emoji9':case 'semoji9':
+						reply(mess.wait) 
+									if (!q) return reply(`Example : ${prefix + command} 😂`)
+									emoji.get(`${q}`).then(emoji => {
+										teks = `${emoji.images[9].url}`
+										sendStickerFromUrl(from,`${teks}`)
+									})
+									break
+case 'emoji10':case 'semoji10':
+						reply(mess.wait) 
+									if (!q) return reply(`Example : ${prefix + command} 😂`)
+									emoji.get(`${q}`).then(emoji => {
+										teks = `${emoji.images[10].url}`
+										sendStickerFromUrl(from,`${teks}`)
+									})
+									break
+case 'emoji11':case 'semoji11':
+						reply(mess.wait) 
+									if (!q) return reply(`Example : ${prefix + command} 😂`)
+									emoji.get(`${q}`).then(emoji => {
+										teks = `${emoji.images[11].url}`
 										sendStickerFromUrl(from,`${teks}`)
 									})
 									break
