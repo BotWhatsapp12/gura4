@@ -895,6 +895,7 @@ tod2 =`
 ┃*き⃟🐣* *.summersand*😅
 ┃*き⃟🐣* *.horrorblood*😅
 ┃*き⃟🐣* *.thunder*😅
+┃*き⃟🐣* *.glitch text1 text2*😅
 ┗━━━━━━━
 
 ➤ *Terimakasih Kepada*➤
@@ -913,6 +914,34 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
+           case 'neko':
+       case 'kanna':
+       case 'sagiri':
+       case 'megumin':
+       case 'wallnime':
+              reply(mess.wait)
+              getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=687424ba062dfbbc4c7a6d59`).then((gambar) => {
+              gura.sendMessage(from, gambar, image, { quoted: dep, thumbnail: Buffer.alloc(0) })
+})
+              break
+       
+       case 'hentai':
+             gura = getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/hentai?apikey=687424ba062dfbbc4c7a6d59`)
+.then((gambar) => {
+              buttons = [{buttonId: `${prefix + command}${q}`,buttonText:{displayText: `➡️Next`},type:1}, {buttonId: `${prefix}owner`,buttonText:{displayText: `👥Owner`},type:1}]
+              imageMsg = (await gura.prepareMessageMedia(gura, "imageMessage", { thumbnail: gura, })).imageMessage
+              buttonsMessage = {footerText:'Made with GuraBotz', imageMessage: imageMsg,
+              contentText:`Sama Sama Ngab`,buttons,headerType:4}
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              gura.relayWAMessage(prep)
+}) 
+              break
+       case 'storyanime':
+              reply(mess.wait)
+              anu = await fetchJson(`https://lolhuman.herokuapp.com/api/storynime?apikey=`)
+              buffer = await getBuffer(anu.result)
+              gura.sendMessage(from, buffer, video, { quoted: dep })
+              break
            case 'cecan':
            case 'bocil':
            case 'hijaber':
@@ -1740,6 +1769,7 @@ case 'demoteall':
         case 'linkgrup':
 case 'linkgroup':
 				case 'linkgc':
+				case 'link':
 				    if (!isGroup) return reply('*Hanya Bisa Digunakan Di Dalam Group*')
 				    if (!isBotGroupAdmins) return reply('*Mohon Maaf Fitur Tidak Bisa Digunakan Karena Bot Bukan Admin*')
 				    linkgc = await gura.groupInviteCode (from)
@@ -1874,12 +1904,18 @@ case 'lirik':
             sendMediaURL(from,song.thumb,song.lirik)
             break
     case 'pinterest':
+    case 'pin'
             if(!q) return reply('gambar apa?')
             let pin = await hx.pinterest(q)
             let ac = pin[Math.floor(Math.random() * pin.length)]
             let di = await getBuffer(ac)
-            await gura.sendMessage(from,di,image,{quoted: ftrol})
-            break
+            buttons = [{buttonId: `${prefix + command}${q}`,buttonText:{displayText: `➡️Next`},type:1}, {buttonId: `${prefix}owner`,buttonText:{displayText: `👥Owner`},type:1}]
+              imageMsg = (await gura.prepareMessageMedia(di, "imageMessage", { thumbnail: di, })).imageMessage
+              buttonsMessage = {footerText:'Made with GuraBotz', imageMessage: imageMsg,
+              contentText:`Sama Sama Ngab`,buttons,headerType:4}
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              gura.relayWAMessage(prep)
+                    break
  case 'twitter':
         if(!q) return reply('linknya?')
         capti2 = `*Twitter Downloader*`
