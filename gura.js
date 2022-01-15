@@ -1220,6 +1220,18 @@ title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
                               "title": "Emoji 10",
                               "rowId": `${prefix}emoji10 ${q}`
                            },
+                           {
+                              "title": "Emoji 11",
+                              "rowId": `${prefix}emoji11 ${q}`
+                           },
+                           {
+                              "title": "Emoji 12",
+                              "rowId": `${prefix}emoji12 ${q}`
+                           },
+                           {
+                              "title": "Emoji 13",
+                              "rowId": `${prefix}emoji13 ${q}`
+                           },
                         ]
                      }],
  listType: 1
@@ -1328,62 +1340,6 @@ case 'emoji13':case 'semoji13':
 									if (!q) return reply(`Example : ${prefix + command} 😂`)
 									emoji.get(`${q}`).then(emoji => {
 										teks = `${emoji.images[13].url}`
-										sendStickerFromUrl(from,`${teks}`)
-									})
-									break
-case 'emoji14':case 'semoji14':
-						reply(mess.wait) 
-									if (!q) return reply(`Example : ${prefix + command} 😂`)
-									emoji.get(`${q}`).then(emoji => {
-										teks = `${emoji.images[14].url}`
-										sendStickerFromUrl(from,`${teks}`)
-									})
-									break
-case 'emoji15':case 'semoji15':
-						reply(mess.wait) 
-									if (!q) return reply(`Example : ${prefix + command} 😂`)
-									emoji.get(`${q}`).then(emoji => {
-										teks = `${emoji.images[15].url}`
-										sendStickerFromUrl(from,`${teks}`)
-									})
-									break
-case 'emoji16':case 'semoji16':
-						reply(mess.wait) 
-									if (!q) return reply(`Example : ${prefix + command} 😂`)
-									emoji.get(`${q}`).then(emoji => {
-										teks = `${emoji.images[16].url}`
-										sendStickerFromUrl(from,`${teks}`)
-									})
-									break
-case 'emoji17':case 'semoji17':
-						reply(mess.wait) 
-									if (!q) return reply(`Example : ${prefix + command} 😂`)
-									emoji.get(`${q}`).then(emoji => {
-										teks = `${emoji.images[17].url}`
-										sendStickerFromUrl(from,`${teks}`)
-									})
-									break
-									case 'emoji18':case 'semoji18':
-						reply(mess.wait) 
-									if (!q) return reply(`Example : ${prefix + command} 😂`)
-									emoji.get(`${q}`).then(emoji => {
-										teks = `${emoji.images[18].url}`
-										sendStickerFromUrl(from,`${teks}`)
-									})
-									break
-									case 'emoji19':case 'semoji19':
-						reply(mess.wait) 
-									if (!q) return reply(`Example : ${prefix + command} 😂`)
-									emoji.get(`${q}`).then(emoji => {
-										teks = `${emoji.images[19].url}`
-										sendStickerFromUrl(from,`${teks}`)
-									})
-									break
-					case 'emoji20':case 'semoji20':
-						reply(mess.wait) 
-									if (!q) return reply(`Example : ${prefix + command} 😂`)
-									emoji.get(`${q}`).then(emoji => {
-										teks = `${emoji.images[20].url}`
 										sendStickerFromUrl(from,`${teks}`)
 									})
 									break
