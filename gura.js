@@ -2092,10 +2092,8 @@ break
            case 'ping2': case 'botstatus': case 'statusbot': {
                 let timestamp = speed()
                 let latensi = speed() - timestamp
-                neww = performance-now()
-                oldd = performance-now()
                 respon = `
-Kecepatan Respon ${latensi.toFixed(4)} _Detik_ \n ${oldd - neww} _milidetik_\n\nRuntime : ${runtime(process.uptime())}
+Kecepatan Respon ${latensi.toFixed(4)} _Detik_ \n ${speed - speed2} _milidetik_\n\nRuntime : ${runtime(process.uptime())}
 
 💻 Info Server
 RAM: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
