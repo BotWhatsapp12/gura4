@@ -2089,16 +2089,37 @@ break
 					buff = await getBuffer(anu.screenshot)
 					gura.sendMessage(from, buff, image, {quoted: ftrol, caption : teks})
 					break
-           
+           case 'ping2': case 'botstatus': case 'statusbot': {
+                let timestamp = speed()
+                let latensi = speed() - timestamp
+                neww = performance.now()
+                oldd = performance.now()
+                respon = `
+Kecepatan Respon ${latensi.toFixed(4)} _Detik_ \n ${oldd - neww} _milidetik_\n\nRuntime : ${runtime(process.uptime())}
+
+💻 Info Server
+RAM: ${formatp(os.totalmem() - os.freemem())} / ${formatp(os.totalmem())}
+
+_NodeJS Memory Usaage_
+${Object.keys(used).map((key, _, arr) => `${key.padEnd(Math.max(...arr.map(v=>v.length)),' ')}: ${formatp(used[key])}`).join('\n')}
+
+${cpus[0] ? `_Total CPU Usage_
+${cpus[0].model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}
+_CPU Core(s) Usage (${cpus.length} Core CPU)_
+${cpus.map((cpu, i) => `${i + 1}. ${cpu.model.trim()} (${cpu.speed} MHZ)\n${Object.keys(cpu.times).map(type => `- *${(type + '*').padEnd(6)}: ${(100 * cpu.times[type] / cpu.total).toFixed(2)}%`).join('\n')}`).join('\n\n')}` : ''}
+                `.trim()
+                reply(respon)
+            }
+            break
            case 'ping':
            case 'speed':
            case 'speedbot':
-           const timestamp = speed();
-			const latensi = speed() - timestamp
+           timestamp = speed();
+			latensi = speed() - timestamp
 			exec(`neofetch --stdout`, (error, stdout, stderr) => {
-			const child = stdout.toString('utf-8')
-			const teks = child.replace(/Memory:/, "Ram:")
-			const pingnya = `_*${latensi.toFixed(4)} Second*_`
+			child = stdout.toString('utf-8')
+		    teks = child.replace(/Memory:/, "Ram:")
+		    pingnya = `_*${latensi.toFixed(4)} Second*_`
 			})
 			teks11 = `*${latensi.toFixed(4)} Second*`
            reply(teks11)
