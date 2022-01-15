@@ -1902,17 +1902,13 @@ case 'lirik':
             break
     case 'pinterest':
     case 'pin'
-            if(!q) return reply('gambar apa?')
-            let pin = await hx.pinterest(q)
-            let ac = pin[Math.floor(Math.random() * pin.length)]
-            let di = await getBuffer(ac)
-            buttons = [{buttonId: `${prefix + command}${q}`,buttonText:{displayText: `➡️Next`},type:1}, {buttonId: `${prefix}owner`,buttonText:{displayText: `👥Owner`},type:1}]
-              imageMsg = (await gura.prepareMessageMedia(di, "imageMessage", { thumbnail: di, })).imageMessage
-              buttonsMessage = {footerText:'Made with GuraBotz', imageMessage: imageMsg,
-              contentText:`Sama Sama Ngab`,buttons,headerType:4}
-              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
-              gura.relayWAMessage(prep)
-                    break
+if (!q) return reply('yg mau di cari apa?')
+pinterest(`${q}`).then( data => {
+const amsulah = data.result
+const pimterest = amsulah[Math.floor(Math.random() * amsulah.length)]
+sendMediaURL (from ,pimterest , `Pinterest : ${q}`)
+})
+break
  case 'twitter':
         if(!q) return reply('linknya?')
         capti2 = `*Twitter Downloader*`
