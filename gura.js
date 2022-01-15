@@ -1261,6 +1261,8 @@ case 'topdf':
            gura.sendMessage(from, pdf, document, { mimetype: Mimetype.pdf, quoted:dep }).catch((err) => reply('error'))
            break
 case 'image':
+case 'pinterest':
+case 'pin':
 case 'gimage':
 case 'googleimage':
 if (args.length < 1) return reply('Apa Yang Mau Dicari?')
@@ -1900,15 +1902,6 @@ case 'lirik':
             let song = await hx.lirik(q)
             sendMediaURL(from,song.thumb,song.lirik)
             break
-    case 'pinterest':
-    case 'pin'
-if (!q) return reply('yg mau di cari apa?')
-pinterest(`${q}`).then( data => {
-const amsulah = data.result
-const pimterest = amsulah[Math.floor(Math.random() * amsulah.length)]
-sendMediaURL (from ,pimterest , `Pinterest : ${q}`)
-})
-break
  case 'twitter':
         if(!q) return reply('linknya?')
         capti2 = `*Twitter Downloader*`
