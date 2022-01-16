@@ -301,7 +301,7 @@ const mentions = (teks, memberr, id) => {
 
 ///Sticker Reply
 		const sticWait = (hehe) => {
-			ano = await getBuffer(`https://telegra.ph/file/90ac9394b18fe327e3ebf.png`)
+			ano = await getBuffer('https://telegra.ph/file/90ac9394b18fe327e3ebf.png')
 			gura.sendMessage(hehe, ano, sticker, { quoted: dep})
 		}
 const runtime = function(seconds) {
