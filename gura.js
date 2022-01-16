@@ -1073,6 +1073,57 @@ sendStickerUrl(from, `${anu1}`)
 reply('Gunakan foto/stiker!')
 }
 break
+//*Mencoba Game
+case 'family100':
+          if (!isGroup) return reply(mess.only.group)
+				data = fs.readFileSync('./lib/family100.js');
+                fami = JSON.parse(data);
+				ly100 = Math.floor(Math.random() * fami.length);
+				randKey = fami[ly100];
+				Pertanyaan = randKey.result.soal
+					setTimeout( () => {
+					gura.sendMessage(from, '*➸ Jawaban :* \n```'+randKey.result.jawaban +'', text, {quoted: dep}) // ur cods
+					}, 30000) // 1000 = 1s,
+					setTimeout( () => {
+					  reply('_Waktu Anda Habis_')
+					}, 29000)
+					setTimeout( () => {
+					gura.sendMessage(from, '_10 Detik lagi…_', text) // ur cods
+					}, 20000) // 1000 = 1s,
+					setTimeout( () => {
+					gura.sendMessage(from, '_20 Detik lagi_…', text) // ur cods
+					}, 10000) // 1000 = 1s,
+					setTimeout( () => {
+					gura.sendMessage(from, '_30 Detik lagi_…', text) // ur cods
+					}, 2500) // 1000 = 1s,
+					setTimeout( () => {
+					gura.sendMessage(from, '*'+ Pertanyaan +'*', text, {quoted: dep }) // ur cods
+					}, 0) // 1000 = 1s,
+					 
+					break
+case 'caklontong':
+          if (!isGroup) return reply(mess.only.group)
+				data = fs.readFileSync('./lib/caklontong.js');
+				cak = JSON.parse(data);
+				lontong = Math.floor(Math.random() * cak.length);
+				randKey = cak[lontong];
+				Pertanyaan = randKey.result.soal
+				Jawaban = '\n*'+randKey.result.desc +'*'
+					setTimeout( () => {
+					gura.sendMessage(from, Jawaban, text, {quoted: dep})
+					}, 30000)
+					setTimeout( () => {
+					gura.sendMessage(from, '_10 Detik lagi…_', text) // ur cods
+					}, 20000) // 1000 = 1s,
+					setTimeout( () => {
+					gura.sendMessage(from, '_20 Detik lagi_…', text) // ur cods
+					}, 10000) // 1000 = 1s,
+					setTimeout( () => {
+					gura.sendMessage(from, '_30 Detik lagi_…', text) // ur cods
+					}, 2500) // 1000 = 1s
+					gura.sendMessage(from, Pertanyaan, text, {quoted: dep})
+					 
+				   break
 case 'smeme2':
 									if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* Gura`)
 									try {
