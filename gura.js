@@ -301,7 +301,7 @@ const mentions = (teks, memberr, id) => {
 
 ///Sticker Reply
 		const sticWait = (hehe) => {
-			ano = fs.readFileSync('./media/wait.jpg')
+			ano = await getBuffer(`https://telegra.ph/file/90ac9394b18fe327e3ebf.png`)
 			gura.sendMessage(hehe, ano, sticker, { quoted: dep})
 		}
 const runtime = function(seconds) {
@@ -850,7 +850,7 @@ tod2 =`
 ┃*き⃟🐣* *.demote <@tag>*
 ┃*き⃟🐣* *.getnumber <@tag>*
 ┃*き⃟🐣* *.getbio <@tag>*
-┃*き⃟🐣* *.add* *<628x> Jangan Buat Mainan*
+┃*き⃟🐣* *.add* *<628x>Jangan Buat Mainan*
 ┃*き⃟🐣* *.kick* *<@tag>Jangan Buat Mainan*
 ┗━━━━━━━
 
@@ -877,116 +877,6 @@ tod2 =`
 ┃*き⃟🐣* *.mediafire <link>*
 ┃*き⃟🐣* *.twitter <link>*
 ┗━━━━━━━
-
-➤ *Anime*➤
-┃*き⃟🐣* *.loli*
-┃*き⃟🐣* *.husbu*
-┃*き⃟🐣* *.milf*
-┃*き⃟🐣* *.cosplay*
-┃*き⃟🐣* *.wallml*
-┗━━━━━━━
-
-➤ *Asupan*➤
-┃*き⃟🐣* *.cecan*
-┃*き⃟🐣* *.bocil*
-┃*き⃟🐣* *.hijaber*
-┃*き⃟🐣* *.santuy*
-┃*き⃟🐣* *.ukhti*
-┗━━━━━━━
-
-➤ *Teks Pro*➤
-┃*き⃟🐣* *.blackpink*
-┃*き⃟🐣* *.neon*
-┃*き⃟🐣* *.greenneon*
-┃*き⃟🐣* *.advanceglow*
-┃*き⃟🐣* *.futureneon*
-┃*き⃟🐣* *.sandwriting*
-┃*き⃟🐣* *.sandsummer*
-┃*き⃟🐣* *.sandengraved*
-┃*き⃟🐣* *.metaldark*
-┃*き⃟🐣* *.neonlight*
-┃*き⃟🐣* *.holographic*
-┃*き⃟🐣* *.text1917*
-┃*き⃟🐣* *.minion*
-┃*き⃟🐣* *.deluxesilver*
-┃*き⃟🐣* *.newyearcard*
-┃*き⃟🐣* *.bloodfrosted*
-┃*き⃟🐣* *.halloween*
-┃*き⃟🐣* *.jokerlogo*
-┃*き⃟🐣* *.fireworksparkle*
-┃*き⃟🐣* *.natureleaves*
-┃*き⃟🐣* *.bokeh*
-┃*き⃟🐣* *.toxic*
-┃*き⃟🐣* *.strawberry*
-┃*き⃟🐣* *.box3d*
-┃*き⃟🐣* *.roadwarning*
-┃*き⃟🐣* *.breakwall*
-┃*き⃟🐣* *.icecold*
-┃*き⃟🐣* *.luxury*
-┃*き⃟🐣* *.cloud*
-┃*き⃟🐣* *.summersand*
-┃*き⃟🐣* *.horrorblood*
-┃*き⃟🐣* *.thunder*
-┃*き⃟🐣* *.shadow* 
-┃*き⃟🐣* *.cup*
-┃*き⃟🐣* *.cup1
-┃*き⃟🐣* *.romance*
-┃*き⃟🐣* *.smoke*
-┃*き⃟🐣* *.burnpaper*
-┃*き⃟🐣* *.lovemessage*
-┃*き⃟🐣* *.undergrass*
-┃*き⃟🐣* *.love*
-┃*き⃟🐣* *.coffe*
-┃*き⃟🐣* *.woodheart*
-┃*き⃟🐣* *.woodenboard*
-┃*き⃟🐣* *.summer3d*
-┃*き⃟🐣* *.wolfmetal*
-┃*き⃟🐣* *.nature3d*
-┃*き⃟🐣* *.underwater*
-┃*き⃟🐣* *.golderrose*
-┃*き⃟🐣* *.summernature*
-┃*き⃟🐣* *.letterleaves*
-┃*き⃟🐣* *.glowingneon*
-┃*き⃟🐣* *.fallleaves*
-┃*き⃟🐣* *.flamming*
-┃*き⃟🐣* *.harrypotter*
-┃*き⃟🐣* *.carvedwood*
-┃*き⃟🐣* *.glitch text1 text2*
-┃*き⃟🐣* *.pornhub text1 text2*
-┃*き⃟🐣* *.avenger text1 text2*
-┃*き⃟🐣* *.space text1 text2*
-┃*き⃟🐣* *.ninjalogo text1 text2*
-┃*き⃟🐣* *.marvelstudio text1 text2*
-┃*き⃟🐣* *.lionlogo text1 text2*
-┃*き⃟🐣* *.wolflogo text1 text2*
-┃*き⃟🐣* *.steel3d text1 text2*
-┃*き⃟🐣* *.wallgravity text1 text2*
-┃*き⃟🐣* *.glitch text1 text2*
-┗━━━━━━━
-
-➤ *Nsfw*➤
-┃*き⃟🐣* *.gasm*
-┃*き⃟🐣* *.pussy*
-┃*き⃟🐣* *.lesbian*
-┃*き⃟🐣* *.kuni*
-┃*き⃟🐣* *.cumsluts*
-┃*き⃟🐣* *.classic*
-┃*き⃟🐣* *.boobs*
-┃*き⃟🐣* *.anal*
-┃*き⃟🐣* *.avatar*
-┃*き⃟🐣* *.yuri*
-┃*き⃟🐣* *.trap*
-┃*き⃟🐣* *.tits*
-┃*き⃟🐣* *.katsune*
-┃*き⃟🐣* *.holo*
-┃*き⃟🐣* *.keta*
-┃*き⃟🐣* *.futanari*
-┃*き⃟🐣* *.femdom*
-┃*き⃟🐣* *.feet*
-┃*き⃟🐣* *.ero*
-┃*き⃟🐣* *.spank*
-┗━━━━━━━
-
 ➤ *Terimakasih Kepada*➤
 ┃*き⃟🐣* *ArulGanz*
 ┃*き⃟🐣* *Pembuat Base Gura*
@@ -994,7 +884,7 @@ tod2 =`
 ┃*き⃟🐣* *Penyedia Apikey*
 ┃*き⃟🐣* *Teman² Yg Suka Bagi² Case*
 ┃*き⃟🐣* *User GuraBotz*
-┗━━━━━━━ *@GuraBotz*
+┗━━━━━━━ *arulganz119@gmail.com*
 `
           but = [
           { buttonId: `${prefix}owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `${prefix}patnerbot`, buttonText: { displayText: 'PatnerBot' }, type: 1 }
@@ -1003,64 +893,6 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
-           case 'darkjoke':
-case 'meme':
-buff = await getBuffer(`https://api.lolhuman.xyz/api/meme/darkjoke?apikey=eb4cc21f784bad7c80d16026`)
-buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
-imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-buttonsMessage = {footerText:'©Created By Gura Botz', imageMessage: imageMsg,
-contentText:`Nih Kak`,buttons,headerType:4}
-prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
-gura.relayWAMessage(prep)
-break
-           case 'pornhub':
-                case 'avenger':
-                case 'space':
-                case 'ninjalogo':
-                case 'marvelstudio':
-                case 'lionlogo':
-                case 'wolflogo':
-                case 'steel3d':
-                case 'wallgravity':
-                reply(mess.wait)
-                    if (args.length == 0) return reply(`Example: ${prefix + command} Gura Botz`)
-                    txt1 = args[0]
-                    txt2 = args[1]
-                    getBuffer(`https://api.lolhuman.xyz/api/textprome2/${command}?apikey=eb4cc21f784bad7c80d16026&text1=${txt1}&text2=${txt2}`).then((gambar) => {
-                        gura.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Nih Kak`, quoted : dep})
-                    })
-                    break
- case 'shadow':
-case 'cup':
-case 'cup1':
-case 'romance':
-case 'smoke':
-case 'burnpaper':
-case 'lovemessage':
-case 'undergrass':
-case 'love':
-case 'coffe':
-case 'woodheart':
-case 'woodenboard':
-case 'summer3d':
-case 'wolfmetal':
-case 'nature3d':
-case 'underwater':
-case 'golderrose':
-case 'summernature':
-case 'letterleaves':
-case 'glowingneon':
-case 'fallleaves':
-case 'flamming':
-case 'harrypotter':
-case 'carvedwood':
-reply(mess.wait)
-if (args.length == 0) return reply(`Teksnya Mana ?\nContoh : ${prefix + command} gura botz`)
-ini_txt = args.join(" ")
-getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=eb4cc21f784bad7c80d16026&text=${ini_txt}`).then((gambar) => {
-gura.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Nih Kak`, quoted : dep})
-})
-break
 case 'setppbot':
 			    gura.updatePresence(from, Presence.composing)
 					if (!isOwner) return reply('Kalau Bukan Owner Gak Usah Banyak Tingkah Deh')
@@ -1128,20 +960,6 @@ var wifegerak = ano.split('\n')
 var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
 sendStickerUrl(from, wifegerakx)
 break
-           case 'neko':
-       case 'kanna':
-       case 'sagiri':
-       case 'megumin':
-       case 'wallnime':
-       reply (mess.wait)
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=eb4cc21f784bad7c80d16026`)
-                 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}, {buttonId: `${prefix}owner`,buttonText:{displayText: `👥Owner`},type:1}]
-              imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'Made with GuraBotz', imageMessage: imageMsg,
-              contentText:`Sama Sama Ngab`,buttons,headerType:4}
-              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
-              gura.relayWAMessage(prep)    
-                    break
            case '18+':
 var pll = 'Ini Kak Asupannya >_<'
 reply(mess.wait)
@@ -1151,58 +969,6 @@ sendButVideo(from, pll, `Next to continue..!!`, blow, [
           buttonText: {displayText: `Next︎`,},type: 1}],
           {quoted:dep})          
 break
-case 'gasm':
-case 'pussy':
-case 'lesbian':
-case 'kuni':
-case 'cumsluts':
-case 'classic':
-case 'boobs':
-case 'anal':
-case 'avatar':
-case 'yuri':
-case 'trap':
-case 'tits':
-case 'kitsune':
-case 'holo':
-case 'keta':
-case 'futanari':
-case 'femdom':
-case 'feet':
-case 'ero':
-case 'spank':
-case 'kemonomimi':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-kon = await getBuffer(`https://hardianto.xyz/api/anime/random?nsfw=${command}&apikey=hardianto`)
-gtsuian = [
-{buttonId:`${prefix+command}`,buttonText:{displayText:'Next'},type:1}
-]
-mhan = await gura.prepareMessage(from, kon, image, {thumbnail: kon})
-const botttmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${pll}`,
-footerText: `${namabot}`,
-buttons: gtsuian,
-headerType: 4
-}
-gura.sendMessage(from, botttmenu, MessageType.buttonsMessage, {quoted: dep, contextInfo: {mentionedJid:[sender]}})
-break
-           case 'cecan':
-           case 'bocil':
-           case 'hijaber':
-           case 'santuy':
-           case 'ukhti':
- reply(mess.wait)
-ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/cecan?apikey=ZeroYT7`)
-buff = await getBuffer(ini.result.url)
-buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
-              imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: tamnel, })).imageMessage
-              buttonsMessage = {footerText:'crated by Gawr GuraBotz', imageMessage: imageMsg,
-              contentText:`Nih Kak ☕`,buttons,headerType:4}
-              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
-              gura.relayWAMessage(prep)
-              break
            case 'chat':
 			if (args[0].startsWith('08')) return reply('Awali nomor dengan 62')
             if (args[0].startsWith('+62')) return reply('Awali nomor dengan 62')
@@ -1303,115 +1069,6 @@ sendStickerUrl(from, `${anu1}`)
 reply('Gunakan foto/stiker!')
 }
 break
-//Text Prome
-case 'blackpink':
-                case 'neon':
-                case 'greenneon':
-                case 'advanceglow':
-                case 'futureneon':
-                case 'sandwriting':
-                case 'sandsummer':
-                case 'sandengraved':
-                case 'metaldark':
-                case 'neonlight':
-                case 'holographic':
-                case 'text1917':
-                case 'minion':
-                case 'deluxesilver':
-                case 'newyearcard':
-                case 'bloodfrosted':
-                case 'halloween':
-                case 'jokerlogo':
-                case 'fireworksparkle':
-                case 'natureleaves':
-                case 'bokeh':
-                case 'toxic':
-                case 'strawberry':
-                case 'box3d':
-                case 'roadwarning':
-                case 'breakwall':
-                case 'icecold':
-                case 'luxury':
-                case 'cloud':
-                case 'summersand':
-                case 'horrorblood':
-                case 'thunder':
-                reply (mess.wait)
-                    if (args.length == 0) return reply(`Example: ${prefix + command} Gura Botz`)
-                    ini_txt = args.join(" ")
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/textprome/${command}?apikey=eb4cc21f784bad7c80d16026&text=${ini_txt}`)
-                 buttons = [{buttonId: `${prefix}menu`,buttonText:{displayText: `⬅️Back To Menu`},type:1}, {buttonId: `${prefix}owner`,buttonText:{displayText: `👥Owner`},type:1}]
-              imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
-              buttonsMessage = {footerText:'Made with GuraBotz', imageMessage: imageMsg,
-              contentText:`Sama Sama Ngab`,buttons,headerType:4}
-              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
-              gura.relayWAMessage(prep)
-        
-                    break
-                    case 'glitch':
-                    if (args.length == 0) return reply(`Example: ${prefix + command} Gawr Gura`)
-                    txt1 = args[0]
-                    txt2 = args[1]
-                    getBuffer(`https://api.lolhuman.xyz/api/textprome2/${command}?apikey=ElainaKey&text1=${txt1}&text2=${txt2}`).then((gambar) => {
-                        gura.sendMessage(from, gambar, image, {thumbnail: dfrply, caption: `Gak Usah Repot² Donasi Kirim Pulsa Aja Seikhlasnya ke 6281578859076`, quoted : dep})
-                    })
-                    break
-                    case 'loli':
-       case 'husbu':
-       case 'milf':
-       case 'cosplay':
-       case 'wallml':
-              let wipu = (await axios.get(`https://raw.githubusercontent.com/Arya-was/endak-tau/main/${command}.json`)).data
-              let wipi = wipu[Math.floor(Math.random() * (wipu.length))]
-              fs.writeFileSync(`./${sender}.jpeg`, await getBuffer(wipi))
-		      buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1},{buttonId:`${prefix}menu`,buttonText:{displayText:'⬅️Back to Menu'},type:1}]
-              imageMsg = ( await gura.prepareMessage(from, fs.readFileSync(`./${sender}.jpeg`), 'imageMessage', {thumbnail: Buffer.alloc(0)})).message.imageMessage
-              buttonsMessage = {footerText:'Sama Sama☕', imageMessage: imageMsg,
-              contentText:`klik Next untuk ke gambar selanjut nya`,buttons,headerType:4}
-              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
-              gura.relayWAMessage(prep)
-              fs.unlinkSync(`./${sender}.jpeg`)
-              break
-case 'vampire':
-   if (!arg) return reply(from, `Penggunaan ${prefix}vampire teks`, dep)
-   sendMediaURL(from, `https://bx-hunter.herokuapp.com/api/flamingtext/vampire?text=${arg}&apikey=Ikyy69`)
-   break
-   case 'codetxt':
-   if (!arg) return reply(from, `Penggunaan ${prefix}codetxt teks`, dep)
-   sendMediaURL(from, `https://bx-hunter.herokuapp.com/api/maker/carbon?code=${arg}&apikey=Ikyy69`)
-   break
-case 'matrix':
-				if (!arg) return reply(from, `Penggunaan ${prefix}matrix teks`, dep)
-				sendMediaURL(from, `https://bx-hunter.herokuapp.com/api/flamingtext/matrix?text=${arg}&apikey=Ikyy69`)
-				break
-				case 'googletxt':
-				if (!arg) return reply(from, `Penggunaan ${prefix}googletxt teks`, dep)
-				sendMediaURL(from, `https://bx-hunter.herokuapp.com/api/flamingtext/google?text=${arg}&apikey=Ikyy69`)
-				break
-				case 'spiderman':
-				if (!arg) return reply(from, `Penggunaan ${prefix}sipderman teks`, dep)
-				sendMediaURL(from, `https://bx-hunter.herokuapp.com/api/flamingtext/spider?text=${arg}&apikey=Ikyy69`)
-				break
-				case 'express':
-				if (!arg) return reply(from, `Penggunaan ${prefix}express teks`, dep)
-				sendMediaURL(from, `https://bx-hunter.herokuapp.com/api/flamingtext/express?text=${arg}&apikey=Ikyy69`)
-				break
-				case 'dance':
-				if (!arg) return reply(from, `Penggunaan ${prefix}dance teks`, dep)
-				sendMediaURL(from, `https://bx-hunter.herokuapp.com/api/flamingtext/dance?text=${arg}&apikey=Ikyy69`)
-				break
-				case 'blackbird':
-				if (!arg) return reply(from, `Penggunaan ${prefix}blackbird teks`, dep)
-				sendMediaURL(from, `https://bx-hunter.herokuapp.com/api/flamingtext/blackbird?text=${arg}&apikey=Ikyy69`)
-				break
-				case 'text3d':
-				if (!arg) return reply(from, `Penggunaan ${prefix}text3d teks`, dep)
-				sendMediaURL(from, `https://bx-hunter.herokuapp.com/api/flamingtext/text3d?text=${arg}&apikey=Ikyy69`)
-				break
-				case 'warrior':
-				if (!arg) return reply(from, `Penggunaan ${prefix}warrior teks`, dep)
-				sendMediaURL(from, `https://bx-hunter.herokuapp.com/api/flamingtext/warrior?text=${arg}&apikey=Ikyy69`)
-				break
 case 'smeme2':
 									if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* Gura`)
 									try {
@@ -1683,15 +1340,6 @@ res = await gura.prepareMessageFromContent(from,{
 }, {}) 
 gura.relayWAMessage(res)
 break
-case 'topdf':
-           if (!isQuotedImage) return reply('image nya di reply')
-           const ida = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace("quotedM","m")).message.extendedTextMessage.contextInfo : dep
-           const idk = await gura.downloadMediaMessage(ida, 'buffer') 
-           const getpng = await uploadImages(idk, true)  
-           reply(mess.wait)
-           pdf = await getBuffer(`https://api.lolhuman.xyz/docs/converter?apikey=DhenxsKey&img=${getpng}`)
-           gura.sendMessage(from, pdf, document, { mimetype: Mimetype.pdf, quoted:dep }).catch((err) => reply('error'))
-           break
 case 'image':
 case 'pinterest':
 case 'pin':
@@ -2441,6 +2089,7 @@ case 'p4':
 		break 
 					
 						case 'wm':
+						pll = `Nih Kak, Sama Sama`
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
@@ -2448,7 +2097,11 @@ res = await TiktokDownloader(`${q}`).catch(e => {
 reply(mess.error.api)
 })
 console.log(res)
-sendMediaURL(from,  `${res.result.watermark}`)
+bkl = `${res.result.watermark}`
+sendButVideo(from, pll, `GuraBotz`, bkl, [                      
+          { buttonId: `${prefix}tomp3`,
+          buttonText: {displayText: `Music`,},type: 1}],
+          {quoted:dep})          
 break
 									case 'nowm':
 if (!q) return reply('Linknya?')
