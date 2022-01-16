@@ -835,7 +835,9 @@ tod2 =`
 ┃*き⃟🐣* *.tinyurl <masukan link>*
 ┃*き⃟🐣* *.ttp <masukan teks>*
 ┃*き⃟🐣* *.attp <masukan teks>*
-┃*き⃟🐣* *.telesticker <url>*
+┃*き⃟🐣* *.gura*
+┃*き⃟🐣* *.patrick*
+┃*き⃟🐣* *.doge*
 ┗━━━━━━━
 
 ➤ *Group*➤
@@ -861,6 +863,10 @@ tod2 =`
 ┃*き⃟🐣* *clearall*
 ┃*き⃟🐣* *self*
 ┃*き⃟🐣* *public*
+┃*き⃟🐣* *setppbot*
+┃*き⃟🐣* *upswteks*
+┃*き⃟🐣* *upswimage*
+┃*き⃟🐣* *upswvideo*
 ┗━━━━━━━
 
 ➤ *Download*➤
@@ -921,10 +927,44 @@ tod2 =`
 ┃*き⃟🐣* *.summersand*
 ┃*き⃟🐣* *.horrorblood*
 ┃*き⃟🐣* *.thunder*
+┃*き⃟🐣* *.shadow* 
+┃*き⃟🐣* *.cup*
+┃*き⃟🐣* *.cup1
+┃*き⃟🐣* *.romance*
+┃*き⃟🐣* *.smoke*
+┃*き⃟🐣* *.burnpaper*
+┃*き⃟🐣* *.lovemessage*
+┃*き⃟🐣* *.undergrass*
+┃*き⃟🐣* *.love*
+┃*き⃟🐣* *.coffe*
+┃*き⃟🐣* *.woodheart*
+┃*き⃟🐣* *.woodenboard*
+┃*き⃟🐣* *.summer3d*
+┃*き⃟🐣* *.wolfmetal*
+┃*き⃟🐣* *.nature3d*
+┃*き⃟🐣* *.underwater*
+┃*き⃟🐣* *.golderrose*
+┃*き⃟🐣* *.summernature*
+┃*き⃟🐣* *.letterleaves*
+┃*き⃟🐣* *.glowingneon*
+┃*き⃟🐣* *.fallleaves*
+┃*き⃟🐣* *.flamming*
+┃*き⃟🐣* *.harrypotter*
+┃*き⃟🐣* *.carvedwood*
+┃*き⃟🐣* *.glitch text1 text2*
+┃*き⃟🐣* *.pornhub text1 text2*
+┃*き⃟🐣* *.avenger text1 text2*
+┃*き⃟🐣* *.space text1 text2*
+┃*き⃟🐣* *.ninjalogo text1 text2*
+┃*き⃟🐣* *.marvelstudio text1 text2*
+┃*き⃟🐣* *.lionlogo text1 text2*
+┃*き⃟🐣* *.wolflogo text1 text2*
+┃*き⃟🐣* *.steel3d text1 text2*
+┃*き⃟🐣* *.wallgravity text1 text2*
 ┃*き⃟🐣* *.glitch text1 text2*
 ┗━━━━━━━
 
-➤ *Teks Pro*➤
+➤ *Nsfw*➤
 ┃*き⃟🐣* *.gasm*
 ┃*き⃟🐣* *.pussy*
 ┃*き⃟🐣* *.lesbian*
@@ -945,7 +985,16 @@ tod2 =`
 ┃*き⃟🐣* *.feet*
 ┃*き⃟🐣* *.ero*
 ┃*き⃟🐣* *.spank*
-┃*き⃟🐣* *.kemonomimi*
+┃*き⃟🐣* *.blowjob*
+┃*き⃟🐣* *.bj*
+┃*き⃟🐣* *.girlssolo*
+┃*き⃟🐣* *.holoero*
+┃*き⃟🐣* *.erofeet*
+┃*き⃟🐣* *.erokitsune*
+┃*き⃟🐣* *.erokemonomimi*
+┃*き⃟🐣* *.eroneko*
+┃*き⃟🐣* *.eroyuri*
+┃*き⃟🐣* *.cumarts*
 ┗━━━━━━━
 
 ➤ *Terimakasih Kepada*➤
@@ -964,6 +1013,222 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
+           case 'darkjoke':
+case 'meme':
+buff = await getBuffer(`https://api.lolhuman.xyz/api/meme/darkjoke?apikey=Bayu Perkasa`)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
+imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
+buttonsMessage = {footerText:'©Created By Gura Botz', imageMessage: imageMsg,
+contentText:`Nih Kak`,buttons,headerType:4}
+prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+gura.relayWAMessage(prep)
+break
+           case 'pornhub':
+                case 'avenger':
+                case 'space':
+                case 'ninjalogo':
+                case 'marvelstudio':
+                case 'lionlogo':
+                case 'wolflogo':
+                case 'steel3d':
+                case 'wallgravity':
+                reply(mess.wait)
+                    if (args.length == 0) return reply(`Example: ${prefix + command} Gura Botz`)
+                    txt1 = args[0]
+                    txt2 = args[1]
+                    getBuffer(`https://api.lolhuman.xyz/api/textprome2/${command}?apikey=Beli Apikey&text1=${txt1}&text2=${txt2}`).then((gambar) => {
+                        gura.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Nih Kak`, quoted : dep})
+                    })
+                    break
+ case 'shadow':
+case 'cup':
+case 'cup1':
+case 'romance':
+case 'smoke':
+case 'burnpaper':
+case 'lovemessage':
+case 'undergrass':
+case 'love':
+case 'coffe':
+case 'woodheart':
+case 'woodenboard':
+case 'summer3d':
+case 'wolfmetal':
+case 'nature3d':
+case 'underwater':
+case 'golderrose':
+case 'summernature':
+case 'letterleaves':
+case 'glowingneon':
+case 'fallleaves':
+case 'flamming':
+case 'harrypotter':
+case 'carvedwood':
+reply(mess.wait)
+if (args.length == 0) return reply(`Teksnya Mana ?\nContoh : ${prefix + command} gura botz`)
+ini_txt = args.join(" ")
+getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
+gura.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Nih Kak`, quoted : dep})
+})
+break
+case 'setppbot':
+			    gura.updatePresence(from, Presence.composing)
+					if (!isOwner) return reply('Kalau Bukan Owner Gak Usah Banyak Tingkah Deh')
+					gura.updatePresence(from, Presence.composing) 
+				   enmedia = JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+				     meda = await gura.downloadAndSaveMediaMessage(enmedia)
+					await gura.updateProfilePicture(botNumber, meda)
+					reply('Makasih profil barunya😗')
+					break
+					case 'upswteks':
+            if (!dep.key.fromMe && !isOwner) return
+            if (!q) return reply('Isi teksnya!')
+            gura.sendMessage('status@broadcast', `${q}`, extendedText)
+            reply(`Sukses Up story wea teks ${q}`)
+            break
+    case 'upswimage':
+            if (!dep.key.fromMe && !isOwner) return
+            if (isQuotedImage) {
+            const swsw = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
+            cihcih = await gura.downloadMediaMessage(swsw)
+            gura.sendMessage('status@broadcast', cihcih, image, { caption: `${q}` })
+            bur = `Sukses Upload Story Image dengan Caption: ${q}`
+            gura.sendMessage(from, bur, text, { quoted: dep })
+            } else {
+            reply('Reply gambarnya!')
+            }
+            break
+    case 'upswvideo':
+            if (!dep.key.fromMe && !isOwner) return
+            if (isQuotedVideo) {
+            const swsw = isQuotedVideo ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
+            cihcih = await gura.downloadMediaMessage(swsw)
+            gura.sendMessage('status@broadcast', cihcih, video, { caption: `${q}` }) 
+            bur = `Sukses Upload Story Video dengan Caption: ${q}`
+            gura.sendMessage(from, bur, text, { quoted: dep })
+            } else {
+            reply('reply videonya!')
+            }
+            break
+case 'blowjob':
+var pll = 'Nih Kak >_<'
+reply(mess.wait)
+blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=blowJob&apikey=hardianto')
+sendButImage(from, pll, `Next to continue..!!`, blow, [                      
+          { buttonId: `${prefix+command}`,
+          buttonText: {displayText: `Next︎`,},type: 1}],
+          {quoted:dep})          
+                    break
+                    
+           case 'bj':
+var pll = 'Nih Kak >_<'
+reply(mess.wait)
+blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=bJ&apikey=hardianto')
+sendButImage(from, pll, `Next to continue..!!`, blow, [                      
+          { buttonId: `${prefix+command}`,
+          buttonText: {displayText: `Next︎`,},type: 1}],
+          {quoted:dep})          
+                    break
+   case 'girlsolo':
+var pll = 'Nih Kak >_<'
+reply(mess.wait)
+blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=girlSolo&apikey=hardianto')
+sendButImage(from, pll, `Next to continue..!!`, blow, [                      
+          { buttonId: `${prefix+command}`,
+          buttonText: {displayText: `Next︎`,},type: 1}],
+          {quoted:dep})          
+break
+case 'holoero':
+var pll = 'Nih Kak >_<'
+reply(mess.wait)
+blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=holoEro&apikey=hardianto')
+sendButImage(from, pll, `Next to continue..!!`, blow, [                      
+          { buttonId: `${prefix+command}`,
+          buttonText: {displayText: `Next︎`,},type: 1}],
+          {quoted:dep})          
+break
+case 'erofeet':
+var pll = 'Nih Kak >_<'
+reply(mess.wait)
+blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=eroFeet&apikey=hardianto')
+sendButImage(from, pll, `Next to continue..!!`, blow, [                      
+          { buttonId: `${prefix+command}`,
+          buttonText: {displayText: `Next︎`,},type: 1}],
+          {quoted:dep})          
+break
+case 'erokitsune':
+var pll = 'Nih Kak >_<'
+reply(mess.wait)
+blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=eroKitsune&apikey=hardianto')
+sendButImage(from, pll, `Next to continue..!!`, blow, [                      
+          { buttonId: `${prefix+command}`,
+          buttonText: {displayText: `Next︎`,},type: 1}],
+          {quoted:dep})          
+break
+case 'erokemonomimi':
+var pll = 'Nih Kak >_<'
+reply(mess.wait)
+blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=eroKemonomimi&apikey=hardianto')
+sendButImage(from, pll, `Next to continue..!!`, blow, [                      
+          { buttonId: `${prefix+command}`,
+          buttonText: {displayText: `Next︎`,},type: 1}],
+          {quoted:dep})          
+break
+case 'eroneko':
+var pll = 'Nih Kak >_<'
+reply(mess.wait)
+blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=eroNeko&apikey=hardianto')
+sendButImage(from, pll, `Next to continue..!!`, blow, [                      
+          { buttonId: `${prefix+command}`,
+          buttonText: {displayText: `Next︎`,},type: 1}],
+          {quoted:dep})          
+break
+case 'eroyuri':
+var pll = 'Nih Kak >_<'
+reply(mess.wait)
+blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=eroYuri&apikey=hardianto')
+sendButImage(from, pll, `Next to continue..!!`, blow, [                      
+          { buttonId: `${prefix+command}`,
+          buttonText: {displayText: `Next︎`,},type: 1}],
+          {quoted:dep})          
+break
+case 'cumarts':
+var pll = 'Nih Kak >_<'
+reply(mess.wait)
+blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=cumArts&apikey=hardianto')
+sendButImage(from, pll, `Next to continue..!!`, blow, [                      
+          { buttonId: `${prefix+command}`,
+          buttonText: {displayText: `Next︎`,},type: 1}],
+          {quoted:dep})          
+break
+           case 'gura':
+case 'gawrgura':
+case 'stickgura':
+case 'gurastick':
+var ano = await fetchText('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
+var wifegerak = ano.split('\n')
+var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
+sendStickerUrl(from, wifegerakx)
+break
+
+case 'doge':
+case 'domge':
+case 'stickdoge':
+case 'dogestick':
+var ano = await fetchText('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
+var wifegerak = ano.split('\n')
+var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
+sendStickerUrl(from, wifegerakx)
+break
+
+case 'patrick':
+case 'patrik':
+case 'patrickstick':
+var ano = await fetchText('https://raw.githubusercontent.com/rashidsiregar28/data/main/patrik')
+var wifegerak = ano.split('\n')
+var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
+sendStickerUrl(from, wifegerakx)
+break
            case 'neko':
        case 'kanna':
        case 'sagiri':
