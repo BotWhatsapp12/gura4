@@ -600,6 +600,18 @@ fs.unlinkSync(filename)
 });
 }
 ///BUTTON
+const sendButVideo = async(id, text1, desc1, vid1, but = [], options = {}) => {
+     kma = vid1
+     mhan = await gura.prepareMessage(from, kma, video)
+     const buttonMessages = {
+     videoMessage: mhan.message.videoMessage,
+     contentText: text1,
+     footerText: desc1,
+     buttons: but,
+     headerType: 5
+     }
+     gura.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+     }         	
 const sendButMessage = (id, text1, desc1, but = [], options = {}) => {
         const buttonMessage = {
         contentText: text1,
@@ -971,7 +983,7 @@ case 'ero':
 case 'spank':
 case 'kemonomimi':
 var pll = 'Jangan Sange Ya Kak >_<'
-freply(mess.wait)
+reply(mess.wait)
 kon = await getBuffer(`https://hardianto.xyz/api/anime/random?nsfw=${command}&apikey=hardianto`)
 gtsuian = [
 {buttonId:`${prefix+command}`,buttonText:{displayText:'Next'},type:1}
