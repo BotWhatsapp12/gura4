@@ -985,16 +985,6 @@ tod2 =`
 ┃*き⃟🐣* *.feet*
 ┃*き⃟🐣* *.ero*
 ┃*き⃟🐣* *.spank*
-┃*き⃟🐣* *.blowjob*
-┃*き⃟🐣* *.bj*
-┃*き⃟🐣* *.girlssolo*
-┃*き⃟🐣* *.holoero*
-┃*き⃟🐣* *.erofeet*
-┃*き⃟🐣* *.erokitsune*
-┃*き⃟🐣* *.erokemonomimi*
-┃*き⃟🐣* *.eroneko*
-┃*き⃟🐣* *.eroyuri*
-┃*き⃟🐣* *.cumarts*
 ┗━━━━━━━
 
 ➤ *Terimakasih Kepada*➤
@@ -1015,7 +1005,7 @@ const loo = fs.readFileSync('./database/spam.mp3')
            break
            case 'darkjoke':
 case 'meme':
-buff = await getBuffer(`https://api.lolhuman.xyz/api/meme/darkjoke?apikey=Bayu Perkasa`)
+buff = await getBuffer(`https://api.lolhuman.xyz/api/meme/darkjoke?apikey=eb4cc21f784bad7c80d16026`)
 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
 imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
 buttonsMessage = {footerText:'©Created By Gura Botz', imageMessage: imageMsg,
@@ -1036,7 +1026,7 @@ break
                     if (args.length == 0) return reply(`Example: ${prefix + command} Gura Botz`)
                     txt1 = args[0]
                     txt2 = args[1]
-                    getBuffer(`https://api.lolhuman.xyz/api/textprome2/${command}?apikey=Beli Apikey&text1=${txt1}&text2=${txt2}`).then((gambar) => {
+                    getBuffer(`https://api.lolhuman.xyz/api/textprome2/${command}?apikey=eb4cc21f784bad7c80d16026&text1=${txt1}&text2=${txt2}`).then((gambar) => {
                         gura.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Nih Kak`, quoted : dep})
                     })
                     break
@@ -1067,7 +1057,7 @@ case 'carvedwood':
 reply(mess.wait)
 if (args.length == 0) return reply(`Teksnya Mana ?\nContoh : ${prefix + command} gura botz`)
 ini_txt = args.join(" ")
-getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=${lolkey}&text=${ini_txt}`).then((gambar) => {
+getBuffer(`https://api.lolhuman.xyz/api/photooxy1/${command}?apikey=eb4cc21f784bad7c80d16026&text=${ini_txt}`).then((gambar) => {
 gura.sendMessage(from, gambar, image, {thumbnail: Buffer.alloc(0), caption: `Nih Kak`, quoted : dep})
 })
 break
@@ -1110,97 +1100,6 @@ case 'setppbot':
             reply('reply videonya!')
             }
             break
-case 'blowjob':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=blowJob&apikey=hardianto')
-sendButImage(from, pll, `Next to continue..!!`, blow, [                      
-          { buttonId: `${prefix+command}`,
-          buttonText: {displayText: `Next︎`,},type: 1}],
-          {quoted:dep})          
-                    break
-                    
-           case 'bj':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=bJ&apikey=hardianto')
-sendButImage(from, pll, `Next to continue..!!`, blow, [                      
-          { buttonId: `${prefix+command}`,
-          buttonText: {displayText: `Next︎`,},type: 1}],
-          {quoted:dep})          
-                    break
-   case 'girlsolo':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=girlSolo&apikey=hardianto')
-sendButImage(from, pll, `Next to continue..!!`, blow, [                      
-          { buttonId: `${prefix+command}`,
-          buttonText: {displayText: `Next︎`,},type: 1}],
-          {quoted:dep})          
-break
-case 'holoero':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=holoEro&apikey=hardianto')
-sendButImage(from, pll, `Next to continue..!!`, blow, [                      
-          { buttonId: `${prefix+command}`,
-          buttonText: {displayText: `Next︎`,},type: 1}],
-          {quoted:dep})          
-break
-case 'erofeet':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=eroFeet&apikey=hardianto')
-sendButImage(from, pll, `Next to continue..!!`, blow, [                      
-          { buttonId: `${prefix+command}`,
-          buttonText: {displayText: `Next︎`,},type: 1}],
-          {quoted:dep})          
-break
-case 'erokitsune':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=eroKitsune&apikey=hardianto')
-sendButImage(from, pll, `Next to continue..!!`, blow, [                      
-          { buttonId: `${prefix+command}`,
-          buttonText: {displayText: `Next︎`,},type: 1}],
-          {quoted:dep})          
-break
-case 'erokemonomimi':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=eroKemonomimi&apikey=hardianto')
-sendButImage(from, pll, `Next to continue..!!`, blow, [                      
-          { buttonId: `${prefix+command}`,
-          buttonText: {displayText: `Next︎`,},type: 1}],
-          {quoted:dep})          
-break
-case 'eroneko':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=eroNeko&apikey=hardianto')
-sendButImage(from, pll, `Next to continue..!!`, blow, [                      
-          { buttonId: `${prefix+command}`,
-          buttonText: {displayText: `Next︎`,},type: 1}],
-          {quoted:dep})          
-break
-case 'eroyuri':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=eroYuri&apikey=hardianto')
-sendButImage(from, pll, `Next to continue..!!`, blow, [                      
-          { buttonId: `${prefix+command}`,
-          buttonText: {displayText: `Next︎`,},type: 1}],
-          {quoted:dep})          
-break
-case 'cumarts':
-var pll = 'Nih Kak >_<'
-reply(mess.wait)
-blow = await getBuffer('https://hardianto.xyz/api/anime/random?nsfw=cumArts&apikey=hardianto')
-sendButImage(from, pll, `Next to continue..!!`, blow, [                      
-          { buttonId: `${prefix+command}`,
-          buttonText: {displayText: `Next︎`,},type: 1}],
-          {quoted:dep})          
-break
            case 'gura':
 case 'gawrgura':
 case 'stickgura':
@@ -1235,7 +1134,7 @@ break
        case 'megumin':
        case 'wallnime':
        reply (mess.wait)
-                  buff = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=DhenxsKey`)
+                  buff = await getBuffer(`https://api.lolhuman.xyz/api/random/${command}?apikey=eb4cc21f784bad7c80d16026`)
                  buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}, {buttonId: `${prefix}owner`,buttonText:{displayText: `👥Owner`},type:1}]
               imageMsg = (await gura.prepareMessageMedia(buff, "imageMessage", { thumbnail: buff, })).imageMessage
               buttonsMessage = {footerText:'Made with GuraBotz', imageMessage: imageMsg,
@@ -1246,7 +1145,7 @@ break
            case '18+':
 var pll = 'Ini Kak Asupannya >_<'
 reply(mess.wait)
-blow = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
+blow = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=ZeroYt7`)
 sendButVideo(from, pll, `Next to continue..!!`, blow, [                      
           { buttonId: `${prefix+command}`,
           buttonText: {displayText: `Next︎`,},type: 1}],
