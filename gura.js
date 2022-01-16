@@ -838,6 +838,10 @@ tod2 =`
 ┃*き⃟🐣* *.gura*
 ┃*き⃟🐣* *.patrick*
 ┃*き⃟🐣* *.doge*
+┃*き⃟🐣* *.robot*
+┃*き⃟🐣* *.bass*
+┃*き⃟🐣* *.balik*
+┃*き⃟🐣* *.gemuk*
 ┗━━━━━━━
 
 ➤ *Group*➤
@@ -2087,9 +2091,56 @@ case 'p4':
 		})
 		})
 		break 
-					
+case 'robot':
+encmedial = JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+medial = await gura.downloadAndSaveMediaMessage(encmedial)
+ran = getRandom('.mp3')
+exec(`ffmpeg -i ${medial} -filter_complex "afftfilt=real='hypot(re,im)*sin(0)':imag='hypot(re,im)*cos(0)':win_size=512:overlap=0.75" ${ran}`, (err, stderr, stdout) => {
+fs.unlinkSync(medial)
+if (err) return reply(mess.error.api)
+hah = fs.readFileSync(ran)
+gura.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', duration: 359996400, ptt:true, quoted: dep})
+fs.unlinkSync(ran)
+})
+break
+case 'gemuk':
+					encmediaz = JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					mediaz = await gura.downloadAndSaveMediaMessage(encmediaz)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${mediaz} -filter:a "atempo=1.6,asetrate=22100" ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(mediaz)
+						if (err) return ephe('Error!')
+						hah = fs.readFileSync(ran)
+					gura.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, duration: 359996400, quoted:dep})
+						fs.unlinkSync(ran)
+					})
+					break
+case 'balik':
+	encmediau = JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+	mediau = await gura.downloadAndSaveMediaMessage(encmediau)
+	ran = getRandom('.mp3')
+	exec(`ffmpeg -i ${mediau} -filter_complex "areverse" ${ran}`, (err, stderr, stdout) => {
+fs.unlinkSync(mediau)
+if (err) return reply('Error!')
+hah = fs.readFileSync(ran)
+gura.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 359996400, quoted:dep})
+fs.unlinkSync(ran)
+	})
+break
+case 'bass':                 
+					encmediao = JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					mediao = await gura.downloadAndSaveMediaMessage(encmediao)
+					ran = getRandom('.mp3')
+					exec(`ffmpeg -i ${mediao} -af equalizer=f=94:width_type=o:width=2:g=30 ${ran}`, (err, stderr, stdout) => {
+						fs.unlinkSync(mediao)
+						if (err) return reply('Error!')
+						hah = fs.readFileSync(ran)
+						gura.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt: true, duration: 359996400, quoted:dep})
+						fs.unlinkSync(ran)
+					})
+				break
 						case 'wm':
-						pll = `Nih Kak, Sama Sama`
+						pll = `Nih Kak, Sama Sama 😊`
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
@@ -2097,13 +2148,10 @@ res = await TiktokDownloader(`${q}`).catch(e => {
 reply(mess.error.api)
 })
 console.log(res)
-bkl = `${res.result.watermark}`
-sendButVideo(from, pll, `GuraBotz`, bkl, [                      
-          { buttonId: `${prefix}tomp3`,
-          buttonText: {displayText: `Music`,},type: 1}],
-          {quoted:dep})          
+sendMediaURL(from,  `${res.result.nowatermark}`, pll)
 break
 									case 'nowm':
+									pll = `Nih Kak, Sama Sama 😊`
 if (!q) return reply('Linknya?')
 var { TiktokDownloader } = require('./lib/tiktokdl')
 reply(mess.wait)
