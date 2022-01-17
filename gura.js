@@ -891,6 +891,22 @@ tod2 =`
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
+case "toviewonce":
+case "tovo":
+if (isImage || isQuotedImage) {
+let encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
+let media = await gura.downloadAndSaveMediaMessage(encmedia)
+gura.sendMessage(from, fs.readFileSync(media), image, {quoted: dep, viewOnce: true})
+fs.unlinkSync(media)
+} else if (isVideo || isQuotedVideo) {
+let encmedia = isQuotedVideo ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
+let media = await gura.downloadAndSaveMediaMessage(encmedia)
+gura.sendMessage(from, fs.readFileSync(media), video, {quoted: dep, viewOnce: true})
+fs.unlinkSync(media)
+} else {
+reply(`Tag atau kirim gambar/video dengan caption ${command}`)
+}
+break
 case 'setppbot':
 			    gura.updatePresence(from, Presence.composing)
 					if (!isOwner) return reply('Kalau Bukan Owner Gak Usah Banyak Tingkah Deh')
