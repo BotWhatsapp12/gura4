@@ -60,6 +60,7 @@ const dfrply = fs.readFileSync('./media/gura.jpeg')
 const premium = require('./lib/premium')
 const { webp2mp4File } = require('./lib/webp2mp4')
 const { webp2gifFile } = require("./lib/gif.js")
+const { msgFilter } = require('./lib/antispam')
 
 //----- DATABASE -------
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
@@ -341,22 +342,15 @@ const isQuotedAudio = type === 'extendedTextMessage' && content.includes('audioM
 const isQuotedVideo = type === 'extendedTextMessage' && content.includes('videoMessage')
 const isQuotedSticker = type === 'extendedTextMessage' && content.includes('stickerMessage')
 const usedCommandRecently = new Set()
-const isFiltered = (from) => !!usedCommandRecently.has(from)
-const addFilter = (from) => {
-    usedCommandRecently.add(from)
-    setTimeout(() => usedCommandRecently.delete(from), 3000) //delay 5 detik tod
-}
+if (isCmd && msgFilter.isFiltered(from) && !isGroup) {
+						console.log(color('[CMD]','magenta'), color(moment(dep.messageTimestamp * 1000).format('DD/MM/YYYY | HH:mm:ss'), 'white'), color(`${command}`,'magenta'), 'from', color(`${sender.split("@")[0]}`,'green'))
+						return reply('Jangan Spam Om')
+						} 
+if (isCmd && msgFilter.isFiltered(from) && isGroup) {
+						console.log(color('[CMD]','magenta'), color(moment(dep.messageTimestamp * 1000).format('DD/MM/YYYY | HH:mm:ss'), 'white'), color(`${command}`,'magenta'), 'from', color(`${sender.split("@")[0]}`,'green'))
+						return reply('Jangan Spam Om')
+					}
 
-
-if (isCmd && isFiltered(from) && !isGroup) {
-console.log(color('「 SPAM 」','red'), (command), ">", (sender.split('@')[0]))
-return reply('```MOHON UNTUK DI BERI JEDA !```')
-}        
-if (isCmd && isFiltered(from) && isGroup) {
-console.log(color('「 SPAM 」','red'), (command), ">", (sender.split('@')[0]), "=>", color(groupName, "yellow"))
-return reply('```MOHON UNTUK DI BERI JEDA !```')
-}  
- 
 if (!isGroup && isCmd) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'args :', color(args.length))
 if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 
