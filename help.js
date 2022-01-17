@@ -1,6 +1,6 @@
 prefix = '.'
 var p = '*'
-module.exports.menu = (GuraBotz) => {
+module.exports = { menu }=> {
   return `
 ┏━━━━━━━━━━━━━━━⬣
 ┃┏━━⬣ *GURA BOTZ		
