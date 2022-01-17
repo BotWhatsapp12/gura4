@@ -1,4 +1,8 @@
 let emote = ``
+const speed = require('performance-now')
+const speednye = require('performance-now')
+const speednya = require('performance-now')
+const speed2 = require('performance-now')
 let mtot = ``
 uptime = process.uptime()            
 var p = '*'
@@ -15,7 +19,6 @@ module.exports.menu = (GuraBotz) => {
 ┃┏━━⬣ *GURA BOTZ*
 ┃┃⬡ ${p}•Hai kak ${pushname}${p}		
 ┃┃⬡ ${p}•Prefix : ${prefix}${p}
-┃┃⬡ ${p}•Runtime : ${kyun(uptime)}${p}
 ┃┃⬡ ${p}•Speed : ${teks11}${p}
 ┃┗━━⬣
 ┗━━━━━━━━━━━━━━━⬣
