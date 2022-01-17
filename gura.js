@@ -817,9 +817,12 @@ switch(command) {
 case 'menu':
 case 'help':
 case 'allmenu':
-                    sendButpdf (from, menu, "Created by GuraBotz", tamnel, menubutlist)        
+if (modelmenu == "text") {
+                    reply(menu(GuraBotz))
+                    } else if (modelmenu == "butpdf") {
+                    sendButpdf (from, menu(GuraBotz), "Created by GuraBotz", tamnel, menubutlist)
+                    }
                   break
-
 case "toviewonce":
 case "tovo":
 if (isImage || isQuotedImage) {
