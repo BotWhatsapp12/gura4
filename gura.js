@@ -244,6 +244,15 @@ const fakevo = {
     }
   }
 }
+let fakeyt = {
+             "title": `Hai Kak ${pushname}`,
+             "body": `${ucapanWaktu} - @${sender.split("@")[0]}`,
+             "mediaType": 2,
+             "previewType": 2,
+             "thumbnail": tamnel,
+             "mediaUrl": "https://instagram.com/_daaa_1"
+        }
+
 const katalog = (teks) => {
              res = gura.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 321, "message": teks, "footerText": "BotWhatsApp by Gura", "thumbnail": ofrply, "surface": 'CATALOG' }}, {quoted:ftrol})
              gura.relayWAMessage(res)
@@ -505,6 +514,32 @@ fs.unlinkSync(filess)
 });
 }
 
+const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
+      gura.sendMessage(id,{contentText: text,
+      footerText: desc,
+	    buttons: but,
+	    headerType: 'DOCUMENT',
+	    documentMessage: {
+	      url: "https://mmg.whatsapp.net/d/f/Ano5cGYOFQnC51uJaqGBWiCrSJH1aDCi8-YPQMMb1N1y.enc",
+		    mimetype: "application/pdf",
+		    title: "GuraBotz.pdf",
+	      fileSha256: "8Xfe3NQDhjwVjR54tkkShLDGrIFKR9QT5EsthPyxDCI=",
+		    fileLength: "9999999999",
+		    pageCount: 999,
+		    mediaKey: "XWv4hcnpGY51qEVSO9+e+q6LYqPR3DbtT4iqS9yKhkI=",
+		    fileName: "GuraBotz",
+		    fileEncSha256: "NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE+MTFbH/Wk8=",
+		    directPath: "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC",
+		    mediaKeyTimestamp: "1634472176",
+	      jpegThumbnail: tamnel,
+	      contextInfo: {
+	        externalAdReply: fakeyt,
+	        mentionedJid: [`0@s.whatsapp.net`, sender, ownerNumber]
+	}}},
+	'buttonsMessage',
+	options)
+}
+
 const sendStickerUrl = async(to, url) => {
 console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Downloading sticker...'))
 var names = getRandom('.webp')
@@ -668,6 +703,11 @@ resolve(res.url)
 })
 }
  
+var menubutlist = [
+  {buttonId: `${prefix}owner`, buttonText: {displayText: 'OWNER'}, type: 1},
+  {buttonId: `${prefix}patnerbot`, buttonText: {displayText: 'PATNERBOT'}, type: 1}
+]
+
 const telestick = async (to, url, wm = namabot, wm2 = '') => {
 			exif.create(wm, wm2)
 let packName = url.replace("https://t.me/addstickers/", "");
@@ -884,10 +924,7 @@ tod2 =`
 ┃*き⃟🐣* *User GuraBotz*
 ┗━━━━━━━ *arulganz119@gmail.com*
 `
-          but = [
-          { buttonId: `${prefix}owner`, buttonText: { displayText: 'Owner' }, type: 1 }, { buttonId: `${prefix}patnerbot`, buttonText: { displayText: 'PatnerBot' }, type: 1 }
-                  ]
-        sendButLocation(from, tod, tod2, tamnel, but)     
+sendButpdf (from, tod, tod2, "Created by GuraBotz", tamnel, menubutlist)
 const loo = fs.readFileSync('./database/spam.mp3')
                 gura.sendMessage(from, loo, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
            break
