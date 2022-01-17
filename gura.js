@@ -915,6 +915,27 @@ if (modelmenu == "text") {
                     sendButpdf (from, menu, "Created by GuraBotz", tamnel, menubutlist)
                     }
                   break
+ case 'tes':
+      gura.sendMessage(from,{
+      contentText: "Tes",
+      footerText: "© GuraBotz",
+      buttons: menubutlist,
+      headerType: "template",
+      templateButtonMessage: {
+        button: {
+        urlButton: {
+        displayText: "Instagram Owner",
+        url: "https://instagram.com/_daaa_1"
+        },
+        callButton: {
+        displayText: "Owner",
+        phoneNumber: "6281229859085@s.whatsapp.net"
+        }
+        },
+        index: "6281229859085@s.whatsapp.net"
+      }
+      },'buttonsMessage')
+      break
 case "toviewonce":
 case "tovo":
 if (isImage || isQuotedImage) {
