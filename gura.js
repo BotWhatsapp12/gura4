@@ -71,6 +71,7 @@ let welkom = JSON.parse(fs.readFileSync('./database/welcome.json'))
 const antilink = JSON.parse(fs.readFileSync('./database/antilink1.json'))
 const { jadibot, stopjadibot, listjadibot } = require('./database/jadibot.js')
 const _premium = JSON.parse(fs.readFileSync('./database/premium.json'))
+const _limit = JSON.parse(fs.readFileSync('./database/user/limit.json'))
 
 
 
@@ -91,7 +92,10 @@ tamnel = fs.readFileSync('./media/gura.jpeg')
 blocked = []
 offline = false
 modelmenu = "butpdf"
+let limitawal = '5'
 
+runa = process.uptime()         
+const gggg = `Bot Aktif Selama ${kyun(runa)}`
 module.exports = gura = async (gura, dep) => {
 try {
 if (!dep.hasNewMessage) return
@@ -113,7 +117,7 @@ const wit = moment.tz('Asia/Jayapura').format('HH : mm : ss')
 
 const menu  = `
 ┏━━━━━━━━━━━━━━━⬣
-┃┏━━⬣ *GURA BOTZ		
+┃┏━━⬣ *GURA BOTZ*		
 ┃┃⬡ *•Prefix : ${prefix}*
 ┃┃⬡ *•Owner : +62 812 2985-9085*
 ┃┗━━⬣
@@ -188,7 +192,7 @@ const menu  = `
 ┗━━━━━━━
 
 ➤ *Download*➤
-┃*き⃟??* *.tiktok <link>*
+┃*き⃟🐣* *.tiktok <link>*
 ┃*き⃟🐣* *.instagram <link>*
 ┃*き⃟🐣* *.play <judul lagu>*
 ┃*き⃟🐣* *.youtube <link>*
@@ -234,6 +238,12 @@ error: {
 stick: 'Ulangi bang',
 tes: '*Testing Bot... *'
 },
+lang = {
+limitcount = '*LIMIT COUNT*\nSisa limit : ${prem ? '1000' : `${limitCounts}`}',
+
+limitend = (pushname) => {
+	return`Maaf ${pushname} limit hari ini telah habis\nlimit di reset setiap jam 24:00`
+}
 only: {
 prem: 'Khusus User Premium Om',
 group: 'Fitur Dapat digunakan di Dalam Group!',
@@ -339,7 +349,7 @@ const fakevo = {
 }
 let fakeyt = {
              "title": `Hai Kak ${pushname}`,
-             "body": `${ucapanWaktu} - @${sender.split("@")[0]}`,
+             "body": `${gggg}`,
              "mediaType": 2,
              "previewType": 2,
              "thumbnail": tamnel,
@@ -370,8 +380,6 @@ const ftrol = {
 function parseMention(text = '') {
 return [...text.matchAll(/@([0-9]{5,16}|0)/g)].map(v => v[1] + '@s.whatsapp.net')
 }
-runa = process.uptime()         
-const gggg = `Bot Aktif Selama ${kyun(runa)}`
 const reply2 = (teks) => {
 			gura.sendMessage(from, teks, text, { thumbnail: dfrply, sendEphemeral: true, quoted: dep, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title: `${gggg}`,body:"Bot WhatsApp by ArulGanz",previewType:"PHOTO",thumbnail:ofrply,sourceUrl:`https://chat.whatsapp.com/C3jhijq3xS0AVuJykrhxMn`}}})
 		}
@@ -516,6 +524,60 @@ const getBaper = async (url, options) => {
 		console.log(`Error : ${e}`)
 	}
 }
+const checkLimit = (sender) => {
+				let found = false
+				for (let lmt of _limit) {
+					if (lmt.id === sender) {
+						let limitCounts = limitawal - lmt.limit
+						if (limitCounts <= 0) return gura.sendMessage(from,`Limit kamu sudah habis`, text,{ quoted: dep})
+						gura.sendMessage(from, lang.limitcount(isPremium, limitCounts), text, { quoted : dep})
+						found = true
+					}
+				}
+					if (found === false) {
+						let obj = { id: sender, limit: 1 }
+						_limit.push(obj)
+						fs.writeFileSync('./database/limit.json', JSON.stringify(_limit))
+						gura.sendMessage(from, lang.limitcount(isPremium, limitCounts), text, { quoted : dep})
+						}
+					}
+			const isLimit = (sender) =>{ 
+				let position = false
+				for (let i of _limit) {
+					if (i.id === sender) {
+						let limits = i.limit
+						if (limits >= limitawal ) {
+							position = true
+							gura.sendMessage(from, lang.limitend(pushname), text, {quoted: dep})
+							return true
+						} else {
+							_limit
+							position = true
+						return false
+						}
+					}
+				}
+				if (position === false) {
+					const obj = { id: sender, limit: 0 }
+					_limit.push(obj)
+					fs.writeFileSync('./database/limit.json',JSON.stringify(_limit))
+					return false
+					}
+				}
+				
+				const limitAdd = (sender) => {
+					if (isOwner && isPremium) {return false;}
+					let position = false
+					Object.keys(_limit).forEach((i) => {
+						if (_limit[i].id == sender) {
+							position = i
+							}
+						})
+				if (position !== false) {
+					_limit[position].limit += 1
+					fs.writeFileSync('./database/limit.json', JSON.stringify(_limit))
+					}
+				}
 const namabot = 'GuraBotz'
 const kickMember = async(id, target = []) => {
            let group = await gura.groupMetadata(id)
@@ -1084,6 +1146,7 @@ case 'ttp':
               if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
               buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
               gura.sendMessage(from, buffer, sticker, { quoted: dep })
+              await limitAdd(sender)
               break
                 case 'd':
 				case 'del':
