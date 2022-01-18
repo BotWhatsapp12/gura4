@@ -239,7 +239,7 @@ stick: 'Ulangi bang',
 tes: '*Testing Bot... *'
 },
 lang = {
-limitend = `Maaf ${pushname} limit hari ini telah habis`
+limitend: 'Maaf limit anda hari ini telah habis'
 }
 only: {
 prem: 'Khusus User Premium Om',
