@@ -2202,7 +2202,7 @@ owgi = await  gura.downloadAndSaveMediaMessage(ger)
 anu = await imgbb("91904762b2cd230ce1d861279bd6bf1d", owgi)
 tekks = `${anu.display_url}`
 anu1 = `${tekks}`
-sendStickerFromUrl(from, `${anu1}` {quoted: ftoko})
+sendStickerFromUrl(from, `${anu1}`)
 } else {
 reply('Gunakan foto!')
 }
