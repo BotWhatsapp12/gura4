@@ -71,7 +71,7 @@ let welkom = JSON.parse(fs.readFileSync('./database/welcome.json'))
 const antilink = JSON.parse(fs.readFileSync('./database/antilink1.json'))
 const { jadibot, stopjadibot, listjadibot } = require('./database/jadibot.js')
 const _premium = JSON.parse(fs.readFileSync('./database/premium.json'))
-const _limit = JSON.parse(fs.readFileSync('./database/user/limit.json'))
+const _limit = JSON.parse(fs.readFileSync('./database/limit.json'))
 
 
 
