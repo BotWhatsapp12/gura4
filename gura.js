@@ -239,8 +239,7 @@ stick: 'Ulangi bang',
 tes: '*Testing Bot... *'
 },
 lang = {
-limitend = (pushname) => { return`Maaf ${pushname} limit hari ini telah habis\nlimit di reset setiap jam 24:00`
-}
+limitend = `Maaf ${pushname} limit hari ini telah habis`
 }
 only: {
 prem: 'Khusus User Premium Om',
