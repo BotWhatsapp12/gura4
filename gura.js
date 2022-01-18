@@ -239,7 +239,6 @@ stick: 'Ulangi bang',
 tes: '*Testing Bot... *'
 },
 lang = {
-limitcount = '*LIMIT COUNT*\nSisa limit : ${prem ? '1000' : `${limitCounts}`}',
 limitend = (pushname) => { return`Maaf ${pushname} limit hari ini telah habis\nlimit di reset setiap jam 24:00`
 }
 }
