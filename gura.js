@@ -238,9 +238,6 @@ error: {
 stick: 'Ulangi bang',
 tes: '*Testing Bot... *'
 },
-lang = {
-limitend: 'Maaf limit anda hari ini telah habis'
-}
 only: {
 prem: 'Khusus User Premium Om',
 group: 'Fitur Dapat digunakan di Dalam Group!',
@@ -250,6 +247,8 @@ admin: 'Fitur dapat Digunakan oleh Admin Group!',
 Badmin: 'Fitur dapat Digunakan Setelah Bot menjadi ADMIN!'
 }
 }
+
+limitend = 'Limit Anda Sudah Habis'
 ownerNumbers = ["6281229859085@s.whatsapp.net","6281578859076@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net","6281229859085@s.whatsapp.net"]
 const totalchat = await gura.chats.all()
 const botNumber = gura.user.jid
@@ -545,7 +544,7 @@ const checkLimit = (sender) => {
 						let limits = i.limit
 						if (limits >= limitawal ) {
 							position = true
-							gura.sendMessage(from, lang.limitend(pushname), text, {quoted: dep})
+							gura.sendMessage(from, limitend, text, {quoted: dep})
 							return true
 						} else {
 							_limit
