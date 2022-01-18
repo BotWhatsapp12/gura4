@@ -993,7 +993,7 @@ case 'allmenu':
 if (modelmenu == "text") {
                     reply(menu)
                     } else if (modelmenu == "butpdf") {
-                    sendButpdf (from, menu, "Created by GuraBotz", tamnel, menubutlist, ftoko)
+                    sendButpdf (from, menu, "Created by GuraBotz", tamnel, menubutlist, (quoted: ftoko))
                     }
                   break
  case 'tes':
