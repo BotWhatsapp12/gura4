@@ -325,6 +325,29 @@ const fakestatus = (teks) => {
 		}
 	}
 }
+const ftoko = {
+key: {
+			fromMe: false,
+			participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "6289523258649-1604595598@g.us" } : {})
+		},
+		message: {
+			"productMessage": {
+				"product": {
+					"productImage":{
+						"mimetype": "image/jpeg",
+						"jpegThumbnail": tamnel//Gambarnye
+					},
+					"title": 'GuraBotz', 
+					"description": "by ArulGanz", 
+					"currencyCode": "IDR",
+					"priceAmount1000": "70000000",
+					"retailerId": 'Whatsapp Bot',
+					"productImageCount": 1
+				},
+				    "businessOwnerJid": `0@s.whatsapp.net`
+		}
+	}
+}
 const fakethumb = (teks, yes) => {
             gura.sendMessage(from, teks, image, {thumbnail:fs.readFileSync('./media/gura.jpeg'),quoted:dep,caption:yes})
             } 
@@ -970,7 +993,7 @@ case 'allmenu':
 if (modelmenu == "text") {
                     reply(menu)
                     } else if (modelmenu == "butpdf") {
-                    sendButpdf (from, menu, "Created by GuraBotz", tamnel, menubutlist)
+                    sendButpdf (from, menu, "Created by GuraBotz", tamnel, menubutlist, quoted: ftoko)
                     }
                   break
  case 'tes':
