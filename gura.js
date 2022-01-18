@@ -993,7 +993,7 @@ case 'allmenu':
 if (modelmenu == "text") {
                     reply(menu)
                     } else if (modelmenu == "butpdf") {
-                    sendButpdf (from, menu, "Created by GuraBotz", tamnel, menubutlist)
+                    sendButpdf (from, menu, "Created by GuraBotz", tamnel, menubutlist, {quoted: ftoko})
                     }
                   break
  case 'tes':
@@ -1148,8 +1148,8 @@ break
 case 'removebg':
            if (!isQuotedImage) return reply('reply gambar nya') 
            const biasalah = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace("quotedM","m")).message.extendedTextMessage.contextInfo : dep
-           const pebzgans1  = await gura.downloadMediaMessage(biasalah, 'buffer') 
-           const getbg = await uploadImages(pebzgans1, true) 
+           const guragans1  = await gura.downloadMediaMessage(biasalah, 'buffer') 
+           const getbg = await uploadImages(guragans1, true) 
            reply(mess.wait)
            pft = await getBuffer(`http://lolhuman.herokuapp.com/api/removebg?apikey=DhenxsKey&img=${getbg}`)
            await gura.sendMessage(from, pft, image, {quoted:dep,caption:'Done'}).catch((err) => reply('Kebanyakan Dosa Kali Lu Jadi Erorr deh'))
@@ -2193,6 +2193,20 @@ case 'lirik':
             let song = await hx.lirik(q)
             sendMediaURL(from,song.thumb,song.lirik)
             break
+ case 'sticker2':
+		  case 's2':
+		  var imgbb = require('imgbb-uploader')
+if ((isMedia && !dep.message.videoMessage || isQuotedImage || isQuotedSticker)) {
+ger = isQuotedImage || isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
+owgi = await  gura.downloadAndSaveMediaMessage(ger)
+anu = await imgbb("91904762b2cd230ce1d861279bd6bf1d", owgi)
+tekks = `${anu.display_url}`
+anu1 = `${tekks}`
+sendStickerFromUrl(from, `${anu1}` {quoted: ftoko})
+} else {
+reply('Gunakan foto!')
+}
+break  
  case 'twitter':
         if(!q) return reply('linknya?')
         capti2 = `*Twitter Downloader*`
@@ -2357,7 +2371,7 @@ case 'bcs':
 						const encmedia = isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
 						bc = await gura.downloadMediaMessage(encmedia)
 						for (let _ of anu) {
-							gura.sendMessage(_.jid, bc, sticker, {quoted:dep})
+							gura.sendMessage(_.jid, bc, sticker, {quoted:ftoko})
 						}
 						reply('Suksess broadcast')
 					}
