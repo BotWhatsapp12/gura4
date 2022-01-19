@@ -41,7 +41,7 @@ const ggs = require('google-it')
 const imgbb = require('imgbb-uploader');
 const { EmojiAPI } = require("emoji-api");
 const emoji = new EmojiAPI()
-const zee = require('api-alphabot')
+const zee = require('api-gurabot')
 
 //------ FUNCTION -------
 const { color, bgcolor } = require('./lib/warna')
@@ -160,6 +160,9 @@ const menu  = `
 ┃*き⃟🐣* *.bass*
 ┃*き⃟🐣* *.balik*
 ┃*き⃟🐣* *.gemuk*
+┃*き⃟🐣* *.slow*
+┃*き⃟🐣* *.fast*
+┃*き⃟🐣* *.tupai*
 ┗━━━━━━━
 
 ➤ *Group*➤
@@ -969,19 +972,27 @@ if (modelmenu == "text") {
                     sendButpdf (from, menu, "🌹Created by GuraBotz🌹", tamnel,  menubutlist)
                     }
                   break
-
- case 'meme':
-case 'darkjokes':
-reply(mess.wait)
-zks = await fetchJson(`https://api.zeks.me/api/${command}?apikey=apivinz`)
-anu = zks.result
-buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
-imageMsg = (await gura.prepareMessageMedia(anu, "imageMessage", { thumbnail: anu, })).imageMessage
-buttonsMessage = {footerText:'©Created By GuraBotz', imageMessage: imageMsg,
-contentText:`DONE NIH`,buttons,headerType:4}
-prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
-gura.relayWAMessage(prep)
-break
+case 'hash':
+                try {
+                if (!isQuotedSticker) return reply('Reply Sticker!')
+                const encmeds = JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+                const mediastick = await gura.downloadMediaMessage(encmeds)
+                var crypto = require('crypto')
+                hash = crypto.createHash('sha256').update(mediastick).digest('base64');
+                console.log(hash)
+                reply (hash)
+                } catch {
+                	reply(`reply stiker dengan command ${prefix}hash`)
+	}
+					break   
+////case 'darkjokes':
+					//////let data = fs.readFileSync('./src/darkjokes.js');
+					jsonData = JSON.parse(data);
+					randIndex = Math.floor(Math.random() * jsonData.length);
+					randKey = jsonData[randIndex];
+					hasil = await getBuffer(randKey.result)
+					gura.sendMessage(from, hasil, image, {thumbnail: Buffer.alloc(0), quoted: fgclink})
+					break
  case 'tes':
       gura.sendMessage(from,{
       contentText: "Tes",
@@ -1038,7 +1049,7 @@ case 'panties':
 case 'thighs':
 case 'yuri':
 case 'neko':
-get = await fetchJson(`https://lexxy-api.herokuapp.com/docs/nsfw/${command}?apikey=Alphabot`)
+get = await fetchJson(`https://lexxy-api.herokuapp.com/docs/nsfw/${command}?apikey=gurabot`)
 ini = await getBuffer(get.result)
 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
 imageMsg = (await gura.prepareMessageMedia(ini, "imageMessage", { thumbnail: ini, })).imageMessage
@@ -1279,6 +1290,37 @@ sendStickerUrl(from, `${anu1}`)
 } else {
 reply('Gunakan foto/stiker!')
 }
+break
+case 'triggered':case 'gay': case 'glass': case 'passed': case 'jail': case 'comrade':case 'green': case 'blue': case 'sepia': case 'wasted': case 'greyscale': case 'blurple2': case 'blurple': case 'red': case 'invertgreyscale': case 'invert':
+					var imgbb = require('imgbb-uploader')
+					if ((isMedia && !dep.message.videoMessage || isQuotedImage) && args.length == 0) {
+					ger = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep 
+					reply(lang.wait())
+					owgi = await gura.downloadMediaMessage(ger)
+				    anu = await uploadImages(owgi)
+					ranp = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu4 = `https://some-random-api.ml/canvas/${command}?avatar=${anu}`
+					exec(`wget ${anu4} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+					fs.unlinkSync(ranp)
+					if (err) return reply(lang.tryAgain())
+					gura.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: dep})
+					fs.unlinkSync(rano)
+					})
+					} else {
+					reply('Gunakan foto!')
+					}
+					break 
+					case 'jadian':
+jds = []
+jdii = groupMembers
+koss = groupMembers
+akuu = jdii[Math.floor(Math.random() * jdii.length)]
+diaa = koss[Math.floor(Math.random() * koss.length)]
+teks = `Ciee.. yang lagi jadian @${akuu.jid.split('@')[0]}  (♥️ ) @${diaa.jid.split('@')[0]} `
+jds.push(akuu.jid)
+jds.push(diaa.jid)
+mentions(teks, jds, true)
 break
 //*Mencoba Game
 case 'smeme2':
@@ -2361,6 +2403,44 @@ case 'bass':
 						fs.unlinkSync(ran)
 					})
 				break
+				case 'fast':
+		            if (!isQuotedVideo) return fakegroup('Reply videonya!')
+		            encmedia3 = JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+		            media3 = await gura.downloadAndSaveMediaMessage(encmedia3)
+		            ran = getRandom('.mp4')
+		            exec(`ffmpeg -i ${media3} -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2[a]" -map "[v]" -map "[a]" ${ran}`, (err) => {
+		            fs.unlinkSync(media3)
+		            if (err) return fakegroup(`Err: ${err}`)
+		            buffer453 = fs.readFileSync(ran)
+		            gura.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: dep })
+		            fs.unlinkSync(ran)
+		            })
+					break   
+		    case 'slow':
+		            if (!isQuotedVideo) return fakegroup('Reply videonya!')
+		            encmedia4 = JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
+		            media4 = await gura.downloadAndSaveMediaMessage(encmedia4)
+		            ran = getRandom('.mp4')
+		            exec(`ffmpeg -i ${media4} -filter_complex "[0:v]setpts=2*PTS[v];[0:a]atempo=0.5[a]" -map "[v]" -map "[a]" ${ran}`, (err) => {
+		            fs.unlinkSync(media4)
+		            if (err) return fakegroup(`Err: ${err}`)
+		            buffer453 = fs.readFileSync(ran)
+		            gura.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: dep })
+		            fs.unlinkSync(ran)
+		            })
+					break   
+		case 'tupai':
+var encmedia6 = JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+var media6 = await gura.downloadAndSaveMediaMessage(encmedia6)
+ran = getRandom('.mp3')
+exec(`ffmpeg -i ${media6} -filter:a "atempo=0.5,asetrate=65100" ${ran}`, (err, stderr, stdout) => {
+fs.unlinkSync(media6)
+if (err) return reply('Error!')
+let hah = fs.readFileSync(ran)
+gura.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: dep})
+fs.unlinkSync(ran)
+})
+					break   
 						case 'wm':
 						pll = `Nih Kak, Sama Sama 😊`
 if (!q) return reply('Linknya?')
