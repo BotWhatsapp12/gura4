@@ -957,62 +957,6 @@ if (!gura.public) {
          
 
 //--------- COMMAND ----------
-if(budy.includes('Bot')){
-const iiiir = fs.readFileSync('./database/botmp3')
-                gura.sendMessage(from, iiiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('bot')){
-	iiir = fs.readFileSync('./database/botmp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('anjir')){
-	iiir = fs.readFileSync('./database/toxic1.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('kontol')){
-	iiir = fs.readFileSync('./database/toxic1.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('Anj')){
-	iiir = fs.readFileSync('./database/toxic1.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('kntl')){
-	iiir = fs.readFileSync('./database/toxic1.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('anj')){
-	iiir = fs.readFileSync('./database/toxic1.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('asu')){
-	iiir = fs.readFileSync('./database/toxic1.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('ngntd')){
-	iiir = fs.readFileSync('./database/toxic1.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('ngentod')){
-	iiir = fs.readFileSync('./database/toxic1.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('bego')){
-	iiir = fs.readFileSync('./database/toxic1.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('gblk')){
-	iiir = fs.readFileSync('./database/toxic1.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
-if(budy.includes('Assalamualaikum')){
-cpref = `*Waalaikumsalam Wr Wb*`
-reply(cpref)
-}
-if(budy.includes('assalamualaikum')){
-cpref = `*Waalaikumsalam Wr Wb*`
-reply(cpref)
-}
 
 switch(command) {
 
@@ -2865,10 +2809,6 @@ reply(e)
 }
 }
 
-if (isCmd){
-	iiir = fs.readFileSync('./database/gada.mp3')
-                gura.sendMessage(from, iiir, MessageType.audio, {quoted: dep, mimetype: 'audio/mp4', ptt:true})
-}
 
 if (budy.startsWith('$')){
 if (!itsMe && !isOwner) return
