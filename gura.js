@@ -1041,7 +1041,7 @@ case 'panties':
 case 'thighs':
 case 'yuri':
 case 'neko':
-get = await fetchJson(`https://lexxy-api.herokuapp.com/docs/nsfw/${command}?apikey=gurabot`)
+get = await fetchJson(`https://lexxy-api.herokuapp.com/docs/nsfw/${command}?apikey=Alphabot`)
 ini = await getBuffer(get.result)
 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
 imageMsg = (await gura.prepareMessageMedia(ini, "imageMessage", { thumbnail: ini, })).imageMessage
@@ -1312,7 +1312,7 @@ diaa = koss[Math.floor(Math.random() * koss.length)]
 teks = `Ciee.. yang lagi jadian @${akuu.jid.split('@')[0]}  (♥️ ) @${diaa.jid.split('@')[0]} `
 jds.push(akuu.jid)
 jds.push(diaa.jid)
-mentions(teks, jds, true)
+reply(teks, jds, true)
 break
 //*Mencoba Game
 case 'smeme2':
@@ -2396,7 +2396,7 @@ case 'bass':
 					})
 				break
 				case 'fast':
-		            if (!isQuotedVideo) return fakegroup('Reply videonya!')
+		            if (!isQuotedVideo) return reply('Reply videonya!')
 		            encmedia3 = JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 		            media3 = await gura.downloadAndSaveMediaMessage(encmedia3)
 		            ran = getRandom('.mp4')
@@ -2409,7 +2409,7 @@ case 'bass':
 		            })
 					break   
 		    case 'slow':
-		            if (!isQuotedVideo) return fakegroup('Reply videonya!')
+		            if (!isQuotedVideo) return reply('Reply videonya!')
 		            encmedia4 = JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo
 		            media4 = await gura.downloadAndSaveMediaMessage(encmedia4)
 		            ran = getRandom('.mp4')
