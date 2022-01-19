@@ -199,6 +199,35 @@ const menu  = `
 ┃*き⃟🐣* *.mediafire <link>*
 ┃*き⃟🐣* *.twitter <link>*
 ┗━━━━━━━
+➤ *Nsfw*➤
+┃*き⃟🐣* *.ass*
+┃*き⃟🐣* *.ahego*
+┃*き⃟🐣* *.bdsm*
+┃*き⃟🐣* *.blowjob*
+┃*き⃟🐣* *.cuckold*
+┃*き⃟🐣* *.cum*
+┃*き⃟🐣* *.ero*
+┃*き⃟🐣* *.femdom*
+┃*き⃟🐣* *.foot*
+┃*き⃟🐣* *.glasses*
+┃*き⃟🐣* *.gangbang*
+┃*き⃟🐣* *.hentai*
+┃*き⃟🐣* *.jahy*
+┃*き⃟🐣* *.orgy*
+┃*き⃟🐣* *.pussy*
+┃*き⃟🐣* *.panties*
+┃*き⃟🐣* *.thighs*
+┃*き⃟🐣* *.yuri*
+┃*き⃟🐣* *.neko*
+┗━━━━━━━
+➤ *Nsfw*➤
+┃*き⃟🐣* *.rem*
+┃*き⃟🐣* *.gura*
+┃*き⃟🐣* *.kaneki*
+┃*き⃟🐣* *.sadboy*
+┃*き⃟🐣* *.girlneko*
+┃*き⃟🐣* *.lolimaker*
+
 ➤ *Terimakasih Kepada*➤
 ┃*き⃟🐣* *ArulGanz*
 ┃*き⃟🐣* *Pembuat Base Gura*
@@ -1113,20 +1142,14 @@ case 'setppbot':
             reply('reply videonya!')
             }
             break
-           case 'gura':
-case 'gawrgura':
 case 'stickgura':
-case 'gurastick':
 var ano = await fetchText('https://raw.githubusercontent.com/rashidsiregar28/data/main/gura')
 var wifegerak = ano.split('\n')
 var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
 sendStickerUrl(from, wifegerakx)
 break
 
-case 'doge':
-case 'domge':
 case 'stickdoge':
-case 'dogestick':
 var ano = await fetchText('https://raw.githubusercontent.com/rashidsiregar28/data/main/anjing')
 var wifegerak = ano.split('\n')
 var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
@@ -1140,6 +1163,31 @@ var ano = await fetchText('https://raw.githubusercontent.com/rashidsiregar28/dat
 var wifegerak = ano.split('\n')
 var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
 sendStickerUrl(from, wifegerakx)
+break
+case 'gura':
+if (args.length ==0)return reply(`Textnya mana kak? Contoh\n${prefix + command} GuraBotz`)
+bo = args.join(" ")
+reply(mess.wait)
+bf = await getBuffer(`https://ziy.herokuapp.com/api/Gura?nama=${bo}&apikey=xZiyy`)
+gura.sendMessage(from, bf, image, { quoted: dep, caption: 'Logo By GuraBotz' })
+break
+case 'kaneki':
+case 'rem':
+case 'lolimaker':
+if (args.length ==0)return reply(`Textnya mana kak? Contoh\n${prefix + command} Lexxy`)
+bo = args.join(" ")
+reply(mess.wait)
+bf = await getBuffer(`https://ziy.herokuapp.com/api/${command}?nama=${bo}&apikey=xZiyy`)
+gura.sendMessage(from, bf, image, { quoted: dep, caption: 'By GuraBotz' })
+break
+case 'girlneko':
+case 'sadboy':
+if (args.length ==0)return reply(`Textnya mana kak? Contoh\n${prefix + command} Gura Botz`)
+txt1 = args[0]
+txt2 = args[1]
+reply(mess.wait)
+bf = await getBuffer(`https://ziy.herokuapp.com/api/${command}?text1=${txt1}&text2=${txt2}&apikey=xZiyy`)
+gura.sendMessage(from, bf, image, { quoted: dep, caption: 'By GuraBotz' })
 break
 case 'stickerzoom':
        case 'stikerzoom':
@@ -1289,56 +1337,6 @@ reply('Gunakan foto/stiker!')
 }
 break
 //*Mencoba Game
-case 'family100':
-          if (!isGroup) return reply(mess.only.group)
-				data = fs.readFileSync('./lib/family100.js');
-                fami = JSON.parse(data);
-				ly100 = Math.floor(Math.random() * fami.length);
-				randKey = fami[ly100];
-				Pertanyaan = randKey.result.soal
-					setTimeout( () => {
-					gura.sendMessage(from, '*➸ Jawaban :* \n```'+randKey.result.jawaban +'', text, {quoted: dep}) // ur cods
-					}, 30000) // 1000 = 1s,
-					setTimeout( () => {
-					  reply('_Waktu Anda Habis_')
-					}, 29000)
-					setTimeout( () => {
-					gura.sendMessage(from, '_10 Detik lagi…_', text) // ur cods
-					}, 20000) // 1000 = 1s,
-					setTimeout( () => {
-					gura.sendMessage(from, '_20 Detik lagi_…', text) // ur cods
-					}, 10000) // 1000 = 1s,
-					setTimeout( () => {
-					gura.sendMessage(from, '_30 Detik lagi_…', text) // ur cods
-					}, 2500) // 1000 = 1s,
-					setTimeout( () => {
-					gura.sendMessage(from, '*'+ Pertanyaan +'*', text, {quoted: dep }) // ur cods
-					}, 0) // 1000 = 1s,
-					 
-					break
-case 'caklontong':
-          if (!isGroup) return reply(mess.only.group)
-				data = fs.readFileSync('./lib/caklontong.js');
-				cak = JSON.parse(data);
-				lontong = Math.floor(Math.random() * cak.length);
-				randKey = cak[lontong];
-				Pertanyaan = randKey.result.soal
-				Jawaban = '\n*'+randKey.result.desc +'*'
-					setTimeout( () => {
-					gura.sendMessage(from, Jawaban, text, {quoted: dep})
-					}, 30000)
-					setTimeout( () => {
-					gura.sendMessage(from, '_10 Detik lagi…_', text) // ur cods
-					}, 20000) // 1000 = 1s,
-					setTimeout( () => {
-					gura.sendMessage(from, '_20 Detik lagi_…', text) // ur cods
-					}, 10000) // 1000 = 1s,
-					setTimeout( () => {
-					gura.sendMessage(from, '_30 Detik lagi_…', text) // ur cods
-					}, 2500) // 1000 = 1s
-					gura.sendMessage(from, Pertanyaan, text, {quoted: dep})
-					 
-				   break
 case 'smeme2':
 									if (args.length < 1) return reply(`Kirim perintah *${prefix + command}* Gura`)
 									try {
