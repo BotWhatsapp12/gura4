@@ -203,8 +203,8 @@ const menu  = `
 ┃*き⃟🐣* *ArulGanz*
 ┃*き⃟🐣* *Pembuat Base Gura*
 ┃*き⃟🐣* *All Creator Bot Wa*
-┃*き⃟🐣* *Penyedia Apikey*
-┃*き⃟🐣* *Teman² Yg Suka Bagi² Case*
+┃*き⃟🐣* *Dimas*
+┃*き⃟🐣* *Galih*
 ┃*き⃟🐣* *User GuraBotz*
 ┗━━━━━━━ *arulganz119@gmail.com*
 `
@@ -996,6 +996,19 @@ if (modelmenu == "text") {
                     sendButpdf (from, menu, "🌹Created by GuraBotz🌹", tamnel,  menubutlist)
                     }
                   break
+
+ case 'meme':
+case 'darkjokes':
+reply(mess.wait)
+zks = await fetchJson(`https://api.zeks.me/api/${command}?apikey=apivinz`)
+anu = zks.result
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
+imageMsg = (await gura.prepareMessageMedia(anu, "imageMessage", { thumbnail: anu, })).imageMessage
+buttonsMessage = {footerText:'©Created By GuraBotz', imageMessage: imageMsg,
+contentText:`DONE NIH`,buttons,headerType:4}
+prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+gura.relayWAMessage(prep)
+break
  case 'tes':
       gura.sendMessage(from,{
       contentText: "Tes",
@@ -1032,6 +1045,34 @@ fs.unlinkSync(media)
 } else {
 reply(`Tag atau kirim gambar/video dengan caption ${command}`)
 }
+break
+case 'ass':
+case 'ahegao':
+case 'bdsm':
+case 'blowjob':
+case 'cuckold':
+case 'cum':
+case 'ero':
+case 'femdom':
+case 'foot':
+case 'glasses':
+case 'gangbang':
+case 'hentai':
+case 'jahy':
+case 'orgy':
+case 'pussy':
+case 'panties':
+case 'thighs':
+case 'yuri':
+case 'neko':
+get = await fetchJson(`https://lexxy-api.herokuapp.com/docs/nsfw/${command}?apikey=Alphabot`)
+ini = await getBuffer(get.result)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️Next`},type:1}]
+imageMsg = (await gura.prepareMessageMedia(ini, "imageMessage", { thumbnail: ini, })).imageMessage
+buttonsMessage = {footerText:'©Created By GuraBotz', imageMessage: imageMsg,
+contentText:`DONE NIH`,buttons,headerType:4}
+prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+gura.relayWAMessage(prep)
 break
 case 'setppbot':
 			    gura.updatePresence(from, Presence.composing)
@@ -1100,6 +1141,43 @@ var wifegerak = ano.split('\n')
 var wifegerakx = wifegerak[Math.floor(Math.random() * wifegerak.length)]
 sendStickerUrl(from, wifegerakx)
 break
+case 'stickerzoom':
+       case 'stikerzoom':
+       case 'szoom':
+       case 'stickergifzoom':
+       case 'stikergifzoom':
+       case 'sgifzoom':
+              if ((isMedia && !dep.message.videoMessage || isQuotedImage) && args.length == 0) {
+              var encmediat = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
+             var mediat = await gura.downloadAndSaveMediaMessage(encmediat)
+              ron = getRandom('.webp')
+              exec(`ffmpeg -i ${mediat} -vf "scale=512:512:force_original_aspect_ratio=increase,fps=15, crop=512:512" ${ron}`, (err) => {
+              fs.unlinkSync(mediat)
+              if (err) return reply(`${err}`)
+              exec(`webpmux -set exif ./sticker/data.exif ${ron} -o ${ron}`, async (error) => {
+              if (error) return reply(`${error}`)
+              gura.sendMessage(from, fs.readFileSync(ron), sticker, {quoted:dep})
+              fs.unlinkSync(ron)
+})
+})
+              } else if ((isMedia && dep.message.videoMessage.seconds < 11 || isQuotedVideo && dep.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
+              var encmediatt = isQuotedVideo ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
+              var mediat = await gura.downloadAndSaveMediaMessage(encmediatt)
+              ron = getRandom('.webp')
+              exec(`ffmpeg -i ${mediat} -vf "scale=512:512:force_original_aspect_ratio=increase,fps=15, crop=512:512" ${ron}`, (err) => {
+              fs.unlinkSync(mediat)
+              if (err) return reply(`${err}`)
+              exec(`webpmux -set exif ./sticker/data.exif ${ron} -o ${ron}`, async (error) => {
+              if (error) return reply(`${error}`)
+              gura.sendMessage(from, fs.readFileSync(ron), sticker, {quoted:dep})
+              fs.unlinkSync(ron)
+})
+})
+              } else {
+              reply(`Kirim gambar dengan caption ${prefix}sticker\nDurasi Sticker Video 1-9 Detik`)
+}
+              break
+
            case '18+':
 var pll = 'Ini Kak Asupannya >_<'
 reply(mess.wait)
