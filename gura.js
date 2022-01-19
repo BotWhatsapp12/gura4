@@ -41,7 +41,7 @@ const ggs = require('google-it')
 const imgbb = require('imgbb-uploader');
 const { EmojiAPI } = require("emoji-api");
 const emoji = new EmojiAPI()
-const zee = require('api-gurabot')
+const zee = require('api-alphabot')
 
 //------ FUNCTION -------
 const { color, bgcolor } = require('./lib/warna')
@@ -985,14 +985,6 @@ case 'hash':
                 	reply(`reply stiker dengan command ${prefix}hash`)
 	}
 					break   
-////case 'darkjokes':
-					//////let data = fs.readFileSync('./src/darkjokes.js');
-					jsonData = JSON.parse(data);
-					randIndex = Math.floor(Math.random() * jsonData.length);
-					randKey = jsonData[randIndex];
-					hasil = await getBuffer(randKey.result)
-					gura.sendMessage(from, hasil, image, {thumbnail: Buffer.alloc(0), quoted: fgclink})
-					break
  case 'tes':
       gura.sendMessage(from,{
       contentText: "Tes",
