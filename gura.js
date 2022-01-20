@@ -61,7 +61,7 @@ const premium = require('./lib/premium')
 const { webp2mp4File } = require('./lib/webp2mp4')
 const { webp2gifFile } = require("./lib/gif.js")
 const { msgFilter } = require('./lib/antispam')
-const { pShadow,pRomantic,pSmoke,pBurnPapper,pNaruto,pLoveMsg,pMsgGrass,pGlitch,pDoubleHeart,pCoffeCup,pLoveText,pButterfly } = require('./lib/photooxy')
+const { pShadow,pRomantic,pSmoke,pBurnPapper,pNaruto,pLoveMsg,pMsgGrass,pGlitch,pDoubleHeart,pCoffeCup,pLoveText,pButterfly } = require('./lib/photooxy.js')
 
 //----- DATABASE -------
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
@@ -147,6 +147,22 @@ const menu  = `
 
 ➤ *Tools*➤
 ┃*き⃟🐣* *.sticker <reply gambar>*
+┃*き⃟🐣* *.sticker2 <reply gambar>*
+┃*き⃟🐣* *.gay <reply gambar>*
+┃*き⃟🐣* *.wasted <reply gambar>*
+┃*き⃟🐣* *.jail <reply gambar>*
+┃*き⃟🐣* *.red <reply gambar>*
+┃*き⃟🐣* *.blue <reply gambar>*
+┃*き⃟🐣* *.sepia <reply gambar>*
+┃*き⃟🐣* *.glass <reply gambar>*
+┃*き⃟🐣* *.passed <reply gambar>*
+┃*き⃟🐣* *.green <reply gambar>*
+┃*き⃟🐣* *.comrade <reply gambar>*
+┃*き⃟🐣* *.blurple <reply gambar>*
+┃*き⃟🐣* *.blurple2 <reply gambar>*
+┃*き⃟🐣* *.invert <reply gambar>*
+┃*き⃟🐣* *.invertgreyscale <reply gambar>*
+┃*き⃟🐣* *.greyscale <reply gambar>*
 ┃*き⃟🐣* *.takestick* 
 ┃*き⃟🐣* *.toimg <Agak Lelet>*
 ┃*き⃟🐣* *.tourl <reply media>*
@@ -224,13 +240,14 @@ const menu  = `
 ┃*き⃟🐣* *.yuri*
 ┃*き⃟🐣* *.neko*
 ┗━━━━━━━
-➤ *Nsfw*➤
+➤ *Canvas*➤
 ┃*き⃟🐣* *.rem*
 ┃*き⃟🐣* *.gura*
 ┃*き⃟🐣* *.kaneki*
 ┃*き⃟🐣* *.sadboy*
 ┃*き⃟🐣* *.girlneko*
 ┃*き⃟🐣* *.lolimaker*
+┗━━━━━━━
 
 ➤ *Terimakasih Kepada*➤
 ┃*き⃟🐣* *ArulGanz*
