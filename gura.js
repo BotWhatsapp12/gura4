@@ -61,6 +61,7 @@ const premium = require('./lib/premium')
 const { webp2mp4File } = require('./lib/webp2mp4')
 const { webp2gifFile } = require("./lib/gif.js")
 const { msgFilter } = require('./lib/antispam')
+const { pShadow,pRomantic,pSmoke,pBurnPapper,pNaruto,pLoveMsg,pMsgGrass,pGlitch,pDoubleHeart,pCoffeCup,pLoveText,pButterfly } = require('./lib/photooxy')
 
 //----- DATABASE -------
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
@@ -1283,11 +1284,11 @@ sendStickerUrl(from, `${anu1}`)
 reply('Gunakan foto/stiker!')
 }
 break
-case 'triggered':case 'gay': case 'glass': case 'passed': case 'jail': case 'comrade':case 'green': case 'blue': case 'sepia': case 'wasted': case 'greyscale': case 'blurple2': case 'blurple': case 'red': case 'invertgreyscale': case 'invert':
+case 'triggered': case 'gay': case 'glass': case 'passed': case 'jail': case 'comrade':case 'green': case 'blue': case 'sepia': case 'wasted': case 'greyscale': case 'blurple2': case 'blurple': case 'red': case 'invertgreyscale': case 'invert':
 					var imgbb = require('imgbb-uploader')
 					if ((isMedia && !dep.message.videoMessage || isQuotedImage) && args.length == 0) {
 					ger = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep 
-					reply(lang.wait())
+					reply(mess.wait)
 					owgi = await gura.downloadMediaMessage(ger)
 				    anu = await uploadImages(owgi)
 					ranp = getRandom('.gif')
@@ -1524,6 +1525,94 @@ if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 
             }
             fs.unlinkSync(owgi)
 break
+case 'naruto':
+									if (!q) return reply('Teksnya Lord?')
+									reply(mess.wait)
+									pNaruto(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url, q)
+										})
+									break
+						case 'shadow':
+									if (!q) return reply('Teksnya Lord?')
+									reply(mess.wait)
+									pShadow(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url)
+									})
+									break
+						case 'romantic':
+									if (!q) return reply('Teksnya Lord?')
+									reply(mess.wait)
+									pRomantic(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url)
+										})
+									break
+						case 'smoke':
+									if (!q) return reply('Teksnya Lord?')
+									reply(mess.wait)
+									pSmoke(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url)
+									})
+									break
+						case 'burnpaper':
+									if (!q) return reply('Teksnya Lord?')
+									reply(mess.wait)
+									pBurnPapper(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url)
+										})
+									break
+						case 'lovemsg':
+									if (!q) return reply('Teksnya Lord?')
+									reply(mess.wait)
+									pLoveMsg(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url)
+										})
+									break
+						case 'grass':
+									if (!q) return reply('Teksnya Lord?')
+									reply(mess.wait)
+									pMsgGrass(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url)
+										})
+									break
+						case 'doubleheart':
+									if (!q) return reply('teksnya Lord?')
+									reply(mess.wait)
+									pDoubleHeart(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url)
+										})
+									break
+						case 'coffecup':
+									if (!q) return reply('Teksnya Lord?')
+									reply(mess.wait)
+									pCoffeCup(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url)
+									})
+									break
+						case 'lovetext':
+									if (!q) return reply('Teksnya Lord?')
+									reply(mess.wait)
+									pLoveText(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url)
+									})
+									break
+						case 'butterfly':
+									if (!q) return reply('Teksnya Lord?')
+									reply(mess.wait)
+									pButterfly(`${q}`)
+									.then(res => {
+										sendMediaURL(from, res.url)
+										})
+									break
 case 'trigger':
 					var imgbb = require('imgbb-uploader')
 					if ((isMedia && !dep.message.videoMessage || isQuotedImage) && args.length == 0) {
