@@ -204,13 +204,13 @@ const menu  = `
 ┃*き⃟🐣* *.tagall*
 ┃*き⃟🐣* *> eval*
 ┃*き⃟🐣* *$ exec*
-┃*き⃟🐣* *clearall*
-┃*き⃟🐣* *self*
-┃*き⃟🐣* *public*
-┃*き⃟🐣* *setppbot*
-┃*き⃟🐣* *upswteks*
-┃*き⃟🐣* *upswimage*
-┃*き⃟🐣* *upswvideo*
+┃*き⃟🐣* *.clearall*
+┃*き⃟🐣* *.self*
+┃*き⃟🐣* *.public*
+┃*き⃟🐣* *.setppbot*
+┃*き⃟🐣* *.upswteks*
+┃*き⃟🐣* *.upswimage*
+┃*き⃟🐣* *.upswvideo*
 ┗━━━━━━━
 
 ➤ *Download*➤
@@ -251,6 +251,34 @@ const menu  = `
 ┃*き⃟🐣* *.lolimaker*
 ┗━━━━━━━
 
+➤ *Fitur Tidak Berfaedah*➤
+┃*き⃟🐣* *.apakah*
+┃*き⃟🐣* *.kapankah*
+┃*き⃟🐣* *.bisakah*
+┃*き⃟🐣* *.ganteng*
+┃*き⃟🐣* *.cantik*
+┃*き⃟🐣* *.jelek*
+┃*き⃟🐣* *.goblok*
+┃*き⃟🐣* *.pinter*
+┃*き⃟🐣* *.bego*
+┃*き⃟🐣* *.jago*
+┃*き⃟🐣* *.nolep*
+┃*き⃟🐣* *.baik*
+┃*き⃟🐣* *.jahat*
+┃*き⃟🐣* *.babi*
+┃*き⃟🐣* *.beban*
+┃*き⃟🐣* *.monyet*
+┃*き⃟🐣* *.anjing*
+┃*き⃟🐣* *.haram*
+┃*き⃟🐣* *.wibu*
+┃*き⃟🐣* *.pakgirl*
+┃*き⃟🐣* *.pakboy*
+┃*き⃟🐣* *.wibu*
+┃*き⃟🐣* *.hebat*
+┃*き⃟🐣* *.sadboy*
+┃*き⃟🐣* *.sadgirl*
+┃*き⃟🐣* *.tolol*
+┗━━━━━━━
 ➤ *Terimakasih Kepada*➤
 ┃*き⃟🐣* *ArulGanz*
 ┃*き⃟🐣* *Pembuat Base Gura*
@@ -996,7 +1024,7 @@ case 'play2':
         if(!q) return reply('linknya?')              
         reply(mess.wait)
         res = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${q}`)
-        sendMediaURL(from, `${res.url.audio}`,{quoted:dep})
+        sendMediaURL(from, `${res.url_audio}`,{quoted:dep})
         break 
 case 'hash':
                 try {
@@ -1011,6 +1039,42 @@ case 'hash':
                 	reply(`reply stiker dengan command ${prefix}hash`)
 	}
 					break   
+case 'cecanrandom':
+ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/cecan?apikey=ZeroYT7`)
+
+buffer = await getBuffer(ini.result.url)
+gura.sendMessage(from, buffer, image, {quoted: dep, caption: 'Nih Ngab'})
+break
+case 'santuy':
+ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/santuy?apikey=ZeroYT7`)
+
+buffer = await getBuffer(ini.result.url)
+gura.sendMessage(from, buffer, video, {quoted: dep, caption: 'Nih Ngab'})
+break
+case 'ukhti':
+ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/ukty?apikey=ZeroYT7`)
+
+buffer = await getBuffer(ini.result.url)
+gura.sendMessage(from, buffer, video, {quoted: dep, caption: 'Nih Ngab'})
+break
+case 'bocil':
+ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/bocil?apikey=ZeroYT7`)
+
+buffer = await getBuffer(ini.result.url)
+gura.sendMessage(from, buffer, video, {quoted: dep, caption: 'Nih Ngab'})
+break
+case 'ghea':
+ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/ghea?apikey=ZeroYT7`)
+
+buffer = await getBuffer(ini.result.url)
+gura.sendMessage(from, buffer, video, {quoted: dep, caption: 'Nih Ngab'})
+break
+case 'rika':
+ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/rikagusriani?apikey=ZeroYT7`)
+
+buffer = await getBuffer(ini.result.url)
+gura.sendMessage(from, buffer, video, {quoted: dep, caption: 'Nih Jangan Sampe Berdiri yah anunya (≧▽≦)'})
+break
  case 'tes':
       gura.sendMessage(from,{
       contentText: "Tes",
@@ -1162,7 +1226,7 @@ reply(mess.wait)
 bf = await getBuffer(`https://ziy.herokuapp.com/api/${command}?text1=${txt1}&text2=${txt2}&apikey=xZiyy`)
 gura.sendMessage(from, bf, image, { quoted: dep, caption: 'By GuraBotz' })
 break
-case 'ganteng': case 'cantik': case 'jelek': case 'goblok':  case 'bego': case 'pinter': case 'jago': case 'nolep': case 'monyet':  case 'babi': case 'beban': case 'baik': case 'jahat': case 'anjing': case 'haram': case 'kontol': case 'pakboy': case 'pakgirl': case 'wibu': case 'hebat': case 'sadboy': case 'sadgirl':  
+case 'ganteng': case 'cantik': case 'jelek': case 'goblok':  case 'bego': case 'pinter': case 'jago': case 'nolep': case 'monyet':  case 'babi': case 'beban': case 'baik': case 'jahat': case 'anjing': case 'haram': case 'tolol': case 'pakboy': case 'pakgirl': case 'wibu': case 'hebat': case 'sadboy': case 'sadgirl':  
 				   if (!isGroup) return reply('Hanya Bisa Di Group Kak') 
  				   jds = []
 				   const A1 = groupMembers
