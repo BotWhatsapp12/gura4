@@ -126,166 +126,186 @@ const menu  = `
 ✇ 𝐓𝐲𝐩𝐞 : 𝐍𝐨𝐝𝐞𝐉𝐒
 
 ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏➤ *Other*➤
-┃*き⃟🐣*  *.menu*
-┃*き⃟🐣* *.ssweb*
-┃*き⃟🐣* *.runtime*
-┃*き⃟🐣* *.owner*
-┃*き⃟🐣* *.get*
-┃*き⃟🐣* *.fdeface*
-┃*き⃟🐣* *.totag <reply media>*
-┃*き⃟🐣* *.jadibot* *Premium*
-┃*き⃟🐣* *.listbot*
-┃*き⃟🐣* *.ping*
-┃*き⃟🐣* *.chat 62xnxx|(pesannya)*
+┃❒き⃟🐣  *.menu*
+┃❒き⃟🐣 *.ssweb*
+┃❒き⃟🐣 *.runtime*
+┃❒き⃟🐣 *.owner*
+┃❒き⃟🐣 *.get*
+┃❒き⃟🐣 *.fdeface*
+┃❒き⃟🐣 *.totag <reply media>*
+┃❒き⃟🐣 *.jadibot* *Premium*
+┃❒き⃟🐣 *.listbot*
+┃❒き⃟🐣 *.ping*
+┃❒き⃟🐣 *.chat 62xnxx|(pesannya)*
 ┗━━━━━━━
 
 ➤ *Search*➤
-┃*き⃟🐣* *.lirik*
-┃*き⃟🐣* *.ytsearch*
-┃*き⃟🐣* *.pinterest*
-┃*き⃟🐣* *.image*
-┃*き⃟🐣* *.google (query)*
+┃❒き⃟🐣 *.lirik*
+┃❒き⃟🐣 *.ytsearch*
+┃❒き⃟🐣 *.pinterest*
+┃❒き⃟🐣 *.image*
+┃❒き⃟🐣 *.google (query)*
 ┗━━━━━━━
 
 ➤ *Tools*➤
-┃*き⃟🐣* *.sticker <reply gambar>*
-┃*き⃟🐣* *.sticker2 <reply gambar>*
-┃*き⃟🐣* *.gay <reply gambar>*
-┃*き⃟🐣* *.wasted <reply gambar>*
-┃*き⃟🐣* *.jail <reply gambar>*
-┃*き⃟🐣* *.red <reply gambar>*
-┃*き⃟🐣* *.blue <reply gambar>*
-┃*き⃟🐣* *.sepia <reply gambar>*
-┃*き⃟🐣* *.glass <reply gambar>*
-┃*き⃟🐣* *.passed <reply gambar>*
-┃*き⃟🐣* *.green <reply gambar>*
-┃*き⃟🐣* *.comrade <reply gambar>*
-┃*き⃟🐣* *.blurple <reply gambar>*
-┃*き⃟🐣* *.blurple2 <reply gambar>*
-┃*き⃟🐣* *.invert <reply gambar>*
-┃*き⃟🐣* *.invertgreyscale <reply gambar>*
-┃*き⃟🐣* *.greyscale <reply gambar>*
-┃*き⃟🐣* *.takestick* 
-┃*き⃟🐣* *.toimg <Agak Lelet>*
-┃*き⃟🐣* *.tourl <reply media>*
-┃*き⃟🐣* *.tomp3 <reply media>*
-┃*き⃟🐣* *.tinyurl <masukan link>*
-┃*き⃟🐣* *.ttp <masukan teks>*
-┃*き⃟🐣* *.attp <masukan teks>*
-┃*き⃟🐣* *.gura*
-┃*き⃟🐣* *.patrick*
-┃*き⃟🐣* *.doge*
-┃*き⃟🐣* *.robot*
-┃*き⃟🐣* *.bass*
-┃*き⃟🐣* *.balik*
-┃*き⃟🐣* *.gemuk*
-┃*き⃟🐣* *.slow*
-┃*き⃟🐣* *.fast*
-┃*き⃟🐣* *.tupai*
+┃❒き⃟🐣 *.sticker <reply gambar>*
+┃❒き⃟🐣 *.sticker2 <reply gambar>*
+┃❒き⃟🐣 *.gay <reply gambar>*
+┃❒き⃟🐣 *.wasted <reply gambar>*
+┃❒き⃟🐣 *.jail <reply gambar>*
+┃❒き⃟🐣 *.red <reply gambar>*
+┃❒き⃟🐣 *.blue <reply gambar>*
+┃❒き⃟🐣 *.sepia <reply gambar>*
+┃❒き⃟🐣 *.glass <reply gambar>*
+┃❒き⃟🐣 *.passed <reply gambar>*
+┃❒き⃟🐣 *.green <reply gambar>*
+┃❒き⃟🐣 *.comrade <reply gambar>*
+┃❒き⃟🐣 *.blurple <reply gambar>*
+┃❒き⃟🐣 *.blurple2 <reply gambar>*
+┃❒き⃟🐣 *.invert <reply gambar>*
+┃❒き⃟🐣 *.invertgreyscale <reply gambar>*
+┃❒き⃟🐣 *.greyscale <reply gambar>*
+┃❒き⃟🐣 *.takestick* 
+┃❒き⃟🐣 *.toimg <Agak Lelet>*
+┃❒き⃟🐣 *.tourl <reply media>*
+┃❒き⃟🐣 *.tomp3 <reply media>*
+┃❒き⃟🐣 *.tinyurl <masukan link>*
+┃❒き⃟🐣 *.ttp <masukan teks>*
+┃❒き⃟🐣 *.attp <masukan teks>*
+┃❒き⃟🐣 *.gura*
+┃❒き⃟🐣 *.patrick*
+┃❒き⃟🐣 *.doge*
+┃❒き⃟🐣 *.robot*
+┃❒き⃟🐣 *.bass*
+┃❒き⃟🐣 *.balik*
+┃❒き⃟🐣 *.gemuk*
+┃❒き⃟🐣 *.slow*
+┃❒き⃟🐣 *.fast*
+┃❒き⃟🐣 *.tupai*
 ┗━━━━━━━
 
 ➤ *Group*➤
-┃*き⃟🐣* *.group <Pilih>*
-┃*き⃟🐣* *.tutuptime <waktu>*
-┃*き⃟🐣* *.bukatime <waktu>*
-┃*き⃟🐣* *.promoteall*
-┃*き⃟🐣* *.demoteall*
-┃*き⃟🐣* *.promote <@tag>*
-┃*き⃟🐣* *.demote <@tag>*
-┃*き⃟🐣* *.getnumber <@tag>*
-┃*き⃟🐣* *.getbio <@tag>*
-┃*き⃟🐣* *.add* *<628x>Jangan Buat Mainan*
-┃*き⃟🐣* *.kick* *<@tag>Jangan Buat Mainan*
+┃❒き⃟🐣 *.group <Pilih>*
+┃❒き⃟🐣 *.tutuptime <waktu>*
+┃❒き⃟🐣 *.bukatime <waktu>*
+┃❒き⃟🐣 *.promoteall*
+┃❒き⃟🐣 *.demoteall*
+┃❒き⃟🐣 *.promote <@tag>*
+┃❒き⃟🐣 *.demote <@tag>*
+┃❒き⃟🐣 *.getnumber <@tag>*
+┃❒き⃟🐣 *.getbio <@tag>*
+┃❒き⃟🐣 *.add* *<628x>Jangan Buat Mainan*
+┃❒き⃟🐣 *.kick* *<@tag>Jangan Buat Mainan*
 ┗━━━━━━━
 
 ➤ *Owner*➤
-┃*き⃟🐣* *.join*
-┃*き⃟🐣* *.hidetag*
-┃*き⃟🐣* *.tagall*
-┃*き⃟🐣* *> eval*
-┃*き⃟🐣* *$ exec*
-┃*き⃟🐣* *.clearall*
-┃*き⃟🐣* *.self*
-┃*き⃟🐣* *.public*
-┃*き⃟🐣* *.setppbot*
-┃*き⃟🐣* *.upswteks*
-┃*き⃟🐣* *.upswimage*
-┃*き⃟🐣* *.upswvideo*
+┃❒き⃟🐣 *.join*
+┃❒き⃟🐣 *.hidetag*
+┃❒き⃟🐣 *.tagall*
+┃❒き⃟🐣 *> eval*
+┃❒き⃟🐣 *$ exec*
+┃❒き⃟🐣 *.clearall*
+┃❒き⃟🐣 *.self*
+┃❒き⃟🐣 *.public*
+┃❒き⃟🐣 *.setppbot*
+┃❒き⃟🐣 *.upswteks*
+┃❒き⃟🐣 *.upswimage*
+┃❒き⃟🐣 *.upswvideo*
 ┗━━━━━━━
 
 ➤ *Download*➤
-┃*き⃟🐣* *.tiktok <link>*
-┃*き⃟🐣* *.instagram <link>*
-┃*き⃟🐣* *.play <judul lagu>*
-┃*き⃟🐣* *.youtube <link>*
-┃*き⃟🐣* *.mediafire <link>*
-┃*き⃟🐣* *.twitter <link>*
+┃❒き⃟🐣 *.tiktok <link>*
+┃❒き⃟🐣 *.instagram <link>*
+┃❒き⃟🐣 *.play <judul lagu>*
+┃❒き⃟🐣 *.youtube <link>*
+┃❒き⃟🐣 *.mediafire <link>*
+┃❒き⃟🐣 *.twitter <link>*
 ┗━━━━━━━
+
+➤ *Sound*➤
+┃❒き⃟🐣 *.sound1*
+┃❒き⃟🐣 *.sound2*
+┃ _Sound Ada 75_
+┃*Penggunaanya .sound1 .sound2 dst.*
+┗━━━━━━━
+
 ➤ *Nsfw*➤
-┃*き⃟🐣* *.ass*
-┃*き⃟🐣* *.ahego*
-┃*き⃟🐣* *.bdsm*
-┃*き⃟🐣* *.blowjob*
-┃*き⃟🐣* *.cuckold*
-┃*き⃟🐣* *.cum*
-┃*き⃟🐣* *.ero*
-┃*き⃟🐣* *.femdom*
-┃*き⃟🐣* *.foot*
-┃*き⃟🐣* *.glasses*
-┃*き⃟🐣* *.gangbang*
-┃*き⃟🐣* *.hentai*
-┃*き⃟🐣* *.jahy*
-┃*き⃟🐣* *.orgy*
-┃*き⃟🐣* *.pussy*
-┃*き⃟🐣* *.panties*
-┃*き⃟🐣* *.thighs*
-┃*き⃟🐣* *.yuri*
-┃*き⃟🐣* *.neko*
+┃❒き⃟🐣 *.ass*
+┃❒き⃟🐣 *.ahego*
+┃❒き⃟🐣 *.bdsm*
+┃❒き⃟🐣 *.blowjob*
+┃❒き⃟🐣 *.cuckold*
+┃❒き⃟🐣 *.cum*
+┃❒き⃟🐣 *.ero*
+┃❒き⃟🐣 *.femdom*
+┃❒き⃟🐣 *.foot*
+┃❒き⃟🐣 *.glasses*
+┃❒き⃟🐣 *.gangbang*
+┃❒き⃟🐣 *.hentai*
+┃❒き⃟🐣 *.jahy*
+┃❒き⃟🐣 *.orgy*
+┃❒き⃟🐣 *.pussy*
+┃❒き⃟🐣 *.panties*
+┃❒き⃟🐣 *.thighs*
+┃❒き⃟🐣 *.yuri*
+┃❒き⃟🐣 *.nekonsfw*
 ┗━━━━━━━
+
 ➤ *Canvas*➤
-┃*き⃟🐣* *.rem*
-┃*き⃟🐣* *.gura*
-┃*き⃟🐣* *.kaneki*
-┃*き⃟🐣* *.sadboy*
-┃*き⃟🐣* *.girlneko*
-┃*き⃟🐣* *.lolimaker*
+┃❒き⃟🐣 *.rem*
+┃❒き⃟🐣 *.gura*
+┃❒き⃟🐣 *.kaneki*
+┃❒き⃟🐣 *.sadboy*
+┃❒き⃟🐣 *.girlneko*
+┃❒き⃟🐣 *.lolimaker*
+┗━━━━━━━
+
+➤ *Asupan*➤
+┃❒き⃟🐣 *.cecanrandom*
+┃❒き⃟🐣 *.bocil*
+┃❒き⃟🐣 *.ukhti*
+┃❒き⃟🐣 *.santuy*
+┃❒き⃟🐣 *.rika*
+┃❒き⃟🐣 *.ghea*
+┃❒き⃟🐣 *.hijaber*
 ┗━━━━━━━
 
 ➤ *Fitur Tidak Berfaedah*➤
-┃*き⃟🐣* *.apakah*
-┃*き⃟🐣* *.kapankah*
-┃*き⃟🐣* *.bisakah*
-┃*き⃟🐣* *.ganteng*
-┃*き⃟🐣* *.cantik*
-┃*き⃟🐣* *.jelek*
-┃*き⃟🐣* *.goblok*
-┃*き⃟🐣* *.pinter*
-┃*き⃟🐣* *.bego*
-┃*き⃟🐣* *.jago*
-┃*き⃟🐣* *.nolep*
-┃*き⃟🐣* *.baik*
-┃*き⃟🐣* *.jahat*
-┃*き⃟🐣* *.babi*
-┃*き⃟🐣* *.beban*
-┃*き⃟🐣* *.monyet*
-┃*き⃟🐣* *.anjing*
-┃*き⃟🐣* *.haram*
-┃*き⃟🐣* *.wibu*
-┃*き⃟🐣* *.pakgirl*
-┃*き⃟🐣* *.pakboy*
-┃*き⃟🐣* *.wibu*
-┃*き⃟🐣* *.hebat*
-┃*き⃟🐣* *.sadboy*
-┃*き⃟🐣* *.sadgirl*
-┃*き⃟🐣* *.tolol*
+┃❒き⃟🐣 *.apakah*
+┃❒き⃟🐣 *.kapankah*
+┃❒き⃟🐣 *.bisakah*
+┃❒き⃟🐣 *.ganteng*
+┃❒き⃟🐣 *.cantik*
+┃❒き⃟🐣 *.jelek*
+┃❒き⃟🐣 *.goblok*
+┃❒き⃟🐣 *.pinter*
+┃❒き⃟🐣 *.bego*
+┃❒き⃟🐣 *.jago*
+┃❒き⃟🐣 *.nolep*
+┃❒き⃟🐣 *.baik*
+┃❒き⃟🐣 *.jahat*
+┃❒き⃟🐣 *.babi*
+┃❒き⃟🐣 *.beban*
+┃❒き⃟🐣 *.monyet*
+┃❒き⃟🐣 *.anjing*
+┃❒き⃟🐣 *.haram*
+┃❒き⃟🐣 *.wibu*
+┃❒き⃟🐣 *.pakgirl*
+┃❒き⃟🐣 *.pakboy*
+┃❒き⃟🐣 *.wibu*
+┃❒き⃟🐣 *.hebat*
+┃❒き⃟🐣 *.sadboy*
+┃❒き⃟🐣 *.sadgirl*
+┃❒き⃟🐣 *.tolol*
 ┗━━━━━━━
+
 ➤ *Terimakasih Kepada*➤
-┃*き⃟🐣* *ArulGanz*
-┃*き⃟🐣* *Pembuat Base Gura*
-┃*き⃟🐣* *All Creator Bot Wa*
-┃*き⃟🐣* *Dimas*
-┃*き⃟🐣* *Galih*
-┃*き⃟🐣* *User GuraBotz*
+┃❒き⃟🐣 *ArulGanz*
+┃❒き⃟🐣 *Pembuat Base Gura*
+┃❒き⃟🐣 *All Creator Bot Wa*
+┃❒き⃟🐣 *Dimas*
+┃❒き⃟🐣 *Galih*
+┃❒き⃟🐣 *User GuraBotz*
 ┗━━━━━━━ *@Z*
 `
 const jmn = moment.tz('Asia/Jakarta').format('HH:mm:ss')
@@ -1026,6 +1046,161 @@ case 'play2':
         res = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${q}`)
         sendMediaURL(from, `${res.url_audio}`,{quoted:dep})
         break 
+case 'shadow':
+case 'flaming':
+case 'rainbow':
+case 'smoke':
+case 'wood':
+case 'coffe':
+if (args.length == 0) return reply(`Text Nya Mana\nContoh: ${prefix + command} GuraBotz`)
+bo = args.join(" ")
+reply(mess.wait)
+rn = await getBuffer(`http://zekais-api.herokuapp.com/oxy/${command}?text=${bo}&apikey=apiviz`)
+LexxyOFC.sendMessage(from, rn, image, { quoted: dep, caption: 'Nih Kak Hasil Makernya' })
+break
+case 'bold':
+if (args.length == 0) return reply(`Text Nya Mana\nContoh: ${prefix + command} GuraBotz`)
+bo = args.join(" ")
+reply(mess.wait)
+bl = await getBuffer(`http://zekais-api.herokuapp.com/oxy/bold?text=${bo}&apikey=apiviz`)
+gura.sendMessage(from, bl, MessageType.video,{mimetype:'video/mp4',quoted: dep, caption: '𝑁𝑖ℎ 𝐵𝑟𝑜 𝑉𝑖𝑑𝑒𝑜 𝑁𝑦𝑎'})
+break
+case 'poly':
+if (args.length == 0) return reply(`Text Nya Mana\nContoh: ${prefix + command} GuraBotz`)
+bo = args.join(" ")
+reply(mess.wait)
+pl = await getBuffer(`http://zekais-api.herokuapp.com/oxy/poly?text=${bo}&apikey=apiviz`)
+gura.sendMessage(from, pl, MessageType.video,{mimetype:'video/mp4',quoted: dep, caption: '𝑁𝑖ℎ 𝐵𝑟𝑜 𝑉𝑖𝑑𝑒𝑜 𝑁𝑦𝑎'})
+break
+case 'cerpen':
+reply(mess.wait)
+get = await fetchJson(`http://zekais-api.herokuapp.com/cerpen?apikey=apiviz`)
+ini_txt =`Judul :${get.title}\n`
+ini_txt +=`Pengarang : ${get.pengarang}\n`
+ini_txt +=`Category : ${get.category}\n\n`
+ini_txt +=`Cerita : ${get.post}`
+reply(ini_txt)
+break
+case 'memes':
+reply(mess.wait)
+get = await fetchJson(`http://zekais-api.herokuapp.com/dankmemes?apikey=apiviz`)
+ini = await getBuffer(`${get.result}`)
+gura.sendMessage(from, ini, image, { quoted: dep })
+break
+case 'bucin':
+reply(mess.wait)
+get = await fetchJson(`http://zekais-api.herokuapp.com/bucin?apikey=apiviz`)
+ini_txt =`*${get.result}*`
+reply(ini_txt)
+break
+case 'bijak':
+reply(mess.wait)
+get = await fetchJson(`http://zekais-api.herokuapp.com/bijak?apikey=apiviz`)
+ini_txt =`*${get.result}*`
+reply(ini_txt)
+break
+case 'fakta':
+reply(mess.wait)
+get = await fetchJson(`http://zekais-api.herokuapp.com/fakta?apikey=apiviz`)
+ini_txt =`*${get.result}*`
+reply(ini_txt)
+break
+case 'quotesimg':
+reply(mess.wait)
+get = await fetchJson(`http://zekais-api.herokuapp.com/quotepic?apikey=apiviz`)
+ini = await getBuffer(`${get.quotes}`)
+gura.sendMessage(from, ini, image, { quoted: dep, caption: '*Quotes by GuraBotz*' })
+break
+case 'quotesid':
+reply(mess.wait)
+get = await fetchJson(`http://zekais-api.herokuapp.com/quotes?apikey=apiviz`)
+ini_txt =`*${get.quotes}*\n\n`
+ini_txt +=`*Author : @${get.author}*`
+reply(ini_txt)
+break
+case 'sound1':
+      case 'sound2':
+      case 'sound3':
+      case 'sound4':
+      case 'sound5':
+      case 'sound6':
+      case 'sound7':
+      case 'sound8':
+      case 'sound9':
+      case 'sound10':
+      case 'sound11':
+      case 'sound12':
+      case 'sound13':
+      case 'sound14':
+      case 'sound15':
+      case 'sound16':
+      case 'sound17':
+      case 'sound18':
+      case 'sound19':
+      case 'sound20':
+      case 'sound21':
+      case 'sound22':
+      case 'sound23':
+      case 'sound24':
+      case 'sound25':
+      case 'sound26':
+      case 'sound27':
+      case 'sound28':
+      case 'sound29':
+      case 'sound30':
+      case 'sound31':
+      case 'sound32':
+      case 'sound33':
+      case 'sound34':
+      case 'sound35':
+      case 'sound36':
+      case 'sound37':
+      case 'sound38':
+      case 'sound39':
+      case 'sound40':
+      case 'sound41':
+      case 'sound42':
+      case 'sound43':
+      case 'sound44':
+      case 'sound45':
+      case 'sound46':
+      case 'sound47':
+      case 'sound48':
+      case 'sound49':
+      case 'sound50':
+      case 'sound51':
+      case 'sound52':
+      case 'sound53':
+      case 'sound54':
+      case 'sound55':
+      case 'sound56':
+      case 'sound57':
+      case 'sound58':
+      case 'sound59':
+      case 'sound60':
+      case 'sound61':
+      case 'sound62':
+      case 'sound63':
+      case 'sound64':
+      case 'sound65':
+      case 'sound66':
+      case 'sound67':
+      case 'sound68':
+      case 'sound69':
+      case 'sound70':
+      case 'sound70':
+      omkeh = await getBuffer(`https://hansxd.nasihosting.com/sound/${command}.mp3`)
+      gura.sendMessage(from, omkeh, MessageType.audio, { quoted: dep, mimetype: 'audio/mp4', ptt: true })
+      break
+      case 'sound71':
+      case 'sound71':
+      case 'sound72':
+      case 'sound73':
+      case 'sound74':
+      case 'sound75':
+      omkeh = await getBuffer(`https://ojankyaa.000webhostapp.com/sound/${command}.mp3`)
+      gura.sendMessage(from, omkeh, MessageType.audio, { quoted: dep, mimetype: 'audio/mp4', ptt: true })
+          break      
 case 'hash':
                 try {
                 if (!isQuotedSticker) return reply('Reply Sticker!')
