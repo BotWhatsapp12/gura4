@@ -1176,7 +1176,7 @@ case 'horror2':
 case 'lava':
 case 'bagel':
 reply(mess.wait)
-if (args.length < 1) return reply('Contoh: .glitch2 Gura|Botz')
+if (args.length < 1) return reply('Contoh: ${prefix + command} Gura|Botz')
 var m = q
 var m1 = m.split("|")[0];
 var m2 = m.split("|")[1]; 
@@ -1231,6 +1231,7 @@ reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/santuy?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
               contentText:`DONE`,buttons,headerType:5}
@@ -1242,6 +1243,7 @@ reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/ukty?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
               contentText:`DONE`,buttons,headerType:5}
@@ -1253,6 +1255,7 @@ reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/bocil?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
               contentText:`DONE`,buttons,headerType:5}
@@ -1264,6 +1267,7 @@ reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/ghea?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
               contentText:`DONE`,buttons,headerType:5}
@@ -1275,6 +1279,7 @@ reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/rikagusriani?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
               contentText:`DONE`,buttons,headerType:5}
@@ -2631,7 +2636,7 @@ case 'ytdl':
         capti2 = `*Youtube Downloader*`
         ya = fs.readFileSync('./media/yutub.jpg')
         py =await gura.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}p4 ${q}`, buttonText: {displayText: '📥Video'}, type: 1},{buttonId: `${prefix}p3 ${q}`, buttonText: {displayText: '📥Music'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}ytp4 ${q}`, buttonText: {displayText: '📥Video'}, type: 1},{buttonId: `${prefix}ytp3 ${q}`, buttonText: {displayText: '📥Music'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti2,
@@ -2642,7 +2647,6 @@ case 'ytdl':
         await gura.sendMessage(from, gbuttonan, MessageType.buttonsMessage)
         break  
 case 'p42':
-if (isBanned) return reply(mess.banned)
 reply(mess.wait)
 bo = args.join(" ")
 ini = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${bo}`)
@@ -2656,6 +2660,32 @@ ini = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${bo}`
 mp3 = await getBuffer(ini.result.url_audio)
 gura.sendMessage(from, mp3, audio)
 break 
+case 'ytp3':
+reply(mess.wait)
+if (args.length ==0)return reply('Link nya Mana?')
+ini_link = args.join(" ")
+anu = await fetchJson(`https://api.zeks.me/api/ytmp3?url=${ini_link}&apikey=apivinz`)
+get = anu.result
+ini_txt =`Judul: ${get.title}\n`
+ini_txt +=`Size: ${get.size}`
+thu = await getBuffer(get.thumbnail)
+gura.sendMessage(from, thu, image, { quoted: dep, caption: ini_txt })
+res = await getBuffer(get.url_audio)
+gura.sendMessage(from, res, audio)
+break
+case 'ytp4':
+reply(mess.wait)
+if (args.length ==0)return reply('Link nya Mana Kak?')
+ini_link = args.join(" ")
+anu = await fetchJson(`https://api.zeks.me/api/ytmp4?url=${ini_link}&apikey=apivinz`)
+get = anu.result
+ini_txt =`Judul: ${get.title}\n`
+ini_txt +=`Size: ${get.size}`
+thu = await getBuffer(get.thumbnail)
+gura.sendMessage(from, thu, image, { quoted: dep, caption: ini_txt })
+res = await getBuffer(get.url_video)
+gura.sendMessage(from, res, video)
+break
 case 'p3':
 						if (args.length === 0) return reply(`Kirim perintah *${prefix}ytmp3 [linkYt]*`)
 						let isLinks = args[0].match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/)
