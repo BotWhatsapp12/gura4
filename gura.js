@@ -118,7 +118,7 @@ const wita = moment.tz('Asia/Makassar').format('HH : mm : ss')
 const wit = moment.tz('Asia/Jayapura').format('HH : mm : ss')
 
 const menu  = `
-                 [ 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 ]
+[ 𝗜𝗡𝗙𝗢 𝗕𝗢𝗧 ]
 
 ✇ ❒𝐏𝐫𝐞𝐟𝐢𝐱 𝐁𝐨𝐭  : ⌜  *.*  ⌟
 ✇ ❒𝐍𝐚𝐦𝐚 𝐁𝐨𝐭  : *GuraBotz*
@@ -1122,6 +1122,14 @@ contentText:`*DONE NIH*`,buttons,headerType:4}
 prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
 gura.relayWAMessage(prep)
 break
+case 'halloween2':case 'horror':case 'game8bit':case 'layered':case 'glitch2':case 'coolg':case 'coolwg':case 'realistic':case 'space3d':case 'gtiktok':case 'stone':case 'marvel':case 'marvel2':case 'pornhub':case 'avengers':case 'metalr':case 'metalg':case 'metalg2':case 'halloween2':case 'lion':case 'wolf_bw':case 'wolf_g':case 'ninja':case '3dsteel':case 'horror2':case 'lava':case 'bagel':
+if (args.length < 1) return reply('Contoh: .glitch2 Gura|Botz')
+var m = q
+var m1 = m.split("|")[0];
+var m2 = m.split("|")[1]; 
+let textpro = await getBuffer(`https://api-alphabot.herokuapp.com/textpro/${command}?apikey=Alphabot&text=${m1}&text2=${m2}`)
+sendButImage(from,  `Nih Kak` , `©Created by GuraBotz`,textpro, [{"buttonId": `owner`,"buttonText": {"displayText": "👨‍💻 Owner"},"type": "RESPONSE"}], {thumbnail: Buffer.alloc(0), quoted: dep})
+break 
 case 'glitch': 
 if (args.length < 1) return reply('*Teks nya mana?*') 
 top = arg.split('|')[0]
