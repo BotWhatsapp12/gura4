@@ -1254,7 +1254,7 @@ buttonsMessage = {footerText:'©Created By GuraBotz', imageMessage: imageMsg,
 contentText:`*DONE NIH*`,buttons,headerType:4}
 prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
 gura.relayWAMessage(prep)
-break.
+break
 case 'glitch': 
 reply(mess.wait)
 if (args.length < 1) return reply('*Teks nya mana?*') 
