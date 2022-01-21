@@ -290,6 +290,32 @@ const menu  = `
 ┃❒き⃟🐣 *.circuit <masukan teks>*
 ┃❒き⃟🐣 *.sketch <masukan teks>*
 ┃❒き⃟🐣 *.halloween <masukan teks>*
+┃❒き⃟🐣 *.halloween2 <masukan teks1|teks2>*
+┃❒き⃟🐣 *.horror <masukan teks1|teks2>*
+┃❒き⃟🐣 *.game8bit <masukan teks1|teks2>*
+┃❒き⃟🐣 *.layered <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.glitch2 <masukan teks1|teks2>*
+┃❒き⃟🐣 *.coolg <masukan teks1|teks2>*
+┃❒き⃟🐣 *.coolwg <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.space3d <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.gtiktok <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.stone <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.marvel <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.marvel2 <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.pornhub <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.avengers <masukan teks1|teks2>*
+┃❒き⃟🐣 *.metalr <masukan teks1|teks2>*
+┃❒き⃟🐣 *.metalg <masukan teks1|teks2>*
+┃❒き⃟🐣 *.metalg2 <masukan teks1|teks2>*
+┃❒き⃟🐣 *.halloween2 <masukan teks1|teks2>*
+┃❒き⃟🐣 *.lion <masukan teks1|teks2>*
+┃❒き⃟🐣 *.wolf_bw <masukan teks1|teks2>*
+┃❒き⃟🐣 *.wolf_g <masukan teks1|teks2>*
+┃❒き⃟🐣 *.ninja <masukan teks1|teks2>*
+┃❒き⃟🐣 *.3dsteel <masukan teks1|teks2>*
+┃❒き⃟🐣 *.horror2 <masukan teks1|teks2>*
+┃❒き⃟🐣 *.lava <masukan teks1|teks2>*
+┃❒き⃟🐣 *.bagel <masukan teks1|teks2>*
 ┗━━━━━━━
 ͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏͏
 ➤ *Asupan*➤
@@ -1111,6 +1137,7 @@ prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
 gura.relayWAMessage(prep)
 break
 case 'nulis': 
+reply(mess.wait)
 if (args.length < 1) return reply('*Teks nya mana?*') 
 catat = args.join(" ")
 
@@ -1122,7 +1149,33 @@ contentText:`*DONE NIH*`,buttons,headerType:4}
 prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
 gura.relayWAMessage(prep)
 break
-case 'halloween2':case 'horror':case 'game8bit':case 'layered': case 'glitch2':case 'coolg':case 'coolwg': case 'space3d': case 'gtiktok': case 'stone': case 'marvel': case 'marvel2': case 'pornhub': case 'avengers':case 'metalr':case 'metalg':case 'metalg2':case 'halloween2':case 'lion':case 'wolf_bw':case 'wolf_g':case 'ninja':case '3dsteel':case 'horror2':case 'lava':case 'bagel':
+case 'halloween2':
+case 'horror':
+case 'game8bit':
+case 'layered': 
+case 'glitch2':
+case 'coolg':
+case 'coolwg': 
+case 'space3d': 
+case 'gtiktok': 
+case 'stone': 
+case 'marvel': 
+case 'marvel2': 
+case 'pornhub': 
+case 'avengers':
+case 'metalr':
+case 'metalg':
+case 'metalg2':
+case 'halloween2':
+case 'lion':
+case 'wolf_bw':
+case 'wolf_g':
+case 'ninja':
+case '3dsteel':
+case 'horror2':
+case 'lava':
+case 'bagel':
+reply(mess.wait)
 if (args.length < 1) return reply('Contoh: .glitch2 Gura|Botz')
 var m = q
 var m1 = m.split("|")[0];
@@ -1136,6 +1189,7 @@ prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
 gura.relayWAMessage(prep)
 break
 case 'glitch': 
+reply(mess.wait)
 if (args.length < 1) return reply('*Teks nya mana?*') 
 top = arg.split('|')[0]
 bottom = arg.split('|')[1]
@@ -1161,6 +1215,7 @@ case 'hash':
 	}
 					break   
 case 'cecanrandom':
+reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/cecan?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
@@ -1172,30 +1227,35 @@ prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
 gura.relayWAMessage(prep)
 break
 case 'santuy':
+reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/santuy?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
 gura.sendMessage(from, buffer, video, {quoted: dep, caption: 'Nih Ngab'})
 break
 case 'ukhti':
+reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/ukty?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
 gura.sendMessage(from, buffer, video, {quoted: dep, caption: 'Nih Ngab'})
 break
 case 'bocil':
+reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/bocil?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
 gura.sendMessage(from, buffer, video, {quoted: dep, caption: 'Nih Ngab'})
 break
 case 'ghea':
+reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/ghea?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
 gura.sendMessage(from, buffer, video, {quoted: dep, caption: 'Nih Ngab'})
 break
 case 'rika':
+reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/rikagusriani?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
@@ -1355,7 +1415,12 @@ if (args.length ==0)return reply(`Textnya mana kak? Contoh\n${prefix + command} 
 bo = args.join(" ")
 reply(mess.wait)
 bf = await getBuffer(`https://ziy.herokuapp.com/api/${command}?nama=${bo}&apikey=xZiyy`)
-gura.sendMessage(from, bf, image, { quoted: dep, caption: 'By GuraBotz' })
+buttons = [{buttonId: `${prefix}owner`,buttonText:{displayText: `Owner`},type:1}]
+imageMsg = (await gura.prepareMessageMedia(bf, "imageMessage", { thumbnail: tamnel, })).imageMessage
+buttonsMessage = {footerText:'©Created By GuraBotz', imageMessage: imageMsg,
+contentText:`*DONE NIH*`,buttons,headerType:4}
+prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+gura.relayWAMessage(prep)
 break
 case 'girlneko':
 case 'sadboy':
@@ -1364,7 +1429,12 @@ txt1 = args[0]
 txt2 = args[1]
 reply(mess.wait)
 bf = await getBuffer(`https://ziy.herokuapp.com/api/${command}?text1=${txt1}&text2=${txt2}&apikey=xZiyy`)
-gura.sendMessage(from, bf, image, { quoted: dep, caption: 'By GuraBotz' })
+buttons = [{buttonId: `${prefix}owner`,buttonText:{displayText: `Owner`},type:1}]
+imageMsg = (await gura.prepareMessageMedia(bf, "imageMessage", { thumbnail: tamnel, })).imageMessage
+buttonsMessage = {footerText:'©Created By GuraBotz', imageMessage: imageMsg,
+contentText:`*DONE NIH*`,buttons,headerType:4}
+prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+gura.relayWAMessage(prep)
 break
 case 'ganteng': case 'cantik': case 'jelek': case 'goblok':  case 'bego': case 'pinter': case 'jago': case 'nolep': case 'monyet':  case 'babi': case 'beban': case 'baik': case 'jahat': case 'anjing': case 'haram': case 'tolol': case 'pakboy': case 'pakgirl': case 'wibu': case 'hebat': case 'sadboy': case 'sadgirl':  
 				   if (!isGroup) return reply('Hanya Bisa Di Group Kak') 
