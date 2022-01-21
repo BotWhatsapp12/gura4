@@ -1235,7 +1235,7 @@ buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEX
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
               contentText:`DONE`,buttons,headerType:5}
-              prep = await Syifa.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
               gura.relayWAMessage(prep)
               break
 case 'ukhti':
@@ -1247,7 +1247,7 @@ buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEX
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
               contentText:`DONE`,buttons,headerType:5}
-              prep = await Syifa.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
               gura.relayWAMessage(prep)
               break
 case 'bocil':
@@ -1259,7 +1259,7 @@ buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEX
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
               contentText:`DONE`,buttons,headerType:5}
-              prep = await Syifa.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
               gura.relayWAMessage(prep)
               break
 case 'ghea':
@@ -1271,7 +1271,7 @@ buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEX
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
               contentText:`DONE`,buttons,headerType:5}
-              prep = await Syifa.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
               gura.relayWAMessage(prep)
               break
 case 'rika':
@@ -1283,7 +1283,7 @@ buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEX
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
               contentText:`DONE`,buttons,headerType:5}
-              prep = await Syifa.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
               gura.relayWAMessage(prep)
               break
  case 'tes':
@@ -1472,7 +1472,7 @@ case 'ganteng': case 'cantik': case 'jelek': case 'goblok':  case 'bego': case '
 				   reply(D1, jds, true)
 				   break
 		case 'bisakah':
-		if (args.length < 1) return alpha.sendMessage(from, 'Pertanyaan nya apa?', text, {quoted: mek})
+		if (args.length < 1) return alpha.sendMessage(from, 'Pertanyaan nya apa?', text, {quoted: dep})
 				bisakah = q
 					const bisa =['Tentu Saja Bisa! Kamu Adalah Orang Paling beruntung','Gak Bisa','Hmm Gua Gak Tau Yaa, tanya ama bapakau','Ulangi Tod Gua Ga Paham']
 					const keh = bisa[Math.floor(Math.random() * bisa.length)]
