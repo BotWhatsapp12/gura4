@@ -325,8 +325,7 @@ const menu  = `
 ┃❒き⃟🐣 *.doubleheart <masukan teks>*
 ┃❒き⃟🐣 *.butterfly <masukan teks>*
 ┃❒き⃟🐣 *.roses <masukan teks>*
-┃❒き⃟🐣 *.whitecube'
-┃❒き⃟🐣 *.nightsky <masukan teks>*
+┃❒き⃟🐣 *.whitecube <masukan teks>*
 ┃❒き⃟🐣 *.flaming <masukan teks>*
 ┃❒き⃟🐣 *.naruto <masukan teks>*
 ┃❒き⃟🐣 *.csgobanner <masukan teks>*
@@ -1283,8 +1282,7 @@ case 'undergrass':
 case 'doubleheart':
 case 'butterfly':
 case 'roses':
-case 'whitecube'
-case 'nightsky':
+case 'whitecube':
 case 'flaming':
 case 'naruto':
 case 'csgobanner':
