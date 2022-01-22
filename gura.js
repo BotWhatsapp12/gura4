@@ -61,7 +61,6 @@ const premium = require('./lib/premium')
 const { webp2mp4File } = require('./lib/webp2mp4')
 const { webp2gifFile } = require("./lib/gif.js")
 const { msgFilter } = require('./lib/antispam')
-const { pShadow,pRomantic,pSmoke,pBurnPapper,pNaruto,pLoveMsg,pMsgGrass,pGlitch,pDoubleHeart,pCoffeCup,pLoveText,pButterfly } = require('./lib/photooxy.js')
 
 //----- DATABASE -------
 let setting = JSON.parse(fs.readFileSync('./setting.json'))
@@ -315,6 +314,24 @@ const menu  = `
 ┃❒き⃟🐣 *.bear <masukan teks>*
 ┃❒き⃟🐣 *.harry_potter <masukan teks>*
 ┃❒き⃟🐣 *.water_pipe <masukan teks>*
+┃❒き⃟🐣 *.metalrainbow <masukan teks>*
+┃❒き⃟🐣 *.engraved3d <masukan teks>*
+┃❒き⃟🐣 *.burnpaper <masukan teks>*
+┃❒き⃟🐣 *.romantic <masukan teks>*
+┃❒き⃟🐣 *.shadow <masukan teks>*
+┃❒き⃟🐣 *.lovemessage <masukan teks>*
+┃❒き⃟🐣 *.smoke <masukan teks>*
+┃❒き⃟🐣 *.undergrass <masukan teks>*
+┃❒き⃟🐣 *.doubleheart <masukan teks>*
+┃❒き⃟🐣 *.butterfly <masukan teks>*
+┃❒き⃟🐣 *.roses <masukan teks>*
+┃❒き⃟🐣 *.whitecube'
+┃❒き⃟🐣 *.nightsky <masukan teks>*
+┃❒き⃟🐣 *.flaming <masukan teks>*
+┃❒き⃟🐣 *.naruto <masukan teks>*
+┃❒き⃟🐣 *.csgobanner <masukan teks>*
+┃❒き⃟🐣 *.greenleaves <masukan teks>*
+┃❒き⃟🐣 *.lolbanner <masukan teks>*
 ┃❒き⃟🐣 *.halloween2 <masukan teks1|teks2>*
 ┃❒き⃟🐣 *.horror <masukan teks1|teks2>*
 ┃❒き⃟🐣 *.game8bit <masukan teks1|teks2>*
@@ -1248,6 +1265,35 @@ if (args.length < 1) return reply(`Teks nya?\nContoh: prefix + command GuraBotz`
 reply(mess.wait)
 query = args.join (" ")
 bf = await getBuffer(`https://api-alphabot.herokuapp.com/api/textpro/${command}?text=${query}&apikey=Alphabot`)
+buttons = [{buttonId: `${prefix}owner`,buttonText:{displayText: `Owner`},type:1}]
+imageMsg = (await gura.prepareMessageMedia(bf, "imageMessage", { thumbnail: tamnel, })).imageMessage
+buttonsMessage = {footerText:'©Created By GuraBotz', imageMessage: imageMsg,
+contentText:`*DONE NIH*`,buttons,headerType:4}
+prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+gura.relayWAMessage(prep)
+break
+case 'metalrainbow':
+case 'engraved3d':
+case 'burnpaper':
+case 'romantic':
+case 'shadow':
+case 'lovemessage':
+case 'smoke':
+case 'undergrass':
+case 'doubleheart':
+case 'butterfly':
+case 'roses':
+case 'whitecube'
+case 'nightsky':
+case 'flaming':
+case 'naruto':
+case 'csgobanner':
+case 'greenleaves':
+case 'lolbanner':
+if (args.length < 1) return reply(`Teks nya?\nContoh: prefix + command GuraBotz`)
+reply(mess.wait)
+query = args.join (" ")
+bf = await getBuffer(`https://api.dapuhy.xyz/api/textpro/${command}?text=${query}&apikey=wC7ZLKWUPR`)
 buttons = [{buttonId: `${prefix}owner`,buttonText:{displayText: `Owner`},type:1}]
 imageMsg = (await gura.prepareMessageMedia(bf, "imageMessage", { thumbnail: tamnel, })).imageMessage
 buttonsMessage = {footerText:'©Created By GuraBotz', imageMessage: imageMsg,
