@@ -96,25 +96,7 @@ modelmenu = "butpdf"
 let limitawal = '5'
 api = ["https://myselfff.herokuapp.com/docs"]
 
-idttt = []
-	    players1 = []
-	    players2 = []
-	    gilir = []
-	    for (let t of ky_ttt){
-	    idttt.push(t.id)
-	    players1.push(t.player1)
-	    players2.push(t.player2)
-	    gilir.push(t.gilir)
-	    }
-	    const isTTT = isGroup ? idttt.includes(from) : false
-	    isPlayer1 = isGroup ? players1.includes(sender) : false
-        isPlayer2 = isGroup ? players2.includes(sender) : false
-		try {
-		pporang = await gura.getProfilePicture(`${sender.split('@')[0]}@s.whatsapp.net`)
-		      } catch {
-		pporang = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
-		      }
-		const ofrply2 = await getBuffer(pporang)
+		const ofrply2 = fs.readFileSync('./media/gura.jpeg')
 runa = process.uptime()         
 const gggg = `Bot Aktif Selama ${kyun(runa)}`
 module.exports = gura = async (gura, dep) => {
