@@ -257,7 +257,7 @@ const menu  = `
 ┃❒き⃟🐣 *.nekonsfw*
 ┗━━━━━━━
 
-➤ *Canvas*➤
+➤ *Maker*➤
 ┃❒き⃟🐣 *.rem <masukan teks>*
 ┃❒き⃟🐣 *.gura <masukan teks>*
 ┃❒き⃟🐣 *.kaneki <masukan teks>*
@@ -316,6 +316,38 @@ const menu  = `
 ┃❒き⃟🐣 *.harry_potter <masukan teks>*
 ┃❒き⃟🐣 *.water_pipe <masukan teks>*
 ┃❒き⃟🐣 *.metalrainbow <masukan teks>*
+┃❒き⃟🐣 *.balloon <masukan teks>*
+┃❒き⃟🐣 *.balloon1 <masukan teks>*  
+┃❒き⃟🐣 *.balloon3 <masukan teks>*
+┃❒き⃟🐣 *.balloon4 <masukan teks>*
+┃❒き⃟🐣 *.balloon5 <masukan teks>*
+┃❒き⃟🐣 *.balloon6 <masukan teks>*
+┃❒き⃟🐣 *.balloon7 <masukan teks>*
+┃❒き⃟🐣 *.steel <masukan teks>*
+┃❒き⃟🐣 *.denim <masukan teks>*
+┃❒き⃟🐣 *.decorate <masukan teks>*
+┃❒き⃟🐣 *.decorate2 <masukan teks>*
+┃❒き⃟🐣 *.peridot <masukan teks>*
+┃❒き⃟🐣 *.rock <masukan teks>*
+┃❒き⃟🐣 *.lava <masukan teks>*
+┃❒き⃟🐣 *.robot <masukan teks>*
+┃❒き⃟🐣 *.equalizer <masukan teks>*
+┃❒き⃟🐣 *.toxic <masukan teks>*
+┃❒き⃟🐣 *.chocolate <masukan teks>* 
+┃❒き⃟🐣 *.koifish <masukan teks>*
+┃❒き⃟🐣 *.bread <masukan teks>*
+┃❒き⃟🐣 *.matrix <masukan teks>*
+┃❒き⃟🐣 *.horrorblood <masukan teks>*
+┃❒き⃟🐣 *.neon2 <masukan teks>*
+┃❒き⃟🐣 *.3dbox <masukan teks>*
+┃❒き⃟🐣 *.3dsteel <masukan teks>*
+┃❒き⃟🐣 *.bokehtext <masukan teks>*
+┃❒き⃟🐣 *.greenneon <masukan teks>*
+┃❒き⃟🐣 *.freeadvanced <masukan teks>*
+┃❒き⃟🐣 *.dropwater <masukan teks>*
+┃❒き⃟🐣 *.breakwall <masukan teks>*
+┃❒き⃟🐣 *.christmast <masukan teks>*
+┃❒き⃟🐣 *.honey <masukan teks>*
 ┃❒き⃟🐣 *.halloween2 <masukan teks1|teks2>*
 ┃❒き⃟🐣 *.horror <masukan teks1|teks2>*
 ┃❒き⃟🐣 *.game8bit <masukan teks1|teks2>*
@@ -1247,38 +1279,36 @@ case 'harry_potter':
 case 'water_pipe':
 case 'balloon':
 case 'balloon1':  
-case 'balloon2':
 case 'balloon3':
 case 'balloon4':
 case 'balloon5':
 case 'balloon6':
 case 'balloon7':
 case 'steel':
-case 'ultragloss':
 case 'denim':
 case 'decorate':
 case 'decorate2':
 case 'peridot':
 case 'rock':
 case 'lava':
-case 'glassyellow':
-case 'glasspurple':
-case 'glassorange':
-case 'glassgreen':
-case 'glasscyan':
-case 'glassblue':
-case 'glassred':
-case 'glasspurpleshyny':
 case 'robot':
 case 'equalizer':
 case 'toxic':
-case 'sparklingblue':
-case 'sparklinggold':
-case 'sparklingred':
-case 'sparklinggreen':
-case 'sparklingpurple':
-case 'sparklingpink':
-case 'sparklingcyan':
+case 'chocolate': 
+case 'koifish':
+case 'bread':
+case 'matrix':
+case 'horrorblood':
+case 'neon2':
+case '3dbox':
+case '3dsteel':
+case 'bokehtext':
+case 'greenneon':
+case 'freeadvanced':
+case 'dropwater':
+case 'breakwall':
+case 'christmast':
+case 'honey':
 if (args.length < 1) return reply(`Teks nya?\nContoh: prefix + command GuraBotz`)
 reply(mess.wait)
 query = args.join (" ")
