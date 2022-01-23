@@ -2305,6 +2305,19 @@ var nomor = dep.participant
 gura.groupSettingChange (from, GroupSettingChange.messageSend, false);
 }, timer)
 break
+case 'joox':
+if (!q) return reply('Lagu apa?')
+reply(mess.wait)
+anu = await fetchJson(`https://api.zeks.me/api/joox?apikey=apivinz&q=${q}`)
+get = anu.data
+thu = await getBuffer(get.thumb)
+tes = `*Judul :* ${get.judul}\n`
+tes = `*Penyanyi :* ${get.artist}\n`
+tes = `*Size :* ${get.size}\n\nTunggu Sebentar Bot Sedang Mengirim Audio`
+gura.sendMessage(from,thu,image,{thumbnail: tamnel, quoted: dep,caption: ${tes}})
+res = await getBuffer(get.audio)
+gura.sendMessage(from, res, audio, { mimetype: 'audio/mp4', duration: 3000, quoted: dep })
+break
 case 'tomp3':
 					gura.updatePresence(from, Presence.composing)
 					if (!isQuotedVideo) return reply('Reply Video Nya Kak')
