@@ -1132,6 +1132,22 @@ const menu  = `
 ┃❒き⃟🐣 *.rika*
 ┃❒き⃟🐣 *.ghea*
 ┃❒き⃟🐣 *.hijaber*
+┃❒き⃟🐣 *.asupan*
+┃❒き⃟🐣 *.mangayutri*
+┃❒き⃟🐣 *.alcakenya*
+┃❒き⃟🐣 *.mama_gina*
+┃❒き⃟🐣 *.syifa*
+┃❒き⃟🐣 *.riri*
+┃❒き⃟🐣 *.syania*
+┃❒き⃟🐣 *.viona*
+┃❒き⃟🐣 *.yana*
+┃❒き⃟🐣 *.ziva*
+┃❒き⃟🐣 *.nisa*
+┃❒き⃟🐣 *.aura*
+┃❒き⃟🐣 *.bunga*
+┃❒き⃟🐣 *.ayu*
+┃❒き⃟🐣 *.delvira*
+┃❒き⃟🐣 *.chika*
 ┃
 ┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
 ┃𝑱𝒊𝒌𝒂 𝑨𝒅𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
@@ -1444,10 +1460,25 @@ videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: 
               contentText:`DONE`,buttons,headerType:5}
               prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
               gura.relayWAMessage(prep)
-              break
+              break      
 case 'asupan':
+case 'mangayutri':
+case 'alcakenya':
+case 'mama_gina':
+case 'syifa':
+case 'riri':
+case 'syania':
+case 'viona':
+case 'yana':
+case 'ziva':
+case 'nisa':
+case 'aura':
+case 'bunga':
+case 'ayu':
+case 'delvira':
+case 'chika':
 reply(mess.wait)
-ini = await fetchJson(`https://api-arulganz.herokuapp.com/api/asupan?apikey=GuraBotz`)
+ini = await fetchJson(`https://api-alphabot.herokuapp.com/api/asupan/${command}?apikey=Alphabot`)
 
 buffer = await getBuffer(ini.result.result)
 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
