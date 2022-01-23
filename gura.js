@@ -79,6 +79,7 @@ const _limit = JSON.parse(fs.readFileSync('./database/limit.json'))
 //----- SINGKAT -------
 prefix = setting.prefix
 owner = setting.owner
+footer = setting.footer
 lolkey = setting.lolkey
 mot = '٬࿊⃟🐼'
 ke = '*'
@@ -315,22 +316,6 @@ const menu  = `
 ┃❒き⃟🐣 *.harry_potter <masukan teks>*
 ┃❒き⃟🐣 *.water_pipe <masukan teks>*
 ┃❒き⃟🐣 *.metalrainbow <masukan teks>*
-┃❒き⃟🐣 *.engraved3d <masukan teks>*
-┃❒き⃟🐣 *.burnpaper <masukan teks>*
-┃❒き⃟🐣 *.romantic <masukan teks>*
-┃❒き⃟🐣 *.shadow <masukan teks>*
-┃❒き⃟🐣 *.lovemessage <masukan teks>*
-┃❒き⃟🐣 *.smoke <masukan teks>*
-┃❒き⃟🐣 *.undergrass <masukan teks>*
-┃❒き⃟🐣 *.doubleheart <masukan teks>*
-┃❒き⃟🐣 *.butterfly <masukan teks>*
-┃❒き⃟🐣 *.roses <masukan teks>*
-┃❒き⃟🐣 *.whitecube <masukan teks>*
-┃❒き⃟🐣 *.flaming <masukan teks>*
-┃❒き⃟🐣 *.naruto <masukan teks>*
-┃❒き⃟🐣 *.csgobanner <masukan teks>*
-┃❒き⃟🐣 *.greenleaves <masukan teks>*
-┃❒き⃟🐣 *.lolbanner <masukan teks>*
 ┃❒き⃟🐣 *.halloween2 <masukan teks1|teks2>*
 ┃❒き⃟🐣 *.horror <masukan teks1|teks2>*
 ┃❒き⃟🐣 *.game8bit <masukan teks1|teks2>*
@@ -1260,6 +1245,40 @@ case 'underwater':
 case 'bear':
 case 'harry_potter':
 case 'water_pipe':
+case 'balloon':
+case 'balloon1':  
+case 'balloon2':
+case 'balloon3':
+case 'balloon4':
+case 'balloon5':
+case 'balloon6':
+case 'balloon7':
+case 'steel':
+case 'ultragloss':
+case 'denim':
+case 'decorate':
+case 'decorate2':
+case 'peridot':
+case 'rock':
+case 'lava':
+case 'glassyellow':
+case 'glasspurple':
+case 'glassorange':
+case 'glassgreen':
+case 'glasscyan':
+case 'glassblue':
+case 'glassred':
+case 'glasspurpleshyny':
+case 'robot':
+case 'equalizer':
+case 'toxic':
+case 'sparklingblue':
+case 'sparklinggold':
+case 'sparklingred':
+case 'sparklinggreen':
+case 'sparklingpurple':
+case 'sparklingpink':
+case 'sparklingcyan':
 if (args.length < 1) return reply(`Teks nya?\nContoh: prefix + command GuraBotz`)
 reply(mess.wait)
 query = args.join (" ")
@@ -1272,22 +1291,6 @@ prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
 gura.relayWAMessage(prep)
 break
 case 'metalrainbow':
-case 'engraved3d':
-case 'burnpaper':
-case 'romantic':
-case 'shadow':
-case 'lovemessage':
-case 'smoke':
-case 'undergrass':
-case 'doubleheart':
-case 'butterfly':
-case 'roses':
-case 'whitecube':
-case 'flaming':
-case 'naruto':
-case 'csgobanner':
-case 'greenleaves':
-case 'lolbanner':
 if (args.length < 1) return reply(`Teks nya?\nContoh: prefix + command GuraBotz`)
 reply(mess.wait)
 query = args.join (" ")
