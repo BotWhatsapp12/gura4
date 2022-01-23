@@ -2314,7 +2314,7 @@ thu = await getBuffer(get.thumb)
 tes = `*Judul :* ${get.judul}\n`
 tes = `*Penyanyi :* ${get.artist}\n`
 tes = `*Size :* ${get.size}\n\nTunggu Sebentar Bot Sedang Mengirim Audio`
-gura.sendMessage(from,thu,image,{thumbnail: tamnel, quoted: dep,caption: ${tes}})
+gura.sendMessage(from,thu,image,{thumbnail: tamnel, quoted: dep,caption: `${tes}` })
 res = await getBuffer(get.audio)
 gura.sendMessage(from, res, audio, { mimetype: 'audio/mp4', duration: 3000, quoted: dep })
 break
