@@ -953,7 +953,11 @@ const menu  = `
 
 ➤ *Download*➤
 ┃❒き⃟🐣 *.tiktok <link>*
-┃❒き⃟🐣 *.instagram <link>*
+┃❒き⃟🐣 *.igdl <link>*
+┃❒き⃟🐣 *.igreels <link>*
+┃❒き⃟🐣 *.igtv <link>*
+┃❒き⃟🐣 *.igvideo <link>*
+┃❒き⃟🐣 *.igfoto <link>*
 ┃❒き⃟🐣 *.play <judul lagu>*
 ┃❒き⃟🐣 *.youtube <link>*
 ┃❒き⃟🐣 *.mediafire <link>*
@@ -1434,6 +1438,18 @@ reply(mess.wait)
 ini = await fetchJson(`https://zeroyt7-api.herokuapp.com/api/asupan/bocil?apikey=ZeroYT7`)
 
 buffer = await getBuffer(ini.result.url)
+buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
+videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
+              buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
+              contentText:`DONE`,buttons,headerType:5}
+              prep = await gura.prepareMessageFromContent(from,{buttonsMessage},{quoted: dep})
+              gura.relayWAMessage(prep)
+              break
+case 'asupan':
+reply(mess.wait)
+ini = await fetchJson(`https://api-arulganz.herokuapp.com/api/asupan?apikey=GuraBotz`)
+
+buffer = await getBuffer(ini.result.result)
 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
