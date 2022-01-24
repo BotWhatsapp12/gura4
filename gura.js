@@ -1132,22 +1132,6 @@ const menu  = `
 ┃❒き⃟🐣 *.rika*
 ┃❒き⃟🐣 *.ghea*
 ┃❒き⃟🐣 *.hijaber*
-┃❒き⃟🐣 *.asupan*
-┃❒き⃟🐣 *.mangayutri*
-┃❒き⃟🐣 *.alcakenya*
-┃❒き⃟🐣 *.mama_gina*
-┃❒き⃟🐣 *.syifa*
-┃❒き⃟🐣 *.riri*
-┃❒き⃟🐣 *.syania*
-┃❒き⃟🐣 *.viona*
-┃❒き⃟🐣 *.yana*
-┃❒き⃟🐣 *.ziva*
-┃❒き⃟🐣 *.nisa*
-┃❒き⃟🐣 *.aura*
-┃❒き⃟🐣 *.bunga*
-┃❒き⃟🐣 *.ayu*
-┃❒き⃟🐣 *.delvira*
-┃❒き⃟🐣 *.chika*
 ┃
 ┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
 ┃𝑱𝒊𝒌𝒂 𝑨𝒅𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
@@ -1480,7 +1464,7 @@ case 'chika':
 reply(mess.wait)
 ini = await fetchJson(`https://api-alphabot.herokuapp.com/api/asupan/${command}?apikey=Alphabot`)
 
-buffer = await getBuffer(ini.result.url)
+buffer = await getBuffer(ini.result)
 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
@@ -1789,7 +1773,7 @@ break
            case 'tovideo':
                if ((isMedia && !dep.message.videoMessage || isQuotedSticker) && args.length == 0) {
                reply(mess.wait) 
-               encmediaaa = isQuotedSticker ? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
+               encmediaaa = isQuotedSticker? JSON.parse(JSON.stringify(dep).replace('quotedM','m')).message.extendedTextMessage.contextInfo : dep
                mediaaa = await gura.downloadAndSaveMediaMessage(encmediaaa)
                a = await webp2gifFile(mediaaa)
                mp4 = await getBuffer(a.result)
@@ -1806,7 +1790,7 @@ case 'removebg':
            const guragans1  = await gura.downloadMediaMessage(biasalah, 'buffer') 
            const getbg = await uploadImages(guragans1, true) 
            reply(mess.wait)
-           pft = await getBuffer(`http://lolhuman.herokuapp.com/api/removebg?apikey=DhenxsKey&img=${getbg}`)
+           pft = await getBuffer(`http://lolhuman.herokuapp.com/api/removebg?apikey=GuraLol&img=${getbg}`)
            await gura.sendMessage(from, pft, image, {quoted:dep,caption:'Done'}).catch((err) => reply('Kebanyakan Dosa Kali Lu Jadi Erorr deh'))
            break
 case 'ttp':
@@ -1817,7 +1801,7 @@ case 'ttp':
 					break
        case 'attp':
        reply(mess.wait) 
-              if (args.length == 0) return reply(`Example: ${prefix + command} kurr`)
+              if (args.length == 0) return reply(`Example: ${prefix + command} Gura`)
               buffer = await getBuffer(`https://api.xteam.xyz/attp?file&text=${encodeURI(q)}`)
               gura.sendMessage(from, buffer, sticker, { quoted: dep })
               await limitAdd(sender)
