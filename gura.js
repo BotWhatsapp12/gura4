@@ -2887,7 +2887,7 @@ case 'p323':
 reply(mess.wait)
 bo = args.join(" ")
 ini = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${bo}`)
-sendFileFromUrl(ini.result.url_audio, document, {mimetype: 'audio/mp3', filename: `${ini.result.title}.mp3`, quoted: dep}
+sendFileFromUrl(ini.result.url_audio, document, {mimetype: 'audio/mp3', filename: `${ini.result.title}.mp3`, quoted: dep})
 break 
 case 'ytp3':
 reply(mess.wait)
