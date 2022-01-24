@@ -2881,7 +2881,7 @@ reply(mess.wait)
 bo = args.join(" ")
 ini = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${bo}`)
 mp4 = await getBuffer(ini.result.url_video)
-sendFileFromUrl(ini.result.url_video, document, {mimetype: 'video/mp4', filename: `${ini.result.title}.mp4`, quoted: dep, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{body:"◈MP4",mediaType:"2",thumbnail:tamnel,sourceUrl:`${ini.result.source}`}}})
+sendFileFromUrl(ini.result.url_video, document, {mimetype: 'video/mp4', filename: `${ini.result.title}.mp4`, quoted: ftoko})
 break
 case 'p32':
 reply(mess.wait)
@@ -2894,7 +2894,7 @@ case 'p323':
 reply(mess.wait)
 bo = args.join(" ")
 ini = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${bo}`)
-sendFileFromUrl(ini.result.url_audio, document, {mimetype: 'audio/mp3', filename: `${ini.result.title}.mp3`, quoted: dep})
+sendFileFromUrl(ini.result.url_audio, document, {mimetype: 'audio/mp3', filename: `${ini.result.title}.mp3`, quoted: ftoko})
 break 
 case 'ytp3':
 reply(mess.wait)
