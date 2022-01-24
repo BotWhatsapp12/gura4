@@ -2883,6 +2883,12 @@ ini = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${bo}`
 mp3 = await getBuffer(ini.result.url_audio)
 gura.sendMessage(from, mp3, audio)
 break 
+case 'p323':
+reply(mess.wait)
+bo = args.join(" ")
+ini = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${bo}`)
+sendFileFromUrl(ini.result.url_audio, document, {mimetype: 'audio/mp3', filename: `${ini.result.title}.mp3`, quoted: dep, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title:title,body:"◈ YTMP3",mediaType:"2",thumbnail:tamnel,mediaUrl:`${body.slice(7)}`}}})
+break 
 case 'ytp3':
 reply(mess.wait)
 if (args.length ==0)return reply('Link nya Mana?')
