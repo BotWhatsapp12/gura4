@@ -2876,6 +2876,13 @@ ini = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${bo}`
 mp4 = await getBuffer(ini.result.url_video)
 gura.sendMessage(from, mp4, video)
 break
+case 'p424':
+reply(mess.wait)
+bo = args.join(" ")
+ini = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${bo}`)
+mp4 = await getBuffer(ini.result.url_video)
+sendFileFromUrl(ini.result.url_video, document, {mimetype: 'video/mp4', filename: `${ini.result.title}.mp4`, quoted: dep, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{body:"◈MP4",mediaType:"2",thumbnail:tamnel,sourceUrl:`${ini.result.source}`}}})
+break
 case 'p32':
 reply(mess.wait)
 bo = args.join(" ")
