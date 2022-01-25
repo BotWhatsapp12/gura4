@@ -617,7 +617,7 @@ fs.unlinkSync(filess)
 const Sendbutdocument = async(id, text1, desc1, file1, doc1, but = [], options = {}) => {
 media = file1
 kma = doc1
-mhan = await pemuda.prepareMessage(from, media, document, kma)
+mhan = await gura.prepareMessage(from, media, document, kma)
 const buttonMessages = {
 documentMessage: mhan.message.documentMessage,
 contentText: text1,
