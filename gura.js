@@ -1500,7 +1500,7 @@ case 'chika':
 reply(mess.wait)
 ini = await fetchJson(`https://api-alphabot.herokuapp.com/api/asupan/${command}?apikey=Alphabot`)
 
-buffer = await getBuffer(ini.result)
+buffer = await getBuffer(ini.results.result)
 buttons = [{buttonId: `${prefix + command}`,buttonText:{displayText: `➡️ NEXT`},type:1}]
 videoMsg = (await gura.prepareMessageMedia(buffer, "videoMessage", { thumbnail: tamnel, })).videoMessage
               buttonsMessage = {footerText:'© Created by GuraBotz', videoMessage: videoMsg,
