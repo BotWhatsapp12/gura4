@@ -618,7 +618,7 @@ const Sendbutdocument = async(id, text1, desc1, file1, doc1, but = [], options =
 media = file1
 kma = doc1
 mhan = await gura.prepareMessage(from, media, document, kma)
-buttonMessage = {
+const buttonMessages = {
 documentMessage: mhan.message.documentMessage,
 contentText: text1,
 footerText: desc1,
@@ -898,7 +898,7 @@ const menu  = `
 ┃❒き⃟🐣 *.image*
 ┃❒き⃟🐣 *.google (query)*
 ┃
-┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂??!!, 
 ┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
 ┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
 ┗━━━━━━━
