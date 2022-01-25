@@ -646,7 +646,7 @@ const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
 		    mediaKeyTimestamp: "1634472176",
 	      jpegThumbnail: tamnel,
 	      contextInfo: {
-	        externalAdReply: fakeyt, ftoko, 
+	        externalAdReply: ftoko, 
 	        mentionedJid: [`0@s.whatsapp.net`, sender, ownerNumber]
 	}}},
 	'buttonsMessage',
@@ -1235,7 +1235,7 @@ case 'help':
 case 'allmenu':
 ptod = "6281229859085@s.whatsapp.net"
         stod = `${sender}`
-Sendbutdocument(from, menu, "GuraBotz by ArulGanz", tamnel, {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/dokumen.jpeg'), filename:`GuraBotz.pdf`, pageCount: 9999999 }, {quoted:ftoko, contextInfo: { mentionedJid: [stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} - ${pushname}\nInstagram`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://instagram.com/_daaa_1`}}})
+sendButpdf(from, menu, "GuraBotz by ArulGanz", tamnel, {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/dokumen.jpeg'), filename:`GuraBotz.pdf`, pageCount: 9999999 }, menubutlist, {quoted:ftoko, contextInfo: { mentionedJid: [stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} - ${pushname}\nInstagram`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://instagram.com/_daaa_1`}}})
 case 'waifu':
              case 'loli':
             case 'husbu':
