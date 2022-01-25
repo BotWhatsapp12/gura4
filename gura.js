@@ -2905,14 +2905,6 @@ if (args.length ==0)return reply('Link nya Mana?')
 ini_link = args.join(" ")
 anu = await fetchJson(`https://api-alphabot.herokuapp.com/api/downloader/youtube/audio?url=${ini_link}&apikey=Alphabot`)
 get = anu.results
-ini_txt =`Judul: ${get.title}\n`
-ini_txt +=`Size: ${get.size}\n`
-ini_txt +=`Views: ${get.views}\n`
-ini_txt +=`Channel: ${get.channel}\n`
-ini_txt +=`Upload: ${get.uploadDate}\n`
-ini_txt +=`Deskripsi: ${get.desc}`
-thu = await getBuffer(get.thumb)
-gura.sendMessage(from, thu, image, { quoted: dep, caption: ini_txt })
 sendFileFromUrl(anu.results.result, document, {mimetype: 'audio/mp3', filename: `${anu.results.title}.mp3`, quoted: ftoko})
 break
 case 'ytp4':
@@ -2921,15 +2913,6 @@ if (args.length ==0)return reply('Link nya Mana Kak?')
 ini_link = args.join(" ")
 anu = await fetchJson(`https://api-alphabot.herokuapp.com/api/downloader/youtube/video?url=${ini_link}&apikey=Alphabot`)
 get = anu.results
-ini_txt =`Judul: ${get.title}\n`
-ini_txt +=`Quality: ${get.quality}\n`
-ini_txt +=`Size: ${get.size}\n`
-ini_txt +=`Views: ${get.views}\n`
-ini_txt +=`Channel: ${get.channel}\n`
-ini_txt +=`Upload: ${get.uploadDate}\n`
-ini_txt +=`Deskripsi: ${get.desc}`
-thu = await getBuffer(get.thumb)
-gura.sendMessage(from, thu, image, { quoted: dep, caption: ini_txt })
 sendFileFromUrl(anu.results.result, document, {mimetype: 'video/mp4', filename: `${anu.results.title}.mp3`, quoted: ftoko})
 break
 case 'p3':
