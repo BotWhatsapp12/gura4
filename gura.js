@@ -2882,9 +2882,9 @@ break
 case 'p424':
 reply(mess.wait)
 bo = args.join(" ")
-ini = await fetchJson(`https://api.zeks.me/api/ytplaymp4?apikey=apivinz&q=${bo}`)
-mp4 = await getBuffer(ini.result.url_video)
-sendFileFromUrl(ini.result.url_video, document, {mimetype: 'video/mp4', filename: `${ini.result.title}.mp4`, quoted: ftoko})
+ini = await fetchJson(`https://api-alphabot.herokuapp.com/api/downloader/youtube/playmp3?query=${bo}&apikey=Alphabot`)
+mp4 = await getBuffer(ini.results.result)
+sendFileFromUrl(ini.results.result, document, {mimetype: 'video/mp4', filename: `${ini.results.title}.mp4`, quoted: ftoko})
 break
 case 'p32':
 reply(mess.wait)
@@ -2896,8 +2896,8 @@ break
 case 'p323':
 reply(mess.wait)
 bo = args.join(" ")
-ini = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${bo}`)
-sendFileFromUrl(ini.result.url_audio, document, {mimetype: 'audio/mp3', filename: `${ini.result.title}.mp3`, quoted: ftoko})
+ini = await fetchJson(`https://api-alphabot.herokuapp.com/api/downloader/youtube/playmp3?query=${bo}&apikey=Alphabot`)
+sendFileFromUrl(ini.results.result, document, {mimetype: 'audio/mp3', filename: `${ini.results.title}.mp3`, quoted: ftoko})
 break 
 case 'ytp3':
 reply(mess.wait)
