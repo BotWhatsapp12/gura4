@@ -299,7 +299,10 @@ let fakeyt = {
              "previewType": 2,
              "thumbnail": ofrply2,
              "mediaUrl": "https://instagram.com/_daaa_1"
-        }
+             "contextInfo": {
+	        externalAdReply: ftoko, 
+	        mentionedJid: [`0@s.whatsapp.net`, sender, ownerNumber]
+        }}
 
 const katalog = (teks) => {
              res = gura.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 321, "message": teks, "footerText": "BotWhatsApp by Gura", "thumbnail": ofrply, "surface": 'CATALOG' }}, {quoted:ftrol})
@@ -1235,7 +1238,7 @@ case 'help':
 case 'allmenu':
 ptod = "6281229859085@s.whatsapp.net"
         stod = `${sender}`
-Sendbutdocument(from, menu, "GuraBotz by ArulGanz", tamnel, {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/dokumen.jpeg'), filename:`GuraBotz.pdf`, pageCount: 9999999 }, menubutlist, {quoted:ftoko, contextInfo: { mentionedJid: [stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} - ${pushname}\nInstagram`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://instagram.com/_daaa_1`}}})
+Sendbutdocument(from, menu, "GuraBotz by ArulGanz", tamnel, {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/dokumen.jpeg'), filename:`GuraBotz.pdf`, pageCount: 9999999 }, {quoted:ftoko, contextInfo: { mentionedJid: [stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} - ${pushname}\nInstagram`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://instagram.com/_daaa_1`}}})
 case 'waifu':
              case 'loli':
             case 'husbu':
