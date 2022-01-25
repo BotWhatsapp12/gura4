@@ -192,6 +192,22 @@ return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a
 }
 		const ofrply = fs.readFileSync('./media/gura.jpeg')
 ///FAKE FAKEAN
+const fvid = {
+	 key: { 
+          fromMe: false,
+	      participant: `0@s.whatsapp.net`, ...(from ? 
+	 { remoteJid: "6289643739077-1613049930@g.us" } : {}) 
+                },
+	 message: { 
+                 "videoMessage": { 
+                 "title": `GuraBotz`,
+                 "h": `Hai Kak ${pushname}`,
+                 'duration': '99999', 
+                 'caption': `Hai Kak ${pushname}`,
+                 'jpegThumbnail': ofrply
+                        }
+                       }
+	                  }
 const fakestatus = (teks) => {
             gura.sendMessage(from, teks, text, {
                 quoted: {
@@ -598,6 +614,19 @@ fs.unlinkSync(filess)
 });
 }
 
+const Sendbutdocument = async(id, text1, desc1, file1, doc1, but = [], options = {}) => {
+media = file1
+kma = doc1
+mhan = await pemuda.prepareMessage(from, media, document, kma)
+const buttonMessages = {
+documentMessage: mhan.message.documentMessage,
+contentText: text1,
+footerText: desc1,
+buttons: but,
+headerType: "DOCUMENT"
+}
+gura.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
+}
 const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
       gura.sendMessage(id,{contentText: text,
       footerText: desc,
@@ -1203,6 +1232,10 @@ if (modelmenu == "text") {
                     sendButpdf (from, menu, "🌹Created by GuraBotz🌹", tamnel,  menubutlist)
                     }
                   break
+case 'menu2':
+ptod = "6281229859085@s.whatsapp.net"
+        stod = `${sender}`
+Sendbutdocument(from, menu, "GuraBotz by ArulGanz", tamnel, {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/dokumen.jpeg'), filename:`GuraBotz.pdf`, pageCount: 9999999 }, [{buttonId:`.owner`,buttonText:{displayText:'Owner'},type:1}], {quoted:fvid, contextInfo: { mentionedJid: [dtod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} - ${pushname}\nInstagram`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://instagram.com/_daaa_1`}}})
 case 'waifu':
              case 'loli':
             case 'husbu':
