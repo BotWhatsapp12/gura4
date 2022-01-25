@@ -299,10 +299,7 @@ let fakeyt = {
              "previewType": 2,
              "thumbnail": ofrply2,
              "mediaUrl": "https://instagram.com/_daaa_1"
-             "contextInfo": {
-	        externalAdReply: ftoko, 
-	        mentionedJid: [`0@s.whatsapp.net`, sender, ownerNumber]
-        }}
+        }
 
 const katalog = (teks) => {
              res = gura.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 321, "message": teks, "footerText": "BotWhatsApp by Gura", "thumbnail": ofrply, "surface": 'CATALOG' }}, {quoted:ftrol})
