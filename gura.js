@@ -1235,7 +1235,7 @@ if (modelmenu == "text") {
 case 'menu2':
 ptod = "6281229859085@s.whatsapp.net"
         stod = `${sender}`
-Sendbutdocument(from, menu, "GuraBotz by ArulGanz", tamnel, {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/dokumen.jpeg'), filename:`GuraBotz.pdf`, pageCount: 9999999 }, [{buttonId:`.owner`,buttonText:{displayText:'Owner'},type:1}], {quoted:fvid, contextInfo: { mentionedJid: [dtod,stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} - ${pushname}\nInstagram`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://instagram.com/_daaa_1`}}})
+Sendbutdocument(from, menu, "GuraBotz by ArulGanz", tamnel, {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/dokumen.jpeg'), filename:`GuraBotz.pdf`, pageCount: 9999999 }, [{buttonId:`.owner`,buttonText:{displayText:'Owner'},type:1}], {quoted:fvid, contextInfo: { mentionedJid: [stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} - ${pushname}\nInstagram`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://instagram.com/_daaa_1`}}})
 case 'waifu':
              case 'loli':
             case 'husbu':
