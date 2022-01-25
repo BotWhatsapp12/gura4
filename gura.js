@@ -2889,8 +2889,8 @@ break
 case 'p32':
 reply(mess.wait)
 bo = args.join(" ")
-ini = await fetchJson(`https://api.zeks.me/api/ytplaymp3?apikey=apivinz&q=${bo}`)
-mp3 = await getBuffer(ini.result.url_audio)
+ini = await fetchJson(`https://api-alphabot.herokuapp.com/api/downloader/youtube/playmp3?query=${bo}&apikey=Alphabot`)
+mp3 = await getBuffer(ini.results.result)
 gura.sendMessage(from, mp3, audio)
 break 
 case 'p323':
