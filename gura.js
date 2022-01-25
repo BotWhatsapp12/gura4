@@ -645,10 +645,10 @@ const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
 		    directPath: "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC",
 		    mediaKeyTimestamp: "1634472176",
 	      jpegThumbnail: tamnel,
-	      contextInfo: {
+	      {quoted: ftoko, contextInfo: {
 	        externalAdReply: fakeyt, 
 	        mentionedJid: [`0@s.whatsapp.net`, sender, ownerNumber]
-	}}},
+	}}}},
 	'buttonsMessage',
 	options)
 }
@@ -898,7 +898,7 @@ const menu  = `
 ┃❒き⃟🐣 *.image*
 ┃❒き⃟🐣 *.google (query)*
 ┃
-┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂??!!, 
+┃𝑵𝒐𝒕𝒆 : 𝑱??𝒏𝒈𝒂𝒏 𝑺𝒑𝒂??!!, 
 ┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
 ┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
 ┗━━━━━━━
