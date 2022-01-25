@@ -645,8 +645,8 @@ const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
 		    directPath: "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC",
 		    mediaKeyTimestamp: "1634472176",
 	      jpegThumbnail: tamnel,
+	      quoted: ftoko, 
 	      contextInfo: {
-		    quoted: ftoko, 
 	        externalAdReply: fakeyt, 
 	        mentionedJid: [`0@s.whatsapp.net`, sender, ownerNumber]
 	}}},
@@ -1184,7 +1184,7 @@ const menu  = `
 ┃❒き⃟🐣 *.jago*
 ┃❒き⃟🐣 *.nolep*
 ┃❒き⃟🐣 *.baik*
-┃❒き⃟?? *.jahat*
+┃❒き⃟🐣 *.jahat*
 ┃❒き⃟🐣 *.babi*
 ┃❒き⃟🐣 *.beban*
 ┃❒き⃟🐣 *.monyet*
@@ -1224,16 +1224,16 @@ const menu  = `
 
 switch(command) {
 
-case 'menu2':
+case 'menu':
+case 'help':
+case 'allmenu':
 if (modelmenu == "text") {
                     reply(menu)
                     } else if (modelmenu == "butpdf") {
                     sendButpdf (from, menu, "🌹Created by GuraBotz🌹", tamnel,  menubutlist)
                     }
                   break
-case 'menu':
-case 'help':
-case 'allmenu':
+case 'menu2':
 ptod = "6281229859085@s.whatsapp.net"
         stod = `${sender}`
 Sendbutdocument(from, menu, "GuraBotz by ArulGanz", tamnel, {mimetype:Mimetype.pdf, thumbnail:fs.readFileSync('./media/dokumen.jpeg'), filename:`GuraBotz.pdf`, pageCount: 9999999 }, menubutlist, {quoted:ftoko, contextInfo: { mentionedJid: [stod], forwardingScore: 508, isForwarded: true, externalAdReply:{title:`${ucapanWaktu} - ${pushname}\nInstagram`,mediaType:"2",thumbnail:ofrply,mediaUrl:`https://instagram.com/_daaa_1`}}})
