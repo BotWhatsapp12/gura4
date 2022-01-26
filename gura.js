@@ -699,7 +699,7 @@ console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:m
             	fetch(link).then((hasil) => {
             	gura.sendMessage(from, hasil, type, options).catch(e => {
             	gura.sendMessage(from, { url : link }, type, options).catch(e => {
-            	fakegroup('Something Error')
+            	reply('Something Error')
             console.log(e)
             })
             })
@@ -3077,7 +3077,7 @@ case 'bass':
 		            ran = getRandom('.mp4')
 		            exec(`ffmpeg -i ${media3} -filter_complex "[0:v]setpts=0.5*PTS[v];[0:a]atempo=2[a]" -map "[v]" -map "[a]" ${ran}`, (err) => {
 		            fs.unlinkSync(media3)
-		            if (err) return fakegroup(`Err: ${err}`)
+		            if (err) return reply(`Err: ${err}`)
 		            buffer453 = fs.readFileSync(ran)
 		            gura.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: dep })
 		            fs.unlinkSync(ran)
@@ -3090,7 +3090,7 @@ case 'bass':
 		            ran = getRandom('.mp4')
 		            exec(`ffmpeg -i ${media4} -filter_complex "[0:v]setpts=2*PTS[v];[0:a]atempo=0.5[a]" -map "[v]" -map "[a]" ${ran}`, (err) => {
 		            fs.unlinkSync(media4)
-		            if (err) return fakegroup(`Err: ${err}`)
+		            if (err) return reply(`Err: ${err}`)
 		            buffer453 = fs.readFileSync(ran)
 		            gura.sendMessage(from, buffer453, video, { mimetype: 'video/mp4', quoted: dep })
 		            fs.unlinkSync(ran)
