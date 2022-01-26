@@ -293,7 +293,7 @@ const fakevo = {
   }
 }
 const fakeyt = (teks) => {
-dhenxs.sendMessage(from, teks, text,{contextInfo :{text: 'Hallo',
+gura.sendMessage(from, teks, text,{contextInfo :{text: 'hi',
 "forwardingScore": 1000000000,
 isForwarded: false,
 sendEphemeral: false,
@@ -308,6 +308,14 @@ sendEphemeral: false,
 },mentionedJid:[sender]}, quoted :ftoko})
 }
 
+let fakeyt2 = {
+             "title": `Hai Kak ${pushname}`,
+             "body": `❒ 𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!`,
+             "mediaType": 2,
+             "previewType": 2,
+             "thumbnail": ofrply2,
+             "mediaUrl": "https://instagram.com/_daaa_1"
+        }
 
 const katalog = (teks) => {
              res = gura.prepareMessageFromContent(from,{ "orderMessage": { "itemCount": 321, "message": teks, "footerText": "BotWhatsApp by Gura", "thumbnail": ofrply, "surface": 'CATALOG' }}, {quoted:ftrol})
@@ -2505,7 +2513,7 @@ case 'bc3':
          const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
          bc = await gura.downloadMediaMessage(encmedia)
          for (let _ of anu) {
-         gura.sendMessage(_.jid, bc, image, { caption: `[ Bot Broadcast ]\n\n${body.slice(4)}` })
+         gura.sendMessage(_.jid, bc, image, viewOnce: true, { caption: `[ Bot Broadcast ]\n\n${body.slice(4)}` })
          }
          reply('Suksess broadcast')
          } else {
