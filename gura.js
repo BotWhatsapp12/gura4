@@ -663,7 +663,7 @@ const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
 	      jpegThumbnail: tamnel,
 	      quoted: ftoko, 
 	      contextInfo: {
-	        externalAdReply: fakeyt, 
+	        externalAdReply: fakeyt2, 
 	        mentionedJid: [`0@s.whatsapp.net`, sender, ownerNumber]
 	}}},
 	'buttonsMessage',
@@ -1250,7 +1250,7 @@ case 'allmenu':
 if (modelmenu == "text") {
                     reply(menu)
                     } else if (modelmenu == "butpdf") {
-                    sendButpdf (from, menu, "🌹Created by GuraBotz🌹", tamnel,  menubutlist)
+                    sendButpdf(from, menu, "🌹Created by GuraBotz🌹", tamnel,  menubutlist)
                     }
                   break
 case 'menu2':
