@@ -3295,7 +3295,7 @@ case 'play':
         const capti = `*📥 Mendownload ${yut.all[0].title}*`      
         ya = await getBuffer(thumb)
         py =await gura.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}p3 ${q}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}p4 ${q}`, buttonText: {displayText: '📥VIDEO'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}p3 ${yut.all[0].url}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}p4 ${yut.all[0].url}`, buttonText: {displayText: '📥VIDEO'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti,
