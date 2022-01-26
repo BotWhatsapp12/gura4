@@ -2505,7 +2505,7 @@ case 'bc3':
          const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(dep).replace('quotedM', 'm')).message.extendedTextMessage.contextInfo : dep
          bc = await gura.downloadMediaMessage(encmedia)
          for (let _ of anu) {
-         gura.sendMessage(_.jid, bc, image, viewOnce: true, { caption: `[ Bot Broadcast ]\n\n${body.slice(4)}` })
+         gura.sendMessage(_.jid, bc, image, { caption: `[ Bot Broadcast ]\n\n${body.slice(4)}` })
          }
          reply('Suksess broadcast')
          } else {
