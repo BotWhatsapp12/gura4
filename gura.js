@@ -95,6 +95,7 @@ offline = false
 modelmenu = "butpdf"
 let limitawal = '5'
 api = ["https://myselfff.herokuapp.com/docs"]
+title= 'GuraBotz by ArulGanz'
 
 		const ofrply2 = fs.readFileSync('./media/gura.jpeg')
 runa = process.uptime()         
@@ -661,11 +662,8 @@ const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
 		    directPath: "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC",
 		    mediaKeyTimestamp: "1634472176",
 	      jpegThumbnail: tamnel,
-	      quoted: ftoko, 
-	      contextInfo: {
-	        externalAdReply: fakeyt2, 
-	        mentionedJid: [`0@s.whatsapp.net`, sender, ownerNumber]
-	}}},
+	      contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title:title,body:"◈Jangan Spam Ya Kak",mediaType:"2",thumbnail:tamnel,sourceUrl:`https://instagram.com/_daaa_1`}}
+	      }}},
 	'buttonsMessage',
 	options)
 }
