@@ -90,6 +90,7 @@ ownerNomor = [`${setting.ownerNumber}`]
 ownerName = setting.ownerName
 rply = '_Made with ArulBotz~_'
 tamnel = fs.readFileSync('./media/gura.jpeg')
+tamnel2 = fs.readFileSync('./media/dokumen.jpeg')
 blocked = []
 offline = false
 modelmenu = "butpdf"
@@ -651,18 +652,18 @@ const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
 	    headerType: 'DOCUMENT',
 	    documentMessage: {
 	      url: "https://mmg.whatsapp.net/d/f/Ano5cGYOFQnC51uJaqGBWiCrSJH1aDCi8-YPQMMb1N1y.enc",
-		    mimetype: "application/pdf",
-		    title: "GuraBotz.pdf",
+		    mimetype: "application/document",
+		    title: "𝑮𝒖𝒓𝒂𝑩𝒐𝒕𝒛 𝒃𝒚 𝑨𝒓𝒖𝒍𝑮𝒂𝒏𝒛",
 	      fileSha256: "8Xfe3NQDhjwVjR54tkkShLDGrIFKR9QT5EsthPyxDCI=",
-		    fileLength: "9999999999",
+		    fileLength: "999999999999999",
 		    pageCount: 999,
 		    mediaKey: "XWv4hcnpGY51qEVSO9+e+q6LYqPR3DbtT4iqS9yKhkI=",
-		    fileName: "GuraBotz",
+		    fileName: "𝑮𝒖𝒓𝒂𝑩𝒐𝒕𝒛",
 		    fileEncSha256: "NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE+MTFbH/Wk8=",
 		    directPath: "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC",
 		    mediaKeyTimestamp: "1634472176",
-	      jpegThumbnail: tamnel,
-	      contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title:title,body:"◈Jangan Spam Ya Kak",mediaType:"2",thumbnail:tamnel,sourceUrl:`https://instagram.com/_daaa_1`}}
+	      jpegThumbnail: tamnel2,
+	      contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title:title,body:"◈𝐉𝐚𝐧𝐠𝐚𝐧 𝐒𝐩𝐚𝐦 𝐊𝐚𝐤",mediaType:"2",thumbnail:tamnel,sourceUrl:`https://instagram.com/_daaa_1`}}
 	      }},
 	'buttonsMessage',
 	options)
