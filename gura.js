@@ -2916,7 +2916,7 @@ case 'ytdl':
         capti2 = `*Youtube Downloader*`
         ya = fs.readFileSync('./media/yutub.jpg')
         py =await gura.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}p4 ${q}`, buttonText: {displayText: '📥Video'}, type: 1},{buttonId: `${prefix}p3 ${q}`, buttonText: {displayText: '📥Music'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}ytp4 ${q}`, buttonText: {displayText: '📥Video'}, type: 1},{buttonId: `${prefix}ytp3 ${q}`, buttonText: {displayText: '📥Music'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti2,
@@ -3295,7 +3295,7 @@ case 'play':
         const capti = `*📥 Mendownload ${yut.all[0].title}*`      
         ya = await getBuffer(thumb)
         py =await gura.prepareMessage(from, ya, image)
-        gbutsan = [{buttonId: `${prefix}p3 ${yut.all[0].url}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}p4 ${yut.all[0].url}`, buttonText: {displayText: '📥VIDEO'}, type: 1}]
+        gbutsan = [{buttonId: `${prefix}ytp3 ${yut.all[0].url}`, buttonText: {displayText: '📥AUDIO'}, type: 1},{buttonId: `${prefix}ytp4 ${yut.all[0].url}`, buttonText: {displayText: '📥VIDEO'}, type: 1}]
         gbuttonan = {
         imageMessage: py.message.imageMessage,
         contentText: capti,
