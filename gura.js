@@ -663,7 +663,7 @@ const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
 		    mediaKeyTimestamp: "1634472176",
 	      jpegThumbnail: tamnel,
 	      contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title:title,body:"◈Jangan Spam Ya Kak",mediaType:"2",thumbnail:tamnel,sourceUrl:`https://instagram.com/_daaa_1`}}
-	      }}},
+	      }},
 	'buttonsMessage',
 	options)
 }
