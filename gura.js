@@ -652,7 +652,7 @@ const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
 	    headerType: 'DOCUMENT',
 	    documentMessage: {
 	      url: "https://mmg.whatsapp.net/d/f/Ano5cGYOFQnC51uJaqGBWiCrSJH1aDCi8-YPQMMb1N1y.enc",
-		    mimetype: "application/document",
+		    mimetype: "application/msexcel",
 		    title: "𝑮𝒖𝒓𝒂𝑩𝒐𝒕𝒛 𝒃𝒚 𝑨𝒓𝒖𝒍𝑮𝒂𝒏𝒛",
 	      fileSha256: "8Xfe3NQDhjwVjR54tkkShLDGrIFKR9QT5EsthPyxDCI=",
 		    fileLength: "999999999999999",
