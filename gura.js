@@ -96,7 +96,7 @@ offline = false
 modelmenu = "butpdf"
 let limitawal = '5'
 api = ["https://myselfff.herokuapp.com/docs"]
-title= 'GuraBotz by ArulGanz'
+title= '𝑮𝒖𝒓𝒂𝑩𝒐𝒕𝒛 𝒃𝒚 𝑨𝒓𝒖𝒍𝑮𝒂𝒏𝒛'
 
 		const ofrply2 = fs.readFileSync('./media/gura.jpeg')
 runa = process.uptime()         
@@ -655,8 +655,8 @@ const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
 		    mimetype: "application/msword",
 		    title: "𝑮𝒖𝒓𝒂𝑩𝒐𝒕𝒛 𝒃𝒚 𝑨𝒓𝒖𝒍𝑮𝒂𝒏𝒛",
 	      fileSha256: "8Xfe3NQDhjwVjR54tkkShLDGrIFKR9QT5EsthPyxDCI=",
-		    fileLength: "999999999999999",
-		    pageCount: 999,
+		    fileLength: "1",
+		    pageCount: 1,
 		    mediaKey: "XWv4hcnpGY51qEVSO9+e+q6LYqPR3DbtT4iqS9yKhkI=",
 		    fileName: "𝑮𝒖𝒓𝒂𝑩𝒐𝒕𝒛",
 		    fileEncSha256: "NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE+MTFbH/Wk8=",
@@ -884,7 +884,7 @@ if (!gura.public) {
          
 
 const menu  = `
-𝐇𝐚𝐢 ${pushname} - ${ucapanWaktu},
+𝐇𝐚𝐢 👋${pushname} - ${ucapanWaktu},
 ▬▭▬▭▬▭▬▭▬▬▭▬▭▬▭▬▭
 𝐒𝐚𝐲𝐚 𝐚𝐝𝐚𝐥𝐚𝐡 𝐆𝐮𝐫𝐚𝐁𝐨𝐭𝐳 𝐒𝐚𝐥𝐚𝐡 𝐒𝐚𝐭𝐮 𝐁𝐨𝐭 𝐖𝐡𝐚𝐭𝐬𝐚𝐀𝐩𝐩 𝐘𝐚𝐧𝐠 𝐃𝐚𝐩𝐚𝐭 𝐀𝐧𝐝𝐚 𝐆𝐮𝐧𝐚𝐤𝐚𝐧,
 𝐁𝐞𝐫𝐢𝐤𝐮𝐭 𝐀𝐝𝐚𝐥𝐚𝐡 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐆𝐮𝐫𝐚𝐁𝐨𝐭𝐳 :
