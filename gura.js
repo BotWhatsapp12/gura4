@@ -1273,8 +1273,8 @@ title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
  listType: 1
 }
 
-gura.sendMessage(from, listMsg, MessageType.listMessage, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title:${gggg},body:"◈Speed: ${teks11}",mediaType:"2",thumbnail:tamnel,sourceUrl:`https://instagram.com/_daaa_1`}}
-)
+gura.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted: ftoko})
+break
 break
 case 'menu3':
 if (modelmenu == "text") {
