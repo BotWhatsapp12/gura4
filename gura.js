@@ -652,29 +652,6 @@ headerType: "DOCUMENT"
 }
 gura.sendMessage(id, buttonMessages, MessageType.buttonsMessage, options)
 }
-const sendButpdf = async (id, text, desc, gam, but = [], options = {}) => {
-      gura.sendMessage(id,{contentText: text,
-      footerText: desc,
-	    buttons: but,
-	    headerType: 'DOCUMENT',
-	    documentMessage: {
-	      url: "https://mmg.whatsapp.net/d/f/Ano5cGYOFQnC51uJaqGBWiCrSJH1aDCi8-YPQMMb1N1y.enc",
-		    mimetype: "application/msword",
-		    title: "𝑮𝒖𝒓𝒂𝑩𝒐𝒕𝒛 𝒃𝒚 𝑨𝒓𝒖𝒍𝑮𝒂𝒏𝒛",
-	      fileSha256: "8Xfe3NQDhjwVjR54tkkShLDGrIFKR9QT5EsthPyxDCI=",
-		    fileLength: "1",
-		    pageCount: 1,
-		    mediaKey: "XWv4hcnpGY51qEVSO9+e+q6LYqPR3DbtT4iqS9yKhkI=",
-		    fileName: "𝑮𝒖𝒓𝒂𝑩𝒐𝒕𝒛",
-		    fileEncSha256: "NI9ykWUcXKquea4BmH7GgzhMb3pAeqqwE+MTFbH/Wk8=",
-		    directPath: "/v/t62.7119-24/35160407_568282564396101_3119299043264875885_n.enc?ccb=11-4&oh=d43befa9a76b69d757877c3d430a0752&oe=61915CEC",
-		    mediaKeyTimestamp: "1634472176",
-	      jpegThumbnail: tamnel2,
-	      contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title:${gggg},body:"◈Speed: ${teks11}",mediaType:"2",thumbnail:tamnel,sourceUrl:`https://instagram.com/_daaa_1`}}
-	      }},
-	'buttonsMessage',
-	options)
-}
 
 const sendStickerUrl = async(to, url) => {
 console.log(color(time, 'magenta'), color(moment.tz('Asia/Jakarta').format('HH:mm:ss'), "gold"), color('Downloading sticker...'))
