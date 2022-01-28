@@ -1235,7 +1235,345 @@ listMsg = {
 title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
  buttonText: 'OWNER',
  footerText: 'GuraBotz by ArulGanz',
- description: `\n${menu}`,
+ description: `
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬▭▬▭
+█▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█ 
+█░░╦─╦╔╗╦─╔╗╔╗╔╦╗╔╗░░█
+█░░║║║╠─║─║─║║║║║╠─░░█
+█░░╚╩╝╚╝╚╝╚╝╚╝╩─╩╚╝░░█
+█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█
+▬▭▬▭▬▭▬▭▬▬▭▬▭▬▭▬▭
+𝐁𝐞𝐫𝐢𝐤𝐮𝐭 𝐀𝐝𝐚𝐥𝐚𝐡 𝐂𝐨𝐦𝐦𝐚𝐧𝐝 𝐆𝐮𝐫𝐚𝐁𝐨𝐭𝐳 :
+
+ ➤ *Other*➤
+┃❒き⃟🐣 *.menu*
+┃❒き⃟🐣 *.ssweb*
+┃❒き⃟🐣 *.runtime*
+┃❒き⃟🐣 *.owner*
+┃❒き⃟🐣 *.get*
+┃❒き⃟🐣 *.fdeface*
+┃❒き⃟🐣 *.totag <reply media>*
+┃❒き⃟🐣 *.jadibot* *Premium*
+┃❒き⃟🐣 *.listbot*
+┃❒き⃟🐣 *.ping*
+┃❒き⃟🐣 *.chat 62xnxx|(pesannya)*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━ 
+
+➤ *Search*➤
+┃❒き⃟🐣 *.lirik*
+┃❒き⃟🐣 *.ytsearch*
+┃❒き⃟🐣 *.pinterest*
+┃❒き⃟🐣 *.image*
+┃❒き⃟🐣 *.google (query)*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━
+
+➤ *Tools*➤
+┃❒き⃟🐣 *.sticker <reply gambar>*
+┃❒き⃟🐣 *.sticker2 <reply gambar>*
+┃❒き⃟🐣 *.gay <reply gambar>*
+┃❒き⃟🐣 *.wasted <reply gambar>*
+┃❒き⃟🐣 *.jail <reply gambar>*
+┃❒き⃟🐣 *.red <reply gambar>*
+┃❒き⃟🐣 *.blue <reply gambar>*
+┃❒き⃟🐣 *.sepia <reply gambar>*
+┃❒き⃟🐣 *.glass <reply gambar>*
+┃❒き⃟🐣 *.passed <reply gambar>*
+┃❒き⃟🐣 *.green <reply gambar>*
+┃❒き⃟🐣 *.comrade <reply gambar>*
+┃❒き⃟🐣 *.blurple <reply gambar>*
+┃❒き⃟🐣 *.blurple2 <reply gambar>*
+┃❒き⃟🐣 *.invert <reply gambar>*
+┃❒き⃟🐣 *.invertgreyscale <reply gambar>*
+┃❒き⃟🐣 *.greyscale <reply gambar>*
+┃❒き⃟🐣 *.takestick* 
+┃❒き⃟🐣 *.toimg <reply sticker>*
+┃❒き⃟🐣 *.tourl <reply media>*
+┃❒き⃟🐣 *.tomp3 <reply video>*
+┃❒き⃟🐣 *.tinyurl <masukan link>*
+┃❒き⃟🐣 *.ttp <masukan teks>*
+┃❒き⃟🐣 *.attp <masukan teks>*
+┃❒き⃟🐣 *.stickgura*
+┃❒き⃟🐣 *.patrick*
+┃❒き⃟🐣 *.doge*
+┃❒き⃟🐣 *.robot <reply audio/vn>*
+┃❒き⃟🐣 *.bass <reply audio/vn*
+┃❒き⃟🐣 *.balik <reply audio/vn*
+┃❒き⃟🐣 *.gemuk <reply audio/vn*
+┃❒き⃟🐣 *.slow <reply audio/vn*
+┃❒き⃟🐣 *.fast <reply audio/vn*
+┃❒き⃟🐣 *.tupai <reply audio/vn*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━
+
+➤ *Group*➤
+┃❒き⃟🐣 *.group <Pilih>*
+┃❒き⃟🐣 *.tutuptime <waktu>*
+┃❒き⃟🐣 *.bukatime <waktu>*
+┃❒き⃟🐣 *.promoteall*
+┃❒き⃟🐣 *.demoteall*
+┃❒き⃟🐣 *.promote <@tag>*
+┃❒き⃟🐣 *.demote <@tag>*
+┃❒き⃟🐣 *.getnumber <@tag>*
+┃❒き⃟🐣 *.getbio <@tag>*
+┃❒き⃟🐣 *.add* *<628x>*
+┃❒き⃟🐣 *.kick* *<@tag>*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━
+
+➤ *Owner*➤
+┃❒き⃟🐣 *.join*
+┃❒き⃟🐣 *.hidetag <masukan teks>*
+┃❒き⃟🐣 *.tagall <masukan teks>*
+┃❒き⃟🐣 *> eval*
+┃❒き⃟🐣 *$ exec*
+┃❒き⃟🐣 *.clearall*
+┃❒き⃟🐣 *.self*
+┃❒き⃟🐣 *.public*
+┃❒き⃟🐣 *.setppbot*
+┃❒き⃟🐣 *.upswteks <masukan teks>*
+┃❒き⃟🐣 *.upswimage <masukan teks>*
+┃❒き⃟🐣 *.upswvideo <masukan teks>*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━
+
+➤ *Download*➤
+┃❒き⃟🐣 *.tiktok <link>*
+┃❒き⃟🐣 *.igdl <link>*
+┃❒き⃟🐣 *.igreels <link>*
+┃❒き⃟🐣 *.igtv <link>*
+┃❒き⃟🐣 *.igvideo <link>*
+┃❒き⃟🐣 *.igfoto <link>*
+┃❒き⃟🐣 *.play <judul lagu>*
+┃❒き⃟🐣 *.youtube <link>*
+┃❒き⃟🐣 *.mediafire <link>*
+┃❒き⃟🐣 *.twitter <link>*
+┃❒き⃟🐣 *.soundcloud <link>*
+┃❒き⃟🐣 *.joox <judul lagu>*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━
+
+➤ *Anime*➤
+┃❒き⃟🐣 *.husbu*
+┃❒き⃟🐣 *.loli*
+┃❒き⃟🐣 *.waifu*
+┃❒き⃟🐣 *.milf*
+┃❒き⃟🐣 *.cosplay*
+┃❒き⃟🐣 *.wallml*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━
+
+➤ *Nsfw*➤
+┃❒き⃟🐣 *.ass*
+┃❒き⃟🐣 *.ahego*
+┃❒き⃟🐣 *.bdsm*
+┃❒き⃟🐣 *.blowjob*
+┃❒き⃟🐣 *.cuckold*
+┃❒き⃟🐣 *.cum*
+┃❒き⃟🐣 *.ero*
+┃❒き⃟🐣 *.femdom*
+┃❒き⃟🐣 *.foot*
+┃❒き⃟🐣 *.glasses*
+┃❒き⃟🐣 *.gangbang*
+┃❒き⃟🐣 *.hentai*
+┃❒き⃟🐣 *.jahy*
+┃❒き⃟🐣 *.orgy*
+┃❒き⃟🐣 *.pussy*
+┃❒き⃟🐣 *.panties*
+┃❒き⃟🐣 *.thighs*
+┃❒き⃟🐣 *.yuri*
+┃❒き⃟🐣 *.nekonsfw*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━
+
+➤ *Maker*➤
+┃❒き⃟🐣 *.rem <masukan teks>*
+┃❒き⃟🐣 *.gura <masukan teks>*
+┃❒き⃟🐣 *.kaneki <masukan teks>*
+┃❒き⃟🐣 *.sadboy <masukan teks>*
+┃❒き⃟🐣 *.girlneko <masukan teks>*
+┃❒き⃟🐣 *.lolimaker <masukan teks>*
+┃❒き⃟🐣 *.glitch teks1|teks2*
+┃❒き⃟🐣 *.nulis <masukan teks>*
+┃❒き⃟🐣 *.bneon <masukan teks>*
+┃❒き⃟🐣 *.matrix <masukan teks>*
+┃❒き⃟🐣 *.breakwall <masukan teks>*
+┃❒き⃟🐣 *.dropwater <masukan teks>*
+┃❒き⃟🐣 *.lithgtext <masukan teks>*
+┃❒き⃟🐣 *.crismes <masukan teks>*
+┃❒き⃟🐣 *.tfire <masukan teks>*
+┃❒き⃟🐣 *.sandw <masukan teks>*
+┃❒き⃟🐣 *.text3dbox <masukan teks>*
+┃❒き⃟🐣 *.leavest <masukan teks>*
+┃❒き⃟🐣 *.tlight <masukan teks>*
+┃❒き⃟🐣 *.neon_light <masukan teks>*
+┃❒き⃟🐣 *.blackpink <masukan teks>*
+┃❒き⃟🐣 *.watercolor <masukan teks>*
+┃❒き⃟🐣 *.gaming <masukan teks>*
+┃❒き⃟🐣 *.rainbow <masukan teks>*
+┃❒き⃟🐣 *.scfi <masukan teks>*
+┃❒き⃟🐣 *.blue <masukan teks>*
+┃❒き⃟🐣 *.juice <masukan teks>*
+┃❒き⃟🐣 *.purple <masukan teks>*
+┃❒き⃟🐣 *.toxic <masukan teks>*
+┃❒き⃟🐣 *.peridot <masukan teks>*
+┃❒き⃟🐣 *.meta <masukan teks>*
+┃❒き⃟🐣 *.realistic <masukan teks>*
+┃❒き⃟🐣 *.impressive <masukan teks>*
+┃❒き⃟🐣 *.cracked <masukan teks>*
+┃❒き⃟🐣 *.magma <masukan teks>*
+┃❒き⃟🐣 *.thunder <masukan teks>*
+┃❒き⃟🐣 *.berry <masukan teks>*
+┃❒き⃟🐣 *.transformer <masukan teks>*
+┃❒き⃟🐣 *.horror <masukan teks>*
+┃❒き⃟🐣 *.metallic <masukan teks>*
+┃❒き⃟🐣 *.circuit <masukan teks>*
+┃❒き⃟🐣 *.sketch <masukan teks>*
+┃❒き⃟🐣 *.halloween <masukan teks>*
+┃❒き⃟🐣 *.discovery <masukan teks>*
+┃❒き⃟🐣 *.fiction <masukan teks>*
+┃❒き⃟🐣 *.demon <masukan teks>*
+┃❒き⃟🐣 *.3dstone <masukan teks>*
+┃❒き⃟🐣 *.embossed <masukan teks>*
+┃❒き⃟🐣 *.broken <masukan teks>*
+┃❒き⃟🐣 *.gradient <masukan teks>*
+┃❒き⃟🐣 *.glossy <masukan teks>*
+┃❒き⃟🐣 *.multicolor <masukan teks>*
+┃❒き⃟🐣 *.neon_devil <masukan teks>*
+┃❒き⃟🐣 *.underwater <masukan teks>*
+┃❒き⃟🐣 *.bear <masukan teks>*
+┃❒き⃟🐣 *.harry_potter <masukan teks>*
+┃❒き⃟🐣 *.water_pipe <masukan teks>*
+┃❒き⃟🐣 *.metalrainbow <masukan teks>*
+┃❒き⃟🐣 *.balloon <masukan teks>*
+┃❒き⃟🐣 *.balloon1 <masukan teks>*  
+┃❒き⃟🐣 *.balloon3 <masukan teks>*
+┃❒き⃟🐣 *.balloon4 <masukan teks>*
+┃❒き⃟🐣 *.balloon5 <masukan teks>*
+┃❒き⃟🐣 *.balloon6 <masukan teks>*
+┃❒き⃟🐣 *.balloon7 <masukan teks>*
+┃❒き⃟🐣 *.steel <masukan teks>*
+┃❒き⃟🐣 *.denim <masukan teks>*
+┃❒き⃟🐣 *.decorate <masukan teks>*
+┃❒き⃟🐣 *.decorate2 <masukan teks>*
+┃❒き⃟🐣 *.peridot <masukan teks>*
+┃❒き⃟🐣 *.rock <masukan teks>*
+┃❒き⃟🐣 *.lava <masukan teks>*
+┃❒き⃟🐣 *.robot <masukan teks>*
+┃❒き⃟🐣 *.equalizer <masukan teks>*
+┃❒き⃟🐣 *.toxic <masukan teks>*
+┃❒き⃟🐣 *.chocolate <masukan teks>* 
+┃❒き⃟🐣 *.koifish <masukan teks>*
+┃❒き⃟🐣 *.bread <masukan teks>*
+┃❒き⃟🐣 *.matrix <masukan teks>*
+┃❒き⃟🐣 *.neon2 <masukan teks>*
+┃❒き⃟🐣 *.3dbox <masukan teks>*
+┃❒き⃟🐣 *.3dsteel <masukan teks>*
+┃❒き⃟🐣 *.breakwall <masukan teks>*
+┃❒き⃟🐣 *.dropwater <masukan teks>*
+┃❒き⃟🐣 *.halloween2 <masukan teks1|teks2>*
+┃❒き⃟🐣 *.horror <masukan teks1|teks2>*
+┃❒き⃟🐣 *.game8bit <masukan teks1|teks2>*
+┃❒き⃟🐣 *.layered <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.glitch2 <masukan teks1|teks2>*
+┃❒き⃟🐣 *.coolg <masukan teks1|teks2>*
+┃❒き⃟🐣 *.coolwg <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.space3d <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.gtiktok <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.stone <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.marvel <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.marvel2 <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.pornhub <masukan teks1|teks2>* 
+┃❒き⃟🐣 *.avengers <masukan teks1|teks2>*
+┃❒き⃟🐣 *.metalr <masukan teks1|teks2>*
+┃❒き⃟🐣 *.metalg <masukan teks1|teks2>*
+┃❒き⃟🐣 *.metalg2 <masukan teks1|teks2>*
+┃❒き⃟🐣 *.halloween2 <masukan teks1|teks2>*
+┃❒き⃟🐣 *.lion <masukan teks1|teks2>*
+┃❒き⃟🐣 *.wolf_bw <masukan teks1|teks2>*
+┃❒き⃟🐣 *.wolf_g <masukan teks1|teks2>*
+┃❒き⃟🐣 *.ninja <masukan teks1|teks2>*
+┃❒き⃟🐣 *.3dsteel <masukan teks1|teks2>*
+┃❒き⃟🐣 *.horror2 <masukan teks1|teks2>*
+┃❒き⃟🐣 *.lava <masukan teks1|teks2>*
+┃❒き⃟🐣 *.bagel <masukan teks1|teks2>*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━
+
+➤ *Asupan*➤
+┃❒き⃟🐣 *.cecanrandom*
+┃❒き⃟🐣 *.bocil*
+┃❒き⃟🐣 *.ukhti*
+┃❒き⃟🐣 *.santuy*
+┃❒き⃟🐣 *.rika*
+┃❒き⃟🐣 *.ghea*
+┃❒き⃟🐣 *.hijaber*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━
+
+➤ *Fitur Tidak Berfaedah*➤
+┃❒き⃟🐣 *.apakah*
+┃❒き⃟🐣 *.kapankah*
+┃❒き⃟🐣 *.bisakah*
+┃❒き⃟🐣 *.ganteng*
+┃❒き⃟🐣 *.cantik*
+┃❒き⃟🐣 *.jelek*
+┃❒き⃟🐣 *.goblok*
+┃❒き⃟🐣 *.pinter*
+┃❒き⃟🐣 *.bego*
+┃❒き⃟🐣 *.jago*
+┃❒き⃟🐣 *.nolep*
+┃❒き⃟🐣 *.baik*
+┃❒き⃟🐣 *.jahat*
+┃❒き⃟🐣 *.babi*
+┃❒き⃟🐣 *.beban*
+┃❒き⃟🐣 *.monyet*
+┃❒き⃟🐣 *.anjing*
+┃❒き⃟🐣 *.haram*
+┃❒き⃟🐣 *.wibu*
+┃❒き⃟🐣 *.pakgirl*
+┃❒き⃟🐣 *.pakboy*
+┃❒き⃟🐣 *.wibu*
+┃❒き⃟🐣 *.hebat*
+┃❒き⃟🐣 *.sadboy*
+┃❒き⃟🐣 *.sadgirl*
+┃❒き⃟🐣 *.tolol*
+┃
+┃𝑵𝒐𝒕𝒆 : 𝑱𝒂𝒏𝒈𝒂𝒏 𝑺𝒑𝒂𝒎!!, 
+┃𝑱𝒊𝒌𝒂 𝑭𝒊𝒕𝒖𝒓 𝑻𝒊𝒅𝒂𝒌 𝑾𝒐𝒓𝒌 𝑳𝒂𝒑𝒐𝒓𝒌𝒂𝒏 𝑲𝒆 𝑶𝒘𝒏𝒆𝒓, 
+┃𝑲𝒆𝒕𝒊𝒌 .𝒐𝒘𝒏𝒆𝒓 𝑼𝒏𝒕𝒖𝒌 𝑵𝒐𝒎𝒐𝒓 𝑶𝒘𝒏𝒆𝒓.
+┗━━━━━━━`,
   sections: [
                      {
                       "title": `Owner GuraBotz`,
@@ -1250,7 +1588,7 @@ title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
  listType: 1
 }
 
-gura.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted: ftoko})
+gura.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mentionedJid: [sender]},quoted: dep})
 break
 break
 case 'menu3':
