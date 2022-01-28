@@ -1229,13 +1229,13 @@ switch(command) {
 case 'menu':
 case 'help':
 case 'allmenu':
-case 'patnerbot':
 stod = `${sender}`
 stst = await gura.getStatus(`${sender.split('@')[0]}@c.us`)
 listMsg = {
 title : `${ucapanWaktu} - @${sender.split("@")[0]}`,
  buttonText: 'OWNER',
- footerText: menu,
+ footerText: 'GuraBotz by ArulGanz',
+ description: `\n${menu}`,
   sections: [
                      {
                       "title": `Owner GuraBotz`,
